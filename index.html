@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amar Plastik — Kasir POS</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+
+        <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
+    <nav class="rail" id="sidebarRail" aria-label="Navigasi utama">
+      <!-- Floating Edge Toggle Pill (‹ / ›) on right border -->
+      <button class="rail-edge-toggle" id="railEdgeToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+        <svg class="edge-icon-collapse" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        <svg class="edge-icon-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+
+      <!-- Brand Logo Header -->
+      <a class="rail-brand" href="index.html" title="Amar Plastik — Beranda">
+        <div class="rail-logo">
+          <img src="logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
+        </div>
+        <div class="rail-brand-text">
+          <strong class="rail-brand-name">AMAR PLASTIK</strong>
+          <small class="rail-brand-sub">Bring the quality</small>
+        </div>
+      </a>
+
+      <!-- Section: MENU -->
+      <div class="rail-section-label">MENU</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="dashboard.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span class="rail-label">Dashboard</span>
+        </a>
+        <a class="rail-btn is-active" href="index.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <span class="rail-label">Kasir</span>
+        </a>
+        <a class="rail-btn" href="transaksi.html" data-page="transaksi" data-tooltip="Transaksi" title="Transaksi">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12l1 6H5l1-6zM4 8h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8zm8 4v6m-3-3h6"/></svg>
+          <span class="rail-label">Transaksi</span>
+        </a>
+        <a class="rail-btn" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 5 5 2.7V15L12 17.7 7 15V9.7L12 7z"/></svg>
+          <span class="rail-label">Produk</span>
+        </a>
+        <a class="rail-btn" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+          <span class="rail-label">Kategori</span>
+        </a>
+        <a class="rail-btn" href="laporan.html" data-page="laporan" data-tooltip="Laporan" title="Laporan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7"/><path d="M2 20h20"/></svg>
+          <span class="rail-label">Laporan</span>
+        </a>
+      </div>
+
+      <!-- Section: LAINNYA -->
+      <div class="rail-section-label" style="margin-top: 10px;">LAINNYA</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="pengaturan.html" data-page="pengaturan" data-tooltip="Pengaturan" title="Pengaturan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+          <span class="rail-label">Pengaturan</span>
+        </a>
+      </div>
+
+      <div class="rail-spacer"></div>
+
+      <!-- Profile Footer Area -->
+      <div class="rail-profile">
+        <span class="rail-avatar" title="Lina Puspa Melinda">LM</span>
+        <div class="rail-profile-info">
+          <span class="rail-role">KASIR TOKO</span>
+          <strong class="rail-name">Lina Puspa Melinda</strong>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka navigasi menu" title="Buka navigasi menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="hamburger-icon">
+              <path d="M4 6.5h16M4 12h16M4 17.5h16" />
+            </svg>
+          </button>
+          <div class="topbar-heading">
+            <span class="topbar-badge">POS KASIR</span>
+            <span class="topbar-sub">Amar Plastik · Toko & Kemasan</span>
+          </div>
+        </div>
+        <div class="profile">
+          <span class="profile-text">
+            <strong>Lina Puspa Melinda</strong>
+            <small>Kasir Toko · Amar Plastik</small>
+          </span>
+          <span class="avatar" aria-hidden="true">LM</span>
+        </div>
+      </header>
+
+      <section class="categories" id="categories" aria-label="Kategori menu"></section>
+
+      <div class="menu-head">
+        <h1>Pilih Produk</h1>
+        <div class="menu-head-tools">
+          <label class="search" for="searchInput">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="searchInput" type="search" placeholder="Cari produk…" autocomplete="off" />
+          </label>
+
+          <div class="filter-dropdown-wrap">
+            <button class="filter-btn" id="filterBtn" aria-label="Filter & Urutkan produk" aria-expanded="false" title="Filter & Urutkan produk">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg>
+              <span>Filter</span>
+              <span class="filter-badge" id="filterActiveBadge" hidden>1</span>
+            </button>
+
+            <!-- Popover Menu Filter -->
+            <div class="filter-popover" id="filterPopover" hidden>
+              <div class="fp-section">
+                <div class="fp-title">Status Stok</div>
+                <div class="fp-chips">
+                  <button type="button" class="fp-chip is-active" data-filter="all">Semua</button>
+                  <button type="button" class="fp-chip" data-filter="ready">Ready</button>
+                  <button type="button" class="fp-chip" data-filter="promo">Diskon</button>
+                  <button type="button" class="fp-chip" data-filter="low">Stok Menipis</button>
+                </div>
+              </div>
+
+              <div class="fp-section">
+                <div class="fp-title">Urutkan Berdasarkan</div>
+                <div class="fp-select-wrap">
+                  <select id="sortSelect" class="fp-select">
+                    <option value="default">Rekomendasi / Bawaan</option>
+                    <option value="price-asc">Harga: Terendah ke Tertinggi</option>
+                    <option value="price-desc">Harga: Tertinggi ke Terendah</option>
+                    <option value="name-asc">Nama: A ke Z</option>
+                    <option value="stock-desc">Stok: Terbanyak</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="fp-actions">
+                <button type="button" class="fp-reset-btn" id="filterResetBtn">Reset</button>
+                <button type="button" class="fp-apply-btn" id="filterApplyBtn">Terapkan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="menu-grid" id="menuGrid" aria-label="Daftar menu"></section>
+    </main>
+
+    <!-- ================= ORDER PANEL ================= -->
+    <div class="order-backdrop" id="orderBackdrop" hidden></div>
+    <aside class="order" id="orderPanel" aria-label="Ringkasan pesanan">
+      <header class="order-head">
+        <h2>Detail Item</h2>
+        <button class="clear-all" id="clearAll" aria-label="Hapus semua item" title="Hapus semua item">
+          🗑 Hapus Semua
+        </button>
+        <button class="order-close-btn" id="orderCloseBtn" aria-label="Tutup ringkasan pesanan" title="Tutup ringkasan pesanan">
+          ✕
+        </button>
+      </header>
+
+      <div class="order-list" id="orderList"></div>
+
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="subtotalVal">Rp 0</dd></div>
+        <div><dt>Diskon Produk</dt><dd id="discountVal" class="is-accent">− Rp 0</dd></div>
+        <div><dt>Pajak 10%</dt><dd id="taxVal">Rp 0</dd></div>
+      </dl>
+
+      <div class="grand-total">
+        <span>Total</span>
+        <strong id="totalVal">Rp 0</strong>
+      </div>
+
+      <div class="payment">
+        <p>Metode Pembayaran</p>
+        <div class="payment-row" id="paymentRow" role="radiogroup" aria-label="Metode pembayaran">
+          <button class="pay-btn is-active" data-pay="Cash" role="radio" aria-checked="true">
+            <span class="pay-ico">💵</span>Cash
+          </button>
+          <button class="pay-btn" data-pay="Debit" role="radio" aria-checked="false">
+            <span class="pay-ico">💳</span>Debit
+          </button>
+          <button class="pay-btn" data-pay="QRIS" role="radio" aria-checked="false">
+            <span class="pay-ico">📱</span>QRIS
+          </button>
+        </div>
+      </div>
+
+      <button class="cta" id="proceedBtn">Proses Transaksi</button>
+    </aside>
+
+  </div>
+
+  <!-- ================= MODAL KONFIRMASI ================= -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalBody">
+      <div class="modal-icon" id="modalIcon">🗑</div>
+      <h3 id="modalTitle">Konfirmasi</h3>
+      <p id="modalBody">Apakah Anda yakin?</p>
+      <div class="cash-box" id="cashBox" hidden>
+        <label class="cash-label" for="cashInput">Uang Dibayarkan</label>
+        <input type="text" id="cashInput" inputmode="numeric" placeholder="0" autocomplete="off" />
+        <div class="cash-quick">
+          <button type="button" class="cash-btn" data-cash="50000">50.000</button>
+          <button type="button" class="cash-btn" data-cash="100000">100.000</button>
+          <div class="cash-more">
+            <select id="cashMore" aria-label="Nominal lainnya">
+              <option value="">Lainnya…</option>
+              <option value="150000">150.000</option>
+              <option value="200000">200.000</option>
+              <option value="250000">250.000</option>
+              <option value="300000">300.000</option>
+              <option value="400000">400.000</option>
+              <option value="500000">500.000</option>
+            </select>
+          </div>
+        </div>
+        <div class="cash-calc">
+          <div class="cc-row"><span>Total</span><strong id="ccTotal">Rp 0</strong></div>
+          <div class="cc-row"><span>Dibayar</span><strong id="ccPaid">Rp 0</strong></div>
+          <div class="cc-row cc-result"><span>Kembalian</span><strong id="cashChange">Rp 0</strong></div>
+        </div>
+        <p class="cash-error" id="cashError" hidden>Uang dibayarkan kurang dari total belanja</p>
+      </div>
+      <div class="modal-actions">
+        <button class="modal-btn secondary" id="modalCancel">Batal</button>
+        <button class="modal-btn danger" id="modalOk">Ya, Lanjutkan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= POPUP STRUK ================= -->
+  <div class="receipt-backdrop" id="receiptBackdrop" hidden>
+    <div class="receipt" role="dialog" aria-modal="true" aria-label="Struk transaksi">
+      <div class="receipt-body">
+        <div class="receipt-logo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 8h11.6l1.1 10.1a2 2 0 0 1-2 2.2H7.1a2 2 0 0 1-2-2.2L6.2 8z"/><path d="M9 10.5V7a3 3 0 0 1 6 0v3.5"/></svg>
+        </div>
+        <h3 class="receipt-name">AMAR PLASTIK</h3>
+        <p class="receipt-tag">Bring the quality</p>
+        <p class="receipt-addr">Jl. Raya Industri No. 88, Medan<br>Telp. 061-1234-5678</p>
+        <div class="receipt-sep"></div>
+        <div class="receipt-info">
+          <div><span>No. Transaksi</span><strong id="rTrx">TRX-000000</strong></div>
+          <div><span>Waktu</span><strong id="rTime">-</strong></div>
+          <div><span>Kasir</span><strong id="rCashier">Lina Puspa Melinda</strong></div>
+          <div><span>Pembayaran</span><strong id="rPay">Cash</strong></div>
+        </div>
+        <div class="receipt-sep"></div>
+        <div class="receipt-items" id="rItems"></div>
+        <div class="receipt-sep"></div>
+        <div class="receipt-totals" id="rTotals"></div>
+        <div class="receipt-sep"></div>
+        <div class="receipt-totals" id="rPayLine"></div>
+        <div class="receipt-sep"></div>
+        <p class="receipt-thanks">Terima kasih telah berbelanja 🙏<br>Semoga hari Anda menyenangkan</p>
+      </div>
+      <div class="receipt-actions">
+        <button class="receipt-btn print" id="receiptPrint" title="Cetak ke printer">🖨 Cetak</button>
+        <button class="receipt-btn done" id="receiptDone">Selesai</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="cart-fab" id="cartFab" aria-label="Buka pesanan">
+    🧾
+    <span class="fab-count" id="fabCount">0</span>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

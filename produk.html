@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Data Produk — Amar Plastik</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="shared.css" />
+</head>
+<body>
+  <div class="app app-single">
+    <!-- Rail navigasi -->
+        <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
+    <nav class="rail" id="sidebarRail" aria-label="Navigasi utama">
+      <!-- Floating Edge Toggle Pill (‹ / ›) on right border -->
+      <button class="rail-edge-toggle" id="railEdgeToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+        <svg class="edge-icon-collapse" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        <svg class="edge-icon-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <!-- Brand Logo Header -->
+      <a class="rail-brand" href="index.html" title="Amar Plastik — Beranda">
+        <div class="rail-logo">
+          <img src="logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
+        </div>
+        <div class="rail-brand-text">
+          <strong class="rail-brand-name">AMAR PLASTIK</strong>
+          <small class="rail-brand-sub">Bring the quality</small>
+        </div>
+      </a>
+
+      <!-- Section: MENU -->
+      <div class="rail-section-label">MENU</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="dashboard.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span class="rail-label">Dashboard</span>
+        </a>
+        <a class="rail-btn" href="index.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <span class="rail-label">Kasir</span>
+        </a>
+        <a class="rail-btn" href="transaksi.html" data-page="transaksi" data-tooltip="Transaksi" title="Transaksi">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12l1 6H5l1-6zM4 8h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8zm8 4v6m-3-3h6"/></svg>
+          <span class="rail-label">Transaksi</span>
+        </a>
+        <a class="rail-btn is-active" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 5 5 2.7V15L12 17.7 7 15V9.7L12 7z"/></svg>
+          <span class="rail-label">Produk</span>
+        </a>
+        <a class="rail-btn" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+          <span class="rail-label">Kategori</span>
+        </a>
+        <a class="rail-btn" href="laporan.html" data-page="laporan" data-tooltip="Laporan" title="Laporan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7"/><path d="M2 20h20"/></svg>
+          <span class="rail-label">Laporan</span>
+        </a>
+      </div>
+
+      <!-- Section: LAINNYA -->
+      <div class="rail-section-label" style="margin-top: 10px;">LAINNYA</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="pengaturan.html" data-page="pengaturan" data-tooltip="Pengaturan" title="Pengaturan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+          <span class="rail-label">Pengaturan</span>
+        </a>
+      </div>
+
+      <div class="rail-spacer"></div>
+
+      <!-- Profile Footer Area -->
+      <div class="rail-profile">
+        <span class="rail-avatar" title="Lina Puspa Melinda">LM</span>
+        <div class="rail-profile-info">
+          <span class="rail-role">KASIR TOKO</span>
+          <strong class="rail-name">Lina Puspa Melinda</strong>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+    <!-- Konten -->
+    <main class="main">
+      <div class="page-pad page-full">
+        <div class="master-head">
+          <div style="display:flex; align-items:flex-start; gap:14px;">
+            <button class="topbar-toggle-btn" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="3"/><path d="M9 3v18"/></svg>
+            </button>
+            <div>
+              <h1 class="page-title">Master data produk</h1>
+              <p class="page-sub">Kelola seluruh produk, stok, dan batch di toko</p>
+            </div>
+          </div>
+          <button class="btn-add" id="btnAddProduct">＋ Tambah produk</button>
+        </div>
+
+        <div class="master-cards" id="masterCards"></div>
+
+        <div class="master-toolbar">
+          <label class="msearch">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="prodSearch" type="search" placeholder="Cari nama produk atau SKU" autocomplete="off" />
+          </label>
+          <select class="mfilter" id="prodCatFilter" aria-label="Filter kategori">
+            <option value="">Kategori</option>
+          </select>
+          <select class="mfilter" id="prodStockFilter" aria-label="Filter status stok">
+            <option value="">Status stok</option>
+            <option value="ok">Aman</option>
+            <option value="low">Stok menipis</option>
+            <option value="out">Stok habis</option>
+          </select>
+          <button class="mexport" id="prodExport">↓ Ekspor</button>
+        </div>
+
+        <div class="prod-table-wrap master-table">
+          <table class="prod-table">
+            <thead>
+              <tr>
+                <th>Produk</th>
+                <th>Kategori</th>
+                <th>Batch terlama</th>
+                <th>Kedaluwarsa</th>
+                <th>Stok</th>
+                <th>Harga jual</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="prodRows"></tbody>
+          </table>
+        </div>
+        <div class="master-foot" id="masterFoot"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal konfirmasi -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-icon" id="modalIcon">🗑</div>
+      <h3 id="modalTitle">Konfirmasi</h3>
+      <p id="modalBody">Apakah Anda yakin?</p>
+      <div class="modal-actions">
+        <button class="modal-btn secondary" id="modalCancel">Batal</button>
+        <button class="modal-btn danger" id="modalOk">Ya, Lanjutkan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="shared.js"></script>
+  <script>
+    const prodFilter = { query: "", cat: "", stock: "" };
+    const PER_PAGE = 6;
+    let prodPageNum = 1;
+
+    function renderProdTable() {
+      const total = MENU.length;
+      const low = MENU.filter(m => stockStatus(m) === "low").length;
+      const out = MENU.filter(m => stockStatus(m) === "out").length;
+      const nearExp = MENU.filter(m => {
+        if (!m.exp) return false;
+        const [mm, yy] = m.exp.split("/").map(Number);
+        const expDate = new Date(2000 + yy, mm - 1, 1);
+        return (expDate - new Date()) / 86400000 <= 60;
+      }).length;
+      $("#masterCards").innerHTML = `
+        <div class="mcard"><div class="mc-label">Total produk</div><div class="mc-value">${total}</div></div>
+        <div class="mcard"><div class="mc-label">Stok menipis</div><div class="mc-value orange">${low}</div></div>
+        <div class="mcard"><div class="mc-label">Stok habis</div><div class="mc-value red">${out}</div></div>
+        <div class="mcard"><div class="mc-label">Mendekati kedaluwarsa</div><div class="mc-value orange">${nearExp}</div></div>`;
+
+      const catSel = $("#prodCatFilter");
+      if (catSel.options.length <= 1) {
+        catSel.innerHTML = `<option value="">Kategori</option>` +
+          Object.entries(CAT_NAME).filter(([id]) => id !== "all")
+            .map(([id, n]) => `<option value="${id}">${n}</option>`).join("");
+      }
+
+      const q = prodFilter.query.toLowerCase();
+      const list = MENU.filter(m =>
+        (!q || m.name.toLowerCase().includes(q) || m.sku.toLowerCase().includes(q)) &&
+        (!prodFilter.cat || m.cat === prodFilter.cat) &&
+        (!prodFilter.stock || stockStatus(m) === prodFilter.stock)
+      );
+
+      const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+      prodPageNum = Math.min(prodPageNum, pages);
+      const slice = list.slice((prodPageNum - 1) * PER_PAGE, prodPageNum * PER_PAGE);
+
+      $("#prodRows").innerHTML = slice.length ? slice.map(m => {
+        const st = stockStatus(m);
+        const statusLabel = { ok: "✓ Aman", low: "⚠ Stok menipis", out: "✕ Habis" }[st];
+        const expText = m.exp
+          ? `${m.exp.split("/")[0]} ${["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"][+m.exp.split("/")[0] - 1]} ${2000 + +m.exp.split("/")[1]}`
+          : "—";
+        return `
+        <tr>
+          <td>
+            <div class="p-name">
+              <span class="p-thumb" style="background:${m.tint}">${m.emoji}</span>
+              <span><strong>${m.name}</strong><small>${m.sku}</small></span>
+            </div>
+          </td>
+          <td><span class="p-cat">${CAT_NAME[m.cat]}</span></td>
+          <td class="td-num">${m.batch}</td>
+          <td>${expText}</td>
+          <td class="td-num">${m.stock}</td>
+          <td class="td-num">${rp(m.price)}</td>
+          <td><span class="p-status ${st}">${statusLabel}</span></td>
+          <td>
+            <div class="p-actions">
+              <button class="p-act" data-edit="${m.id}" aria-label="Edit ${m.name}" title="Edit">✎</button>
+              <button class="p-act del" data-del="${m.id}" aria-label="Hapus ${m.name}" title="Hapus">🗑</button>
+            </div>
+          </td>
+        </tr>`;
+      }).join("") : `<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:34px">Tidak ada produk yang cocok dengan filter</td></tr>`;
+
+      const first = list.length ? (prodPageNum - 1) * PER_PAGE + 1 : 0;
+      const last = Math.min(prodPageNum * PER_PAGE, list.length);
+      $("#masterFoot").innerHTML = `
+        <span>Menampilkan ${first}–${last} dari ${list.length} produk</span>
+        <div class="master-pager">
+          <button data-goto="${prodPageNum - 1}" ${prodPageNum <= 1 ? "disabled" : ""}>‹</button>
+          ${Array.from({ length: pages }, (_, i) =>
+            `<button data-goto="${i + 1}" class="${i + 1 === prodPageNum ? "is-active" : ""}">${i + 1}</button>`
+          ).join("")}
+          <button data-goto="${prodPageNum + 1}" ${prodPageNum >= pages ? "disabled" : ""}>›</button>
+        </div>`;
+    }
+
+    $("#prodSearch").addEventListener("input", e => {
+      prodFilter.query = e.target.value;
+      prodPageNum = 1;
+      renderProdTable();
+    });
+    $("#prodCatFilter").addEventListener("change", e => {
+      prodFilter.cat = e.target.value;
+      prodPageNum = 1;
+      renderProdTable();
+    });
+    $("#prodStockFilter").addEventListener("change", e => {
+      prodFilter.stock = e.target.value;
+      prodPageNum = 1;
+      renderProdTable();
+    });
+    $("#masterFoot").addEventListener("click", e => {
+      const btn = e.target.closest("[data-goto]");
+      if (!btn || btn.disabled) return;
+      prodPageNum = +btn.dataset.goto;
+      renderProdTable();
+    });
+    $("#btnAddProduct").addEventListener("click", () => toast("Formulir tambah produk segera hadir"));
+    $("#prodExport").addEventListener("click", () => toast("Ekspor daftar produk segera hadir"));
+    $("#prodRows").addEventListener("click", e => {
+      const edit = e.target.closest("[data-edit]");
+      const del = e.target.closest("[data-del]");
+      if (edit) toast(`Edit produk: ${ITEM[+edit.dataset.edit].name}`);
+      if (del) {
+        const m = ITEM[+del.dataset.del];
+        showConfirm({
+          icon: "🗑",
+          title: "Hapus Produk",
+          body: `Hapus produk "${m.name}" (${m.sku})?`,
+          okText: "Ya, Hapus",
+          okClass: "danger",
+          onOk: () => toast(`${m.name} dihapus dari master data (demo)`),
+        });
+      }
+    });
+
+    $("#modalOk").addEventListener("click", () => closeConfirm(true));
+    $("#modalCancel").addEventListener("click", () => closeConfirm(false));
+    $("#modalBackdrop").addEventListener("click", e => {
+      if (e.target === e.currentTarget) closeConfirm(false);
+    });
+
+    renderProdTable();
+    initSidebar("produk");
+  </script>
+</body>
+</html>

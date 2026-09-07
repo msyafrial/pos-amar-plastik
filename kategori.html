@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Kategori — Amar Plastik</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="shared.css" />
+</head>
+<body>
+  <div class="app app-single">
+    <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
+    <nav class="rail" id="sidebarRail" aria-label="Navigasi utama">
+      <!-- Floating Edge Toggle Pill (‹ / ›) on right border -->
+      <button class="rail-edge-toggle" id="railEdgeToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+        <svg class="edge-icon-collapse" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        <svg class="edge-icon-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <!-- Brand Logo Header -->
+      <a class="rail-brand" href="dashboard.html" title="Amar Plastik — Beranda">
+        <div class="rail-logo">
+          <img src="logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
+        </div>
+        <div class="rail-brand-text">
+          <strong class="rail-brand-name">AMAR PLASTIK</strong>
+          <small class="rail-brand-sub">Bring the quality</small>
+        </div>
+      </a>
+
+      <!-- Section: MENU -->
+      <div class="rail-section-label">MENU</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="dashboard.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span class="rail-label">Dashboard</span>
+        </a>
+        <a class="rail-btn" href="index.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <span class="rail-label">Kasir</span>
+        </a>
+        <a class="rail-btn" href="transaksi.html" data-page="transaksi" data-tooltip="Transaksi" title="Transaksi">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12l1 6H5l1-6zM4 8h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8zm8 4v6m-3-3h6"/></svg>
+          <span class="rail-label">Transaksi</span>
+        </a>
+        <a class="rail-btn" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 5 5 2.7V15L12 17.7 7 15V9.7L12 7z"/></svg>
+          <span class="rail-label">Produk</span>
+        </a>
+        <a class="rail-btn is-active" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+          <span class="rail-label">Kategori</span>
+        </a>
+        <a class="rail-btn" href="laporan.html" data-page="laporan" data-tooltip="Laporan" title="Laporan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7"/><path d="M2 20h20"/></svg>
+          <span class="rail-label">Laporan</span>
+        </a>
+      </div>
+
+      <!-- Section: LAINNYA -->
+      <div class="rail-section-label" style="margin-top: 10px;">LAINNYA</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="pengaturan.html" data-page="pengaturan" data-tooltip="Pengaturan" title="Pengaturan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+          <span class="rail-label">Pengaturan</span>
+        </a>
+      </div>
+
+      <div class="rail-spacer"></div>
+
+      <!-- Profile Footer Area -->
+      <div class="rail-profile">
+        <span class="rail-avatar" title="Lina Puspa Melinda">LM</span>
+        <div class="rail-profile-info">
+          <span class="rail-role">KASIR TOKO</span>
+          <strong class="rail-name">Lina Puspa Melinda</strong>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+    <!-- ================= KONTEN HALAMAN KATEGORI ================= -->
+    <main class="main">
+      <div class="page-pad page-full">
+        <!-- Header Halaman Kategori -->
+        <header class="cat-header">
+          <div class="cat-header-left">
+            <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka navigasi menu" title="Buka navigasi menu">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6.5h16M4 12h16M4 17.5h16" />
+              </svg>
+            </button>
+            <div>
+              <h1 class="page-title">Kategori</h1>
+              <p class="page-sub" id="catTotalSub">8 kategori terdaftar</p>
+            </div>
+          </div>
+          <div class="cat-header-right">
+            <button type="button" class="cat-btn-add" id="btnOpenAddCategory">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              <span>Tambah Kategori</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Toolbar: Search Input + View Mode Toggle (Grid/List) -->
+        <div class="cat-toolbar">
+          <div class="cat-search-wrap">
+            <input type="text" id="catSearchInput" class="cat-search-input" placeholder="Cari kategori..." autocomplete="off" />
+            <svg class="cat-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+
+          <div class="cat-view-toggles" role="radiogroup" aria-label="Tampilan kategori">
+            <button type="button" class="cat-view-btn is-active" id="viewGridBtn" aria-label="Tampilan grid" title="Tampilan Grid">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+            </button>
+            <button type="button" class="cat-view-btn" id="viewListBtn" aria-label="Tampilan list" title="Tampilan List">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid Kartu Kategori (Sesuai Referensi Gambar) -->
+        <div class="cat-grid" id="categoryGrid">
+          <!-- Kartu kategori di-generate via JavaScript -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Tambah / Edit Kategori -->
+  <div class="modal-backdrop" id="catModalBackdrop" hidden>
+    <div class="modal cat-modal" role="dialog" aria-modal="true" aria-labelledby="catModalTitle">
+      <div class="cat-modal-head">
+        <h3 id="catModalTitle">Tambah Kategori Baru</h3>
+        <button type="button" class="cat-modal-close" id="catModalClose">✕</button>
+      </div>
+      <form id="catForm" class="cat-form">
+        <input type="hidden" id="catIdInput" value="" />
+        <div class="cat-form-group">
+          <label for="catNameInput">Nama Kategori</label>
+          <input type="text" id="catNameInput" required placeholder="Contoh: Roti & Kue" class="cat-input" />
+        </div>
+        <div class="cat-form-group">
+          <label for="catDescInput">Keterangan / Subtitle</label>
+          <input type="text" id="catDescInput" placeholder="Contoh: Roti segar dan aneka kue" class="cat-input" />
+        </div>
+        <div class="cat-form-group">
+          <label for="catImgSelect">Gambar Sampul</label>
+          <select id="catImgSelect" class="cat-input">
+            <option value="groceries">Kebutuhan Rumah (Sembako)</option>
+            <option value="bakery">Roti & Kue</option>
+            <option value="spices">Bumbu & Rempah</option>
+            <option value="toiletries">Kesehatan & Kecantikan</option>
+            <option value="snacks">Makanan Ringan</option>
+            <option value="meals">Makanan Berat</option>
+            <option value="baby">Kebutuhan Balita</option>
+            <option value="tools">Peralatan Tukang</option>
+            <option value="custom">Warna & Gradien Kustom</option>
+          </select>
+        </div>
+        <div class="modal-actions" style="margin-top: 20px;">
+          <button type="button" class="modal-btn secondary" id="catModalCancel">Batal</button>
+          <button type="submit" class="modal-btn success" id="catModalSubmit">Simpan Kategori</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Konfirmasi Hapus -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-icon" id="modalIcon">🗑</div>
+      <h3 id="modalTitle">Konfirmasi</h3>
+      <p id="modalBody">Apakah Anda yakin?</p>
+      <div class="modal-actions">
+        <button class="modal-btn secondary" id="modalCancel">Batal</button>
+        <button class="modal-btn danger" id="modalOk">Ya, Hapus</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="shared.js"></script>
+  <script>
+    // Data Master Kategori (8 Kategori Sesuai Gambar Referensi)
+    const DEFAULT_CATEGORIES = [
+      {
+        id: "cat-1",
+        name: "Kebutuhan Rumah",
+        desc: "Perlengkapan rumah tangga",
+        type: "groceries",
+        bg: "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#f8fafc"/><rect x="40" y="70" width="90" height="130" rx="8" fill="#fca5a5"/><rect x="55" y="85" width="60" height="40" fill="#ef4444"/><rect x="140" y="50" width="120" height="150" rx="10" fill="#fed7aa"/><circle cx="200" cy="110" r="35" fill="#f97316"/><rect x="270" y="80" width="90" height="120" rx="12" fill="#bae6fd"/><path d="M290 80 Q315 40 340 80" stroke="#0284c7" stroke-width="8" fill="none"/></svg>`
+      },
+      {
+        id: "cat-2",
+        name: "Roti & Kue",
+        desc: "Roti segar dan aneka kue",
+        type: "bakery",
+        bg: "linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#382923"/><circle cx="80" cy="90" r="45" fill="#d97706"/><circle cx="180" cy="75" r="50" fill="#b45309"/><circle cx="280" cy="95" r="45" fill="#f59e0b"/><circle cx="130" cy="160" r="40" fill="#fbbf24"/><circle cx="230" cy="165" r="42" fill="#d97706"/><circle cx="320" cy="170" r="35" fill="#92400e"/></svg>`
+      },
+      {
+        id: "cat-3",
+        name: "Bumbu & Rempah",
+        desc: "Bumbu masak dan rempah-rempah",
+        type: "spices",
+        bg: "linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#292524"/><path d="M50 80 Q100 20 180 50" stroke="#16a34a" stroke-width="26" stroke-linecap="round" fill="none"/><circle cx="120" cy="140" r="45" fill="#fde047"/><circle cx="220" cy="130" r="50" fill="#eab308"/><circle cx="310" cy="110" r="40" fill="#dc2626"/><circle cx="260" cy="180" r="35" fill="#ca8a04"/><circle cx="70" cy="180" r="30" fill="#f8fafc"/></svg>`
+      },
+      {
+        id: "cat-4",
+        name: "Kesehatan & Kecantikan",
+        desc: "Sabun, shampoo, dan perawatan diri",
+        type: "toiletries",
+        bg: "linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#f0fdf4"/><rect x="60" y="60" width="65" height="150" rx="14" fill="#38bdf8"/><rect x="140" y="40" width="75" height="170" rx="18" fill="#ec4899"/><rect x="230" y="55" width="60" height="155" rx="16" fill="#a855f7"/><rect x="305" y="80" width="55" height="130" rx="12" fill="#2dd4bf"/></svg>`
+      },
+      {
+        id: "cat-5",
+        name: "Makanan Ringan",
+        desc: "Camilan dan snack kemasan",
+        type: "snacks",
+        bg: "linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#fef2f2"/><rect x="50" y="50" width="80" height="150" rx="8" fill="#22c55e"/><rect x="140" y="40" width="85" height="160" rx="8" fill="#eab308"/><rect x="235" y="45" width="80" height="155" rx="8" fill="#ef4444"/><rect x="325" y="65" width="55" height="135" rx="8" fill="#f97316"/></svg>`
+      },
+      {
+        id: "cat-6",
+        name: "Makanan Berat",
+        desc: "Makanan siap saji dan frozen food",
+        type: "meals",
+        bg: "linear-gradient(135deg, #fee2e2 0%, #fecaca 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#1c1917"/><rect x="40" y="40" width="320" height="160" rx="20" fill="#292524"/><rect x="60" y="60" width="130" height="120" rx="12" fill="#f97316"/><rect x="210" y="60" width="130" height="55" rx="10" fill="#84cc16"/><rect x="210" y="125" width="130" height="55" rx="10" fill="#ef4444"/></svg>`
+      },
+      {
+        id: "cat-7",
+        name: "Kebutuhan Balita",
+        desc: "Susu, pempers dan lain-lain",
+        type: "baby",
+        bg: "linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#fefce8"/><rect x="50" y="55" width="85" height="145" rx="10" fill="#38bdf8"/><rect x="150" y="60" width="95" height="140" rx="8" fill="#fbbf24"/><rect x="260" y="50" width="90" height="150" rx="14" fill="#ec4899"/><text x="197" y="130" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">MILK</text></svg>`
+      },
+      {
+        id: "cat-8",
+        name: "Peralatan Tukang",
+        desc: "Aneka Peralatan Tukang",
+        type: "tools",
+        bg: "linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%)",
+        svg: `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#e2e8f0"/><circle cx="100" cy="100" r="50" fill="#eab308"/><rect x="180" y="110" width="120" height="45" rx="12" fill="#f97316"/><rect x="290" y="125" width="60" height="16" rx="4" fill="#334155"/><rect x="90" y="140" width="140" height="50" rx="10" fill="#0284c7"/></svg>`
+      }
+    ];
+
+    let categoryList = [];
+    let currentViewMode = "grid"; // 'grid' | 'list'
+    let searchQuery = "";
+
+    function loadCategories() {
+      try {
+        const saved = localStorage.getItem("ap_master_categories");
+        if (saved) {
+          categoryList = JSON.parse(saved);
+        } else {
+          categoryList = DEFAULT_CATEGORIES;
+          saveCategories();
+        }
+      } catch {
+        categoryList = DEFAULT_CATEGORIES;
+      }
+    }
+
+    function saveCategories() {
+      localStorage.setItem("ap_master_categories", JSON.stringify(categoryList));
+    }
+
+    function renderCategories() {
+      const grid = $("#categoryGrid");
+      const filtered = categoryList.filter(c =>
+        c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        c.desc.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      $("#catTotalSub").textContent = `${filtered.length} kategori terdaftar`;
+
+      grid.className = currentViewMode === "grid" ? "cat-grid" : "cat-grid is-list-view";
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="cat-empty-state">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <h3>Tidak ada kategori yang cocok</h3>
+            <p>Coba gunakan kata kunci pencarian yang lain.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(cat => `
+        <article class="cat-card" data-id="${cat.id}">
+          <div class="cat-card-media">
+            ${cat.svg || `<div class="cat-card-placeholder" style="background:${cat.bg || '#f1f5f9'}"></div>`}
+            <div class="cat-card-actions">
+              <button type="button" class="cat-action-btn edit" data-edit="${cat.id}" title="Edit Kategori" aria-label="Edit ${cat.name}">
+                <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </button>
+              <button type="button" class="cat-action-btn delete" data-del="${cat.id}" title="Hapus Kategori" aria-label="Hapus ${cat.name}">
+                <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="cat-card-body">
+            <h3 class="cat-card-title">${cat.name}</h3>
+            <p class="cat-card-desc">${cat.desc}</p>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    // Event Search
+    $("#catSearchInput").addEventListener("input", e => {
+      searchQuery = e.target.value.trim();
+      renderCategories();
+    });
+
+    // Event View Switcher
+    $("#viewGridBtn").addEventListener("click", () => {
+      currentViewMode = "grid";
+      $("#viewGridBtn").classList.add("is-active");
+      $("#viewListBtn").classList.remove("is-active");
+      renderCategories();
+    });
+
+    $("#viewListBtn").addEventListener("click", () => {
+      currentViewMode = "list";
+      $("#viewListBtn").classList.add("is-active");
+      $("#viewGridBtn").classList.remove("is-active");
+      renderCategories();
+    });
+
+    // Modal Tambah & Edit
+    const modalBackdrop = $("#catModalBackdrop");
+    const openAddBtn = $("#btnOpenAddCategory");
+    const closeBtn = $("#catModalClose");
+    const cancelBtn = $("#catModalCancel");
+    const form = $("#catForm");
+
+    function openModal(editId = null) {
+      if (editId) {
+        const cat = categoryList.find(c => c.id === editId);
+        if (!cat) return;
+        $("#catModalTitle").textContent = "Edit Kategori";
+        $("#catIdInput").value = cat.id;
+        $("#catNameInput").value = cat.name;
+        $("#catDescInput").value = cat.desc;
+        $("#catImgSelect").value = cat.type || "custom";
+      } else {
+        $("#catModalTitle").textContent = "Tambah Kategori Baru";
+        $("#catIdInput").value = "";
+        form.reset();
+      }
+      modalBackdrop.hidden = false;
+      $("#catNameInput").focus();
+    }
+
+    function closeModal() {
+      modalBackdrop.hidden = true;
+      form.reset();
+    }
+
+    openAddBtn.addEventListener("click", () => openModal());
+    closeBtn.addEventListener("click", closeModal);
+    cancelBtn.addEventListener("click", closeModal);
+    modalBackdrop.addEventListener("click", e => {
+      if (e.target === modalBackdrop) closeModal();
+    });
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const id = $("#catIdInput").value;
+      const name = $("#catNameInput").value.trim();
+      const desc = $("#catDescInput").value.trim();
+      const type = $("#catImgSelect").value;
+
+      const sampleSvg = DEFAULT_CATEGORIES.find(d => d.type === type)?.svg ||
+        `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#e0e7ff"/><circle cx="200" cy="120" r="60" fill="#6366f1"/><text x="200" y="130" font-family="sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">${name.slice(0, 2).toUpperCase()}</text></svg>`;
+
+      if (id) {
+        const idx = categoryList.findIndex(c => c.id === id);
+        if (idx !== -1) {
+          categoryList[idx] = { ...categoryList[idx], name, desc, type, svg: sampleSvg };
+          toast(`Kategori "${name}" berhasil diperbarui!`);
+        }
+      } else {
+        const newId = `cat-${Date.now()}`;
+        categoryList.unshift({ id: newId, name, desc, type, svg: sampleSvg });
+        toast(`Kategori "${name}" berhasil ditambahkan!`);
+      }
+
+      saveCategories();
+      renderCategories();
+      closeModal();
+    });
+
+    // Delegation Edit / Delete
+    $("#categoryGrid").addEventListener("click", e => {
+      const editBtn = e.target.closest("[data-edit]");
+      if (editBtn) {
+        openModal(editBtn.dataset.edit);
+        return;
+      }
+
+      const delBtn = e.target.closest("[data-del]");
+      if (delBtn) {
+        const delId = delBtn.dataset.del;
+        const cat = categoryList.find(c => c.id === delId);
+        if (!cat) return;
+
+        showConfirm({
+          icon: "🗑",
+          title: "Hapus Kategori?",
+          body: `Apakah Anda yakin ingin menghapus kategori "${cat.name}"?\nKategori ini akan dihapus dari daftar master.`,
+          okText: "Ya, Hapus",
+          okClass: "danger",
+          onOk: () => {
+            categoryList = categoryList.filter(c => c.id !== delId);
+            saveCategories();
+            renderCategories();
+            toast(`Kategori "${cat.name}" telah dihapus.`);
+          }
+        });
+      }
+    });
+
+    $("#modalCancel")?.addEventListener("click", () => closeConfirm(false));
+    $("#modalOk")?.addEventListener("click", () => closeConfirm(true));
+
+    loadCategories();
+    renderCategories();
+    initSidebar("kategori");
+  </script>
+</body>
+</html>

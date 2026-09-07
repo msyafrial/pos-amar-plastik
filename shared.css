@@ -1,0 +1,114 @@
+/* ============================================================
+   Amar Plastik — shared.css
+   Gaya bersama: halaman umum, kartu, tabel, modal, toast.
+   ============================================================ */
+
+/* ---------- Halaman umum ---------- */
+.page-pad { max-width: 860px; }
+.page-pad.page-full,
+.page-full { max-width: 100%; width: 100%; }
+.page-title { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.page-sub { color: var(--muted); font-size: 13px; margin-bottom: 22px; }
+
+/* ---------- Modal konfirmasi ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 24, 34, .55);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  padding: 20px;
+}
+.modal-backdrop[hidden] { display: none; }
+
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  padding: 26px 24px 20px;
+  width: min(360px, 100%);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  animation: popIn .18s ease;
+}
+@keyframes popIn {
+  from { transform: scale(.94); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.modal-icon { font-size: 34px; margin-bottom: 8px; }
+.modal h3 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+.modal p { color: var(--muted); font-size: 13px; line-height: 1.5; margin-bottom: 18px; white-space: pre-line; }
+
+.modal-actions { display: flex; gap: 10px; }
+.modal-btn {
+  flex: 1;
+  height: 44px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 13.5px;
+  transition: transform .15s, opacity .15s;
+}
+.modal-btn:hover { transform: translateY(-1px); }
+.modal-btn.secondary { background: var(--bg); color: var(--ink); }
+.modal-btn.danger    { background: #e0342b; color: #fff; }
+.modal-btn.success   { background: var(--green); color: #fff; }
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translate(-50%, 20px);
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 13px 22px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s, transform .25s;
+  z-index: 50;
+  max-width: 90vw;
+}
+.toast.is-show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Kartu & tabel umum ---------- */
+.prod-table-wrap {
+  background: var(--surface);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+.prod-table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 560px; }
+.prod-table th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.prod-table td { padding: 11px 16px; border-bottom: 1px solid var(--line); }
+.prod-table tr:last-child td { border-bottom: 0; }
+.prod-table td:first-child { font-weight: 700; }
+.prod-table .td-num { font-variant-numeric: tabular-nums; }
+.prod-table .p-out { color: #e0342b; font-weight: 700; }
+.prod-table .p-low { color: #f2a30f; font-weight: 700; }
+.prod-table .p-ok { color: var(--green); font-weight: 700; }
+
+/* Status pill */
+.p-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.p-status.ok  { background: #e7f6ed; color: var(--green); }
+.p-status.low { background: #fdf3e0; color: #d68a00; }
+.p-status.out { background: #fdeaea; color: #e0342b; }
