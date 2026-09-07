@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laporan Keuntungan — Amar Plastik</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/shared.css" />
+</head>
+<body>
+  <div class="app app-single">
+    <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
+    <nav class="rail" id="sidebarRail" aria-label="Navigasi utama">
+      <!-- Floating Edge Toggle Pill (‹ / ›) on right border -->
+      <button class="rail-edge-toggle" id="railEdgeToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+        <svg class="edge-icon-collapse" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        <svg class="edge-icon-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <!-- Brand Logo Header -->
+      <a class="rail-brand" href="index.html" title="Amar Plastik — Beranda">
+        <div class="rail-logo">
+          <img src="assets/images/logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
+        </div>
+        <div class="rail-brand-text">
+          <strong class="rail-brand-name">AMAR PLASTIK</strong>
+          <small class="rail-brand-sub">Bring the quality</small>
+        </div>
+      </a>
+
+      <!-- Section: UTAMA -->
+      <div class="rail-section-label">UTAMA</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="index.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span class="rail-label">Dashboard</span>
+        </a>
+        <a class="rail-btn" href="kasir.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="rail-label">Kasir</span>
+        </a>
+        <a class="rail-btn" href="transaksi.html" data-page="transaksi" data-tooltip="Transaksi" title="Transaksi">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3"/><path d="M3.05 11a9 9 0 1 1 .5 4"/><path d="M3 5v6h6"/></svg>
+          <span class="rail-label">Transaksi</span>
+        </a>
+      </div>
+
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: KATALOG -->
+      <div class="rail-section-label">KATALOG</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <span class="rail-label">Produk</span>
+        </a>
+        <a class="rail-btn" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="14" rx="1.5"/><rect width="7" height="7" x="3" y="14" rx="1.5"/></svg>
+          <span class="rail-label">Kategori</span>
+        </a>
+      </div>
+
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: LAPORAN -->
+      <div class="rail-section-label">LAPORAN</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="laporan.html" data-page="laporan" data-tooltip="Penjualan" title="Laporan Penjualan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/><path d="M2 20h20"/></svg>
+          <span class="rail-label">Penjualan</span>
+        </a>
+        <a class="rail-btn is-active" href="profit.html" data-page="profit" data-tooltip="Keuntungan" title="Laporan Keuntungan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M15 9.5a2.5 2.5 0 0 0-2.5-2H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9.5a2.5 2.5 0 0 1-2.5-2"/></svg>
+          <span class="rail-label">Keuntungan</span>
+        </a>
+      </div>
+
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: SISTEM -->
+      <div class="rail-section-label">SISTEM</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="pengaturan.html" data-page="pengaturan" data-tooltip="Pengaturan" title="Pengaturan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+          <span class="rail-label">Pengaturan</span>
+        </a>
+      </div>
+
+      <div class="rail-spacer"></div>
+
+      <!-- Profile Footer Area -->
+      <div class="rail-profile">
+        <span class="rail-avatar" title="Lina Puspa Melinda">LM</span>
+        <div class="rail-profile-info">
+          <span class="rail-role">KASIR TOKO</span>
+          <strong class="rail-name">Lina Puspa Melinda</strong>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+    <!-- Konten Utama -->
+    <main class="main">
+      <div class="page-pad page-full">
+
+        <!-- Modern Header Section -->
+        <div class="rpt-header">
+          <div class="rpt-header-left">
+            <button class="topbar-toggle-btn" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="3"/><path d="M9 3v18"/></svg>
+            </button>
+            <div class="rpt-title-box">
+              <div class="rpt-title-row">
+                <span class="rpt-title-icon green" aria-hidden="true">
+                  <!-- Coin / Dollar circle icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M12 7v10"/>
+                    <path d="M15 9.5a2.5 2.5 0 0 0-2.5-2H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9.5a2.5 2.5 0 0 1-2.5-2"/>
+                  </svg>
+                </span>
+                <h1 class="rpt-title">Laporan Keuntungan</h1>
+              </div>
+              <p class="rpt-subtitle">Analisis profit dan margin</p>
+            </div>
+          </div>
+
+          <div class="rpt-header-actions">
+            <!-- Tombol Print -->
+            <button class="rpt-btn-print" id="btnProfitPrint" title="Cetak Laporan Keuntungan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"/>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                <rect x="6" y="14" width="12" height="8"/>
+              </svg>
+              <span>Print</span>
+            </button>
+
+            <!-- Tombol Filter -->
+            <button class="rpt-btn-filter" id="btnProfitFilterToggle" title="Buka / Tutup Panel Filter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+              </svg>
+              <span>Filter</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Kartu Ringkasan Keuntungan (Hero Stat Cards) -->
+        <div class="rpt-cards-grid">
+          <!-- Kartu 1: Total Profit (Hijau Emerald) -->
+          <div class="rpt-card card-profit">
+            <div class="rpt-card-header">
+              <span class="rpt-card-badge-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v12M15 9.5a3 3 0 0 0-3-2.5H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H9a3 3 0 0 1-3-2.5"/></svg>
+              </span>
+              <span>Total Profit</span>
+            </div>
+            <div class="rpt-card-value" id="profitTotal">Rp 192.800</div>
+            <div class="rpt-card-footer">Akumulasi bersih</div>
+            <div class="rpt-card-watermark">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="4" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="20"/></svg>
+            </div>
+          </div>
+
+          <!-- Kartu 2: Rata-rata Profit (Biru / Indigo) -->
+          <div class="rpt-card card-revenue">
+            <div class="rpt-card-header">
+              <span class="rpt-card-badge-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </span>
+              <span>Rata-rata Profit</span>
+            </div>
+            <div class="rpt-card-value" id="profitAvg">Rp 27.543</div>
+            <div class="rpt-card-footer" id="profitTrxCount">7 transaksi</div>
+            <div class="rpt-card-watermark">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+          </div>
+
+          <!-- Kartu 3: Margin Kotor (Orange / Amber) -->
+          <div class="rpt-card card-discount">
+            <div class="rpt-card-header">
+              <span class="rpt-card-badge-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><circle cx="9.5" cy="9.5" r=".5" fill="currentColor"/><circle cx="14.5" cy="14.5" r=".5" fill="currentColor"/></svg>
+              </span>
+              <span>Margin Kotor</span>
+            </div>
+            <div class="rpt-card-value" id="profitMargin">28.04%</div>
+            <div class="rpt-card-footer">Profit vs penjualan</div>
+            <div class="rpt-card-watermark">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+
+          <!-- Kartu 4: Transaksi Terbaik (Cyan / Teal) -->
+          <div class="rpt-card card-items">
+            <div class="rpt-card-header">
+              <span class="rpt-card-badge-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </span>
+              <span>Transaksi Terbaik</span>
+            </div>
+            <div class="rpt-card-value trx-code" id="profitBestTrx">TRX-O7CVEG5R</div>
+            <div class="rpt-card-footer" id="profitBestVal">Rp 58.000</div>
+            <div class="rpt-card-watermark">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Filter Keuntungan (Opsional / Toggleable) -->
+        <div class="rpt-filter-card" id="profitFilterCard" hidden>
+          <div class="rpt-filter-grid">
+            <div class="rpt-field">
+              <label class="rpt-field-label" for="pFilterStartDate">Tanggal Mulai</label>
+              <input type="text" class="rpt-input" id="pFilterStartDate" placeholder="dd/mm/yyyy" />
+            </div>
+            <div class="rpt-field">
+              <label class="rpt-field-label" for="pFilterEndDate">Tanggal Akhir</label>
+              <input type="text" class="rpt-input" id="pFilterEndDate" placeholder="mm/dd/yyyy" />
+            </div>
+            <div class="rpt-field">
+              <label class="rpt-field-label" for="pFilterInvoice">Invoice</label>
+              <input type="text" class="rpt-input" id="pFilterInvoice" placeholder="TRX-..." />
+            </div>
+            <div class="rpt-field">
+              <label class="rpt-field-label" for="pFilterCashier">Kasir</label>
+              <select class="rpt-select" id="pFilterCashier">
+                <option value="all">Semua kasir</option>
+                <option value="Admin">Admin</option>
+                <option value="kasir">kasir</option>
+                <option value="Lina Puspa Melinda">Lina Puspa Melinda</option>
+              </select>
+            </div>
+            <div class="rpt-field">
+              <label class="rpt-field-label" for="pFilterCustomer">Pelanggan</label>
+              <select class="rpt-select" id="pFilterCustomer">
+                <option value="all">Semua pelanggan</option>
+                <option value="budi">budi</option>
+                <option value="Andi Nugraha">Andi Nugraha</option>
+                <option value="Bunga Maharani">Bunga Maharani</option>
+                <option value="Cici Amelia">Cici Amelia</option>
+                <option value="Davin Pradipta">Davin Pradipta</option>
+                <option value="Fitri Lestari">Fitri Lestari</option>
+                <option value="Umum">Umum</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="rpt-filter-actions-row">
+            <button class="rpt-btn-reset" id="pBtnResetFilter" title="Reset filter ke awal" aria-label="Reset filter">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <button class="rpt-btn-apply" id="pBtnApplyFilter">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Terapkan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tabel Data Laporan Keuntungan -->
+        <div class="trx-table-card">
+          <div class="trx-table-responsive">
+            <table class="trx-table">
+              <thead>
+                <tr>
+                  <th style="width: 50px;">NO</th>
+                  <th style="width: 170px;">INVOICE</th>
+                  <th style="width: 210px;">TANGGAL</th>
+                  <th style="width: 120px;">KASIR</th>
+                  <th style="width: 160px;">PELANGGAN</th>
+                  <th style="width: 80px; text-align: center;">ITEM</th>
+                  <th style="width: 140px; text-align: right;">PENJUALAN</th>
+                  <th style="width: 140px; text-align: right;">PROFIT</th>
+                </tr>
+              </thead>
+              <tbody id="profitTableBody">
+                <!-- Data baris keuntungan di-render secara dinamis via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="trx-footer-note">Kasep_Code</div>
+
+          <!-- Total Profit Footer di sudut kanan bawah tabel -->
+          <div class="profit-table-footer">
+            <span class="profit-footer-label">Total Profit</span>
+            <strong class="profit-footer-val" id="profitFooterSum">Rp 192.800</strong>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/shared.js"></script>
+  <script>
+    // 7 Data Transaksi Default (persis dengan referensi UI Kasep_Code)
+    const DEFAULT_PROFIT_TRANSACTIONS = [
+      {
+        trx: "TRX-C3ZC9754T4",
+        date: "07-Apr-2026 00:42:51",
+        cashier: "Admin",
+        customer: "budi",
+        itemCount: 5,
+        total: 117000,
+        profit: 8800
+      },
+      {
+        trx: "TRX-UI3TFGPG",
+        date: "22-Feb-2026 02:05:20",
+        cashier: "kasir",
+        customer: "Andi Nugraha",
+        itemCount: 6,
+        total: 50000,
+        profit: 18000
+      },
+      {
+        trx: "TRX-YHCT9PIG",
+        date: "22-Feb-2026 02:05:20",
+        cashier: "kasir",
+        customer: "Bunga Maharani",
+        itemCount: 7,
+        total: 79000,
+        profit: 24000
+      },
+      {
+        trx: "TRX-ZOVJRCBT",
+        date: "22-Feb-2026 02:05:20",
+        cashier: "kasir",
+        customer: "Cici Amelia",
+        itemCount: 5,
+        total: 148000,
+        profit: 50000
+      },
+      {
+        trx: "TRX-W4LWB0AW",
+        date: "22-Feb-2026 02:05:20",
+        cashier: "kasir",
+        customer: "Davin Pradipta",
+        itemCount: 9,
+        total: 77500,
+        profit: 25000
+      },
+      {
+        trx: "TRX-O7CVEG5R",
+        date: "22-Feb-2026 02:05:20",
+        cashier: "kasir",
+        customer: "Fitri Lestari",
+        itemCount: 6,
+        total: 189000,
+        profit: 58000
+      },
+      {
+        trx: "TRX-PFJMF8NL",
+        date: "22-Feb-2026 02:05:20",
+        cashier: "kasir",
+        customer: "-",
+        itemCount: 3,
+        total: 27000,
+        profit: 9000
+      }
+    ];
+
+    function getAllProfitTransactions() {
+      const history = loadHistory();
+      if (!history || history.length === 0) {
+        return DEFAULT_PROFIT_TRANSACTIONS;
+      }
+
+      const formattedReal = history.map((t, idx) => {
+        const total = t.totalNum || 0;
+        const profit = t.profit || Math.round(total * 0.22);
+        const customer = t.customer || (t.customerName || "-");
+        const cashier = t.cashier || "kasir";
+        
+        let dateFormatted = t.time || "";
+        if (dateFormatted.includes("/")) {
+          const [dPart, tPart] = dateFormatted.split(" ");
+          if (dPart) {
+            const [d, m, y] = dPart.split("/");
+            const months = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+            const mName = months[parseInt(m, 10) - 1] || m;
+            dateFormatted = `${d.padStart(2,"0")}-${mName}-${y} ${tPart ? tPart + ":00" : "00:00:00"}`;
+          }
+        }
+
+        return {
+          trx: t.trx || `TRX-TRX${idx+100}`,
+          date: dateFormatted || "07-Apr-2026 00:42:51",
+          cashier: cashier,
+          customer: customer,
+          itemCount: t.itemCount || (t.items ? t.items.reduce((s, i) => s + i.qty, 0) : 1),
+          total: total,
+          profit: profit
+        };
+      });
+
+      return [...formattedReal, ...DEFAULT_PROFIT_TRANSACTIONS];
+    }
+
+    function renderProfitView() {
+      const allData = getAllProfitTransactions();
+
+      const invoiceVal = $("#pFilterInvoice")?.value.trim().toLowerCase() || "";
+      const cashierVal = $("#pFilterCashier")?.value || "all";
+      const customerVal = $("#pFilterCustomer")?.value || "all";
+
+      const filtered = allData.filter(t => {
+        if (invoiceVal && !t.trx.toLowerCase().includes(invoiceVal)) return false;
+        if (cashierVal !== "all" && t.cashier.toLowerCase() !== cashierVal.toLowerCase()) return false;
+        if (customerVal !== "all" && t.customer.toLowerCase() !== customerVal.toLowerCase()) return false;
+        return true;
+      });
+
+      // Kalkulasi Metrik
+      const totalSales = filtered.reduce((s, t) => s + (t.total || 0), 0);
+      const totalProfit = filtered.reduce((s, t) => s + (t.profit || 0), 0);
+      const n = filtered.length;
+      const avgProfit = n > 0 ? Math.round(totalProfit / n) : 0;
+      const marginKotor = totalSales > 0 ? ((totalProfit / totalSales) * 100).toFixed(2) : "0.00";
+
+      // Cari transaksi dengan profit tertinggi
+      let bestTrx = { trx: "-", profit: 0 };
+      filtered.forEach(t => {
+        if (t.profit > bestTrx.profit) bestTrx = t;
+      });
+
+      // Update 4 Kartu Ringkasan
+      $("#profitTotal").textContent = rp(totalProfit);
+      $("#profitAvg").textContent = rp(avgProfit);
+      $("#profitTrxCount").textContent = `${n} transaksi`;
+      $("#profitMargin").textContent = `${marginKotor}%`;
+      $("#profitBestTrx").textContent = bestTrx.trx;
+      $("#profitBestVal").textContent = rp(bestTrx.profit);
+
+      // Update Footer Tabel
+      $("#profitFooterSum").textContent = rp(totalProfit);
+
+      // Render Baris Tabel
+      const tbody = $("#profitTableBody");
+      if (!tbody) return;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="8" class="trx-empty-state">
+              Tidak ada data transaksi keuntungan yang cocok dengan filter.
+            </td>
+          </tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((t, idx) => `
+        <tr>
+          <td class="trx-col-no">${idx + 1}</td>
+          <td class="trx-col-invoice">${t.trx}</td>
+          <td class="trx-col-date">${t.date}</td>
+          <td class="trx-col-cashier">${t.cashier}</td>
+          <td class="trx-col-customer">${t.customer}</td>
+          <td style="text-align: center;"><span class="trx-badge-item">${t.itemCount}</span></td>
+          <td class="trx-col-total">${rp(t.total)}</td>
+          <td class="trx-col-profit">${rp(t.profit)}</td>
+        </tr>
+      `).join("");
+    }
+
+    // Toggle Filter Card
+    const filterBtn = $("#btnProfitFilterToggle");
+    const filterCard = $("#profitFilterCard");
+    if (filterBtn && filterCard) {
+      filterBtn.addEventListener("click", () => {
+        filterCard.hidden = !filterCard.hidden;
+      });
+    }
+
+    $("#pBtnApplyFilter")?.addEventListener("click", () => {
+      renderProfitView();
+      toast("Filter keuntungan diterapkan");
+    });
+
+    $("#pBtnResetFilter")?.addEventListener("click", () => {
+      if ($("#pFilterInvoice")) $("#pFilterInvoice").value = "";
+      if ($("#pFilterCashier")) $("#pFilterCashier").value = "all";
+      if ($("#pFilterCustomer")) $("#pFilterCustomer").value = "all";
+      renderProfitView();
+      toast("Filter direset ke semula");
+    });
+
+    $("#btnProfitPrint")?.addEventListener("click", () => {
+      window.print();
+    });
+
+    renderProfitView();
+    initSidebar("profit");
+  </script>
+</body>
+</html>

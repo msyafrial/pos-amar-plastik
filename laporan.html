@@ -1,32 +1,39 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laporan Penjualan — Amar Plastik</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="shared.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/shared.css" />
 </head>
+
 <body>
   <div class="app app-single">
-    <!-- Rail navigasi -->
-        <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
+    <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
     <nav class="rail" id="sidebarRail" aria-label="Navigasi utama">
       <!-- Floating Edge Toggle Pill (‹ / ›) on right border -->
-      <button class="rail-edge-toggle" id="railEdgeToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
-        <svg class="edge-icon-collapse" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-        <svg class="edge-icon-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      <button class="rail-edge-toggle" id="railEdgeToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)"
+        title="Buka / Tutup sidebar (Ctrl+B)">
+        <svg class="edge-icon-collapse" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <svg class="edge-icon-expand" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
       </button>
-
 
       <!-- Brand Logo Header -->
       <a class="rail-brand" href="index.html" title="Amar Plastik — Beranda">
         <div class="rail-logo">
-          <img src="logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
+          <img src="assets/images/logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
         </div>
         <div class="rail-brand-text">
           <strong class="rail-brand-name">AMAR PLASTIK</strong>
@@ -34,40 +41,95 @@
         </div>
       </a>
 
-      <!-- Section: MENU -->
-      <div class="rail-section-label">MENU</div>
+      <!-- Section: UTAMA -->
+      <div class="rail-section-label">UTAMA</div>
       <div class="rail-nav">
-        <a class="rail-btn" href="dashboard.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+        <a class="rail-btn" href="index.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect width="7" height="9" x="3" y="3" rx="1" />
+            <rect width="7" height="5" x="14" y="3" rx="1" />
+            <rect width="7" height="9" x="14" y="12" rx="1" />
+            <rect width="7" height="5" x="3" y="16" rx="1" />
+          </svg>
           <span class="rail-label">Dashboard</span>
         </a>
-        <a class="rail-btn" href="index.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <a class="rail-btn" href="kasir.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
           <span class="rail-label">Kasir</span>
         </a>
         <a class="rail-btn" href="transaksi.html" data-page="transaksi" data-tooltip="Transaksi" title="Transaksi">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12l1 6H5l1-6zM4 8h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8zm8 4v6m-3-3h6"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 8v4l3 3" />
+            <path d="M3.05 11a9 9 0 1 1 .5 4" />
+            <path d="M3 5v6h6" />
+          </svg>
           <span class="rail-label">Transaksi</span>
-        </a>
-        <a class="rail-btn" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 5 5 2.7V15L12 17.7 7 15V9.7L12 7z"/></svg>
-          <span class="rail-label">Produk</span>
-        </a>
-        <a class="rail-btn" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
-          <span class="rail-label">Kategori</span>
-        </a>
-        <a class="rail-btn is-active" href="laporan.html" data-page="laporan" data-tooltip="Laporan" title="Laporan">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7"/><path d="M2 20h20"/></svg>
-          <span class="rail-label">Laporan</span>
         </a>
       </div>
 
-      <!-- Section: LAINNYA -->
-      <div class="rail-section-label" style="margin-top: 10px;">LAINNYA</div>
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: KATALOG -->
+      <div class="rail-section-label">KATALOG</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+            <line x1="12" y1="22.08" x2="12" y2="12" />
+          </svg>
+          <span class="rail-label">Produk</span>
+        </a>
+        <a class="rail-btn" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect width="7" height="7" x="3" y="3" rx="1.5" />
+            <rect width="7" height="7" x="14" y="3" rx="1.5" />
+            <rect width="7" height="7" x="14" y="14" rx="1.5" />
+            <rect width="7" height="7" x="3" y="14" rx="1.5" />
+          </svg>
+          <span class="rail-label">Kategori</span>
+        </a>
+      </div>
+
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: LAPORAN -->
+      <div class="rail-section-label">LAPORAN</div>
+      <div class="rail-nav">
+        <a class="rail-btn is-active" href="laporan.html" data-page="laporan" data-tooltip="Penjualan"
+          title="Laporan Penjualan">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 20V10M12 20V4M6 20v-6" />
+            <path d="M2 20h20" />
+          </svg>
+          <span class="rail-label">Penjualan</span>
+        </a>
+        <a class="rail-btn" href="profit.html" data-page="profit" data-tooltip="Keuntungan" title="Laporan Keuntungan">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v10" />
+            <path d="M15 9.5a2.5 2.5 0 0 0-2.5-2H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9.5a2.5 2.5 0 0 1-2.5-2" />
+          </svg>
+          <span class="rail-label">Keuntungan</span>
+        </a>
+      </div>
+
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: SISTEM -->
+      <div class="rail-section-label">SISTEM</div>
       <div class="rail-nav">
         <a class="rail-btn" href="pengaturan.html" data-page="pengaturan" data-tooltip="Pengaturan" title="Pengaturan">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0 1.55 1z" />
+          </svg>
           <span class="rail-label">Pengaturan</span>
         </a>
       </div>
@@ -85,61 +147,1318 @@
     </nav>
     <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
 
-    <!-- Konten -->
+    <!-- Konten Utama -->
     <main class="main">
       <div class="page-pad page-full">
-        <div class="page-header-row">
-          <button class="topbar-toggle-btn" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="3"/><path d="M9 3v18"/></svg>
-          </button>
-          <div>
-            <h1 class="page-title">Laporan Penjualan</h1>
-            <p class="page-sub">Ringkasan penjualan berdasarkan transaksi tersimpan pada sesi ini.</p>
+        <!-- Modern 2026 Header Section: Unified Title + Quick Controls -->
+        <div class="rpt-header">
+          <div class="rpt-header-left">
+            <button class="topbar-toggle-btn" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)"
+              title="Buka / Tutup sidebar (Ctrl+B)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="3" rx="3" />
+                <path d="M9 3v18" />
+              </svg>
+            </button>
+            <div class="rpt-title-box">
+              <div class="rpt-title-row">
+                <span class="rpt-title-icon" aria-hidden="true">
+                  <!-- Analytics Pulse Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                    <polyline points="16 7 22 7 22 13" />
+                  </svg>
+                </span>
+                <h1 class="rpt-title">Laporan Penjualan</h1>
+                <span class="rpt-live-badge">
+                  <span class="pulse-dot"></span>
+                  <span>Live Analytics</span>
+                </span>
+              </div>
+              <p class="rpt-subtitle">Performa penjualan produk, margin keuntungan, dan audit log transaksi kasir</p>
+            </div>
+          </div>
+
+          <div class="rpt-header-controls">
+            <!-- Filter Toko Dropdown Capsule -->
+            <div class="rpt-top-ctrl-box">
+              <label class="rpt-top-label" for="topStoreSelect">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Toko:</span>
+              </label>
+              <select class="rpt-top-select" id="topStoreSelect" aria-label="Pilih Toko">
+                <option value="all">Semua Toko</option>
+                <option value="pusat">Amar Plastik - Pusat</option>
+                <option value="cabang2">Amar Plastik - Cabang 2</option>
+                <option value="cabang3">Amar Plastik - Cabang 3</option>
+              </select>
+            </div>
+
+            <!-- Filter Periode (Bulanan / Mingguan) Capsule -->
+            <div class="rpt-period-group">
+              <div class="rpt-period-type-pills" role="tablist" aria-label="Pilih Tipe Periode">
+                <button type="button" class="rpt-type-pill is-active" id="btnTypeMonthly" data-type="monthly">Bulanan</button>
+                <button type="button" class="rpt-type-pill" id="btnTypeWeekly" data-type="weekly">Mingguan</button>
+              </div>
+              <select class="rpt-top-select" id="topPeriodSelect" aria-label="Pilih Rentang Periode">
+                <!-- Opsi diisi dinamis via JavaScript -->
+              </select>
+            </div>
           </div>
         </div>
-        <div class="report-cards" id="reportCards"></div>
-        <div class="prod-table-wrap">
-          <table class="prod-table">
-            <thead>
-              <tr><th>No. Transaksi</th><th>Waktu</th><th>Item</th><th>Pembayaran</th><th>Total</th></tr>
-            </thead>
-            <tbody id="reportRows"></tbody>
-          </table>
+
+        <!-- 2026 AI Smart Decision & Executive Summary Bar -->
+        <div class="rpt-ai-insight-bar" id="rptAiInsightBar">
+          <div class="rpt-ai-insight-left">
+            <span class="rpt-ai-sparkle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+              </svg>
+            </span>
+            <div class="rpt-ai-insight-text">
+              <strong class="rpt-ai-tag">RINGKASAN EKSEKUTIF:</strong>
+              <span id="rptAiInsightText">Memuat analisis performa penjualan...</span>
+            </div>
+          </div>
+          <div class="rpt-ai-insight-right">
+            <span class="rpt-ai-health-pill" id="rptAiHealthPill">
+              <span class="rpt-pulse-green"></span>
+              <span id="rptAiHealthLabel">Margin Sehat 27%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 4 BENTO ANALYTICS CARDS (2026 Dribbble/Pinterest Clean SaaS Bento Architecture) -->
+        <div class="rpt-bento-grid" aria-label="Ringkasan Kinerja Penjualan">
+          <!-- Card 1: Master Financial Hero (Total Omzet Penjualan) -->
+          <div class="rpt-bento-card is-primary">
+            <div class="rpt-bento-head">
+              <div class="rpt-bento-label-wrap">
+                <span class="rpt-bento-label">TOTAL OMZET PENJUALAN</span>
+                <span class="rpt-bento-tag indigo">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                    <polyline points="16 7 22 7 22 13" />
+                  </svg>
+                  <span>Gross Realtime</span>
+                </span>
+              </div>
+              <div class="rpt-bento-icon indigo">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="5" width="20" height="14" rx="2" />
+                  <line x1="2" y1="10" x2="22" y2="10" />
+                </svg>
+              </div>
+            </div>
+            <div class="rpt-bento-body">
+              <div class="rpt-bento-val-row">
+                <div class="rpt-bento-value" id="rptNetRevenue">Rp 0</div>
+                <!-- Mini Trend Sparkline Indigo -->
+                <svg class="rpt-bento-sparkline" viewBox="0 0 54 22" fill="none" aria-hidden="true">
+                  <path d="M2 18 C12 16, 18 8, 28 11 C38 14, 44 4, 52 3" stroke="#4f46e5" stroke-width="2.2" stroke-linecap="round" />
+                  <path d="M2 18 C12 16, 18 8, 28 11 C38 14, 44 4, 52 3 L52 22 L2 22 Z" fill="url(#gradSparkIndigo)" opacity="0.15" />
+                  <defs>
+                    <linearGradient id="gradSparkIndigo" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#4f46e5"/>
+                      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="rpt-bento-sub">
+                <span class="rpt-bento-sub-text">Akumulasi bruto penjualan terfilter</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Total Keuntungan (Laba Bersih & Estimasi Margin) -->
+          <div class="rpt-bento-card is-profit">
+            <div class="rpt-bento-head">
+              <div class="rpt-bento-label-wrap">
+                <span class="rpt-bento-label">TOTAL KEUNTUNGAN</span>
+                <span class="rpt-bento-tag emerald" id="rptProfitMargin">Margin laba: 0.0%</span>
+              </div>
+              <div class="rpt-bento-icon emerald">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v10" />
+                  <path d="M15 9.5a2.5 2.5 0 0 0-2.5-2H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9.5a2.5 2.5 0 0 1-2.5-2" />
+                </svg>
+              </div>
+            </div>
+            <div class="rpt-bento-body">
+              <div class="rpt-bento-val-row">
+                <div class="rpt-bento-value text-emerald" id="rptNetProfit">+Rp 0</div>
+                <!-- Mini Trend Sparkline Emerald -->
+                <svg class="rpt-bento-sparkline" viewBox="0 0 54 22" fill="none" aria-hidden="true">
+                  <path d="M2 19 C10 17, 20 12, 30 7 C40 3, 46 6, 52 2" stroke="#059669" stroke-width="2.2" stroke-linecap="round" />
+                  <path d="M2 19 C10 17, 20 12, 30 7 C40 3, 46 6, 52 2 L52 22 L2 22 Z" fill="url(#gradSparkEmerald)" opacity="0.15" />
+                  <defs>
+                    <linearGradient id="gradSparkEmerald" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#059669"/>
+                      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="rpt-bento-sub">
+                <span class="rpt-bento-sub-text">Estimasi margin laba bersih toko</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Volume Penjualan (Produk Terjual & Kontributor SKU) -->
+          <div class="rpt-bento-card is-volume">
+            <div class="rpt-bento-head">
+              <div class="rpt-bento-label-wrap">
+                <span class="rpt-bento-label">PRODUK TERJUAL</span>
+                <span class="rpt-bento-tag blue" id="rptSkuCount">0 SKU berkontribusi</span>
+              </div>
+              <div class="rpt-bento-icon blue">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                </svg>
+              </div>
+            </div>
+            <div class="rpt-bento-body">
+              <div class="rpt-bento-val-row">
+                <div class="rpt-bento-value" id="rptSoldItems">0 pcs</div>
+                <!-- Mini Sparkline Sky Blue -->
+                <svg class="rpt-bento-sparkline" viewBox="0 0 54 22" fill="none" aria-hidden="true">
+                  <path d="M2 16 C12 18, 22 10, 32 12 C42 14, 46 6, 52 4" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" />
+                  <path d="M2 16 C12 18, 22 10, 32 12 C42 14, 46 6, 52 4 L52 22 L2 22 Z" fill="url(#gradSparkBlue)" opacity="0.15" />
+                  <defs>
+                    <linearGradient id="gradSparkBlue" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#0284c7"/>
+                      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="rpt-bento-sub">
+                <span class="rpt-bento-sub-text">Total kuantitas unit produk yang laku</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Top Performer Showcase (Produk Terlaris) -->
+          <div class="rpt-bento-card is-top-performer">
+            <div class="rpt-bento-head">
+              <div class="rpt-bento-label-wrap">
+                <span class="rpt-bento-label">PRODUK TERLARIS</span>
+                <span class="rpt-bento-tag amber">★ Top Revenue</span>
+              </div>
+              <div class="rpt-bento-icon amber">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                  <path d="M4 22h16" />
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="rpt-bento-body">
+              <div class="rpt-bento-val-row">
+                <div class="rpt-bento-value text-amber rpt-top-name" id="rptTopProduct">-</div>
+              </div>
+              <div class="rpt-bento-sub">
+                <span class="rpt-bento-sub-text" id="rptTopProductSub">Belum ada transaksi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segmented Tab Navigation for Laporan Penjualan -->
+        <div class="rpt-tabs-bar" role="tablist" aria-label="Navigasi Tampilan Laporan Penjualan">
+          <button class="rpt-tab-btn is-active" id="tabBtnSummary" role="tab" aria-selected="true" data-tab="summary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 20V10M12 20V4M6 20v-6" />
+              <path d="M2 20h20" />
+            </svg>
+            <span>Rekap per Produk</span>
+            <span class="rpt-tab-pill" id="rptTabSkuCount">8 SKU</span>
+          </button>
+          <button class="rpt-tab-btn" id="tabBtnItems" role="tab" aria-selected="false" data-tab="items">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            <span>Log Penjualan Item</span>
+            <span class="rpt-tab-pill" id="rptTabItemCount">0 Baris</span>
+          </button>
+        </div>
+
+        <!-- ================= PANEL 1: REKAP PER PRODUK ================= -->
+        <div class="rpt-view-panel" id="panelSummary">
+          <!-- Filter Dropdown di Atas Tabel Rekap -->
+          <div class="rpt-table-filters">
+            <div class="rpt-filter-item">
+              <label class="rpt-filter-label" for="filterCategory">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+                <span>Kategori:</span>
+              </label>
+              <select class="rpt-filter-select" id="filterCategory">
+                <option value="all">Semua Kategori</option>
+                <option value="kue">Bahan Kue</option>
+                <option value="plastik">Plastik</option>
+                <option value="kemasan">Kemasan</option>
+              </select>
+            </div>
+
+            <div class="rpt-filter-item">
+              <label class="rpt-filter-label" for="filterSort">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M6 12h12m-9 6h6"/></svg>
+                <span>Urutkan:</span>
+              </label>
+              <select class="rpt-filter-select" id="filterSort">
+                <option value="revenue_desc">Omzet Tertinggi</option>
+                <option value="profit_desc">Profit Tertinggi</option>
+                <option value="profit_share_desc">Kontribusi Profit (%)</option>
+                <option value="daily_desc">Rata² Penjualan/Hari</option>
+                <option value="qty_desc">Terjual Terbanyak</option>
+                <option value="name_asc">Nama Produk (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Tabel Data Laporan Penjualan per Produk (Sales by Item) -->
+          <div class="trx-table-card">
+            <!-- Mobile UX Helper: Horizontal Scroll Hint Pill -->
+            <div class="rpt-mobile-scroll-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+              <span>Geser ke samping untuk rincian profit & kontribusi</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+            <div class="trx-table-responsive">
+              <table class="trx-table">
+                <thead>
+                  <tr>
+                    <th style="width: 45px;">NO</th>
+                    <th style="width: 105px;">SKU</th>
+                    <th style="width: 210px;">PRODUK</th>
+                    <th style="width: 100px;">KATEGORI</th>
+                    <th style="width: 80px; text-align: center;">TERJUAL</th>
+                    <th style="width: 110px; text-align: center;">RATA² / HARI</th>
+                    <th style="width: 125px; text-align: right;">TOTAL OMZET</th>
+                    <th style="width: 125px; text-align: right;">TOTAL PROFIT</th>
+                    <th style="width: 125px;">KONTRIBUSI OMZET</th>
+                    <th style="width: 125px;">KONTRIBUSI PROFIT</th>
+                  </tr>
+                </thead>
+                <tbody id="rptTableBody">
+                  <!-- Baris data di-render secara dinamis via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+            <!-- Ringkasan Footer Tabel -->
+            <div class="rpt-table-footer">
+              <div>
+                <span>Total Unit Terjual: </span>
+                <strong id="rptFooterQty">0 Pcs</strong>
+                <span style="margin: 0 8px; color: #cbd5e1;">|</span>
+                <span>Rata² Toko: </span>
+                <strong id="rptFooterDaily" style="color: #0f172a; font-size: 13.5px;">0 pcs/hari</strong>
+                <span style="margin: 0 8px; color: #cbd5e1;">|</span>
+                <span>Total Profit: </span>
+                <strong id="rptFooterProfit" style="color: #059669; font-size: 15px;">+Rp 0</strong>
+              </div>
+              <div>
+                <span>Akumulasi Omzet Penjualan: </span>
+                <strong id="rptFooterTotal" style="color: #4f46e5; font-size: 16px;">Rp 0</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= PANEL 2: LOG PENJUALAN TIAP ITEM ================= -->
+        <div class="rpt-view-panel" id="panelItems" hidden>
+          <!-- Filter Dropdown di Atas Tabel Log Item -->
+          <div class="rpt-table-filters">
+            <div class="rpt-filter-item">
+              <label class="rpt-filter-label" for="filterItemCategory">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+                <span>Kategori:</span>
+              </label>
+              <select class="rpt-filter-select" id="filterItemCategory">
+                <option value="all">Semua Kategori</option>
+                <option value="kue">Bahan Kue</option>
+                <option value="plastik">Plastik</option>
+                <option value="kemasan">Kemasan</option>
+              </select>
+            </div>
+
+            <div class="rpt-filter-item">
+              <label class="rpt-filter-label" for="filterItemPayment">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                <span>Metode Bayar:</span>
+              </label>
+              <select class="rpt-filter-select" id="filterItemPayment">
+                <option value="all">Semua Metode</option>
+                <option value="Cash">💵 Tunai (Cash)</option>
+                <option value="QRIS">📱 QRIS</option>
+                <option value="Debit">💳 Kartu Debit</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Tabel Data Log Penjualan Item Granular -->
+          <div class="trx-table-card">
+            <!-- Mobile UX Helper: Horizontal Scroll Hint Pill -->
+            <div class="rpt-mobile-scroll-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+              <span>Geser ke samping untuk rincian harga beli, toko & kasir</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+            <div class="trx-table-responsive">
+              <table class="trx-table rpt-table-log-items">
+                <thead>
+                  <tr>
+                    <th style="width: 40px; padding: 14px 10px;">NO</th>
+                    <th style="width: 125px; padding: 14px 10px;">WAKTU</th>
+                    <th style="width: 110px; padding: 14px 10px;">INVOICE</th>
+                    <th style="width: 190px; padding: 14px 10px;">PRODUK</th>
+                    <th style="width: 90px; padding: 14px 10px; text-align: right;">HARGA BELI</th>
+                    <th style="width: 90px; padding: 14px 10px; text-align: right;">HARGA JUAL</th>
+                    <th style="width: 55px; padding: 14px 8px; text-align: center;">QTY</th>
+                    <th style="width: 100px; padding: 14px 10px; text-align: right;">SUBTOTAL</th>
+                    <th style="width: 95px; padding: 14px 10px; text-align: right;">PROFIT</th>
+                    <th style="width: 85px; padding: 14px 8px; text-align: center;">TOKO</th>
+                    <th style="width: 80px; padding: 14px 8px; text-align: center;">KASIR</th>
+                    <th style="width: 80px; padding: 14px 8px; text-align: center;">METODE</th>
+                  </tr>
+                </thead>
+                <tbody id="rptItemTableBody">
+                  <!-- Baris log item di-render secara dinamis via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+            <!-- Ringkasan Footer Tabel Log Item -->
+            <div class="rpt-table-footer">
+              <div>
+                <span>Total Baris: </span>
+                <strong id="rptItemFooterRows">0 Baris</strong>
+                <span style="margin: 0 8px; color: #cbd5e1;">|</span>
+                <span>Total Fisik: </span>
+                <strong id="rptItemFooterQty">0 Pcs</strong>
+                <span style="margin: 0 8px; color: #cbd5e1;">|</span>
+                <span>Total Modal (Beli): </span>
+                <strong id="rptItemFooterCost" style="color: #64748b; font-size: 13.5px;">Rp 0</strong>
+                <span style="margin: 0 8px; color: #cbd5e1;">|</span>
+                <span>Total Profit: </span>
+                <strong id="rptItemFooterProfit" style="color: #059669; font-size: 15px;">+Rp 0</strong>
+              </div>
+              <div>
+                <span>Akumulasi Nilai Item: </span>
+                <strong id="rptItemFooterTotal" style="color: #4f46e5; font-size: 16px;">Rp 0</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
   </div>
 
-  <script src="shared.js"></script>
-  <script>
-    function renderReport() {
-      const history = loadHistory();
-      const n = history.length;
-      const omzet = history.reduce((s, t) => s + t.totalNum, 0);
-      const items = history.reduce((s, t) => s + t.itemCount, 0);
-      const cards = [
-        { label: "Jumlah Transaksi", value: String(n), cls: "" },
-        { label: "Total Omzet", value: rp(omzet), cls: "green" },
-        { label: "Item Terjual", value: String(items), cls: "" },
-      ];
-      $("#reportCards").innerHTML = cards.map(c =>
-        `<div class="report-card"><div class="rc-label">${c.label}</div><div class="rc-value ${c.cls}">${c.value}</div></div>`
-      ).join("");
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-      $("#reportRows").innerHTML = n
-        ? history.map(t => `
-          <tr>
-            <td>${t.trx}</td>
-            <td>${t.time}</td>
-            <td class="td-num">${t.itemCount} item</td>
-            <td>${t.payment}</td>
-            <td class="td-num">${rp(t.totalNum)}</td>
-          </tr>`).join("")
-        : `<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:34px">Belum ada transaksi pada sesi ini.<br>Selesaikan transaksi di halaman Kasir untuk melihat laporan.</td></tr>`;
+  <script src="assets/js/shared.js"></script>
+  <script>
+    // State tab aktif ('summary' atau 'items')
+    let activeTab = "summary";
+    let periodType = "monthly"; // 'monthly' atau 'weekly'
+
+    // Opsi Periode Bulanan & Mingguan
+    const MONTH_OPTIONS = [
+      { id: "2026-09", label: "September 2026 (Bulan Ini)" },
+      { id: "2026-08", label: "Agustus 2026" },
+      { id: "2026-07", label: "Juli 2026" },
+      { id: "2026-06", label: "Juni 2026" },
+      { id: "2026-05", label: "Mei 2026" },
+      { id: "2026-04", label: "April 2026" },
+      { id: "2026-03", label: "Maret 2026" },
+      { id: "2026-02", label: "Februari 2026" },
+      { id: "2026-01", label: "Januari 2026" }
+    ];
+
+    const WEEK_OPTIONS = [
+      { id: "w_this", label: "07/09/2026 - Sekarang (Minggu Ini)" },
+      { id: "w_prev1", label: "31/08/2026 - 06/09/2026" },
+      { id: "w_prev2", label: "24/08/2026 - 30/08/2026" },
+      { id: "w_prev3", label: "17/08/2026 - 23/08/2026" },
+      { id: "w_prev4", label: "10/08/2026 - 16/08/2026" },
+      { id: "w_prev5", label: "03/08/2026 - 09/08/2026" }
+    ];
+
+    // Transaksi terkalibrasi realistis untuk Log Penjualan Item lintas toko & rentang waktu 2026
+    const DEFAULT_TRANSACTIONS_LOG = [
+      {
+        trx: "TRX-20260907-8821",
+        time: "07/09/2026 14:35",
+        storeId: "pusat",
+        store: "Amar Plastik - Pusat",
+        cashier: "Lina Puspa Melinda",
+        customer: "Toko Kue Berkah",
+        payment: "QRIS",
+        items: [
+          { name: "Tepung Terigu 1kg", qty: 6, price: 12500 },
+          { name: "Mentega 250gr", qty: 4, price: 18900 },
+          { name: "Mica Bento Kotak", qty: 8, price: 12000 }
+        ]
+      },
+      {
+        trx: "TRX-20260907-3102",
+        time: "07/09/2026 10:18",
+        storeId: "cabang2",
+        store: "Amar Plastik - Cabang 2",
+        cashier: "Ahmad Rizki",
+        customer: "Dapur Bu Siti",
+        payment: "Cash",
+        items: [
+          { name: "Gula Pasir 1kg", qty: 5, price: 15500 },
+          { name: "Plastik Kresek L", qty: 4, price: 8500 }
+        ]
+      },
+      {
+        trx: "TRX-20260907-1044",
+        time: "07/09/2026 08:51",
+        storeId: "cabang3",
+        store: "Amar Plastik - Cabang 3",
+        cashier: "Siti Rahma",
+        customer: "Budi Santoso",
+        payment: "Debit",
+        items: [
+          { name: "Coklat Bubuk 500gr", qty: 3, price: 26500 },
+          { name: "Cup Puding Isi 50", qty: 3, price: 21500 }
+        ]
+      },
+      {
+        trx: "TRX-20260905-9921",
+        time: "05/09/2026 16:40",
+        storeId: "pusat",
+        store: "Amar Plastik - Pusat",
+        cashier: "Lina Puspa Melinda",
+        customer: "Ibu Ratna",
+        payment: "Cash",
+        items: [
+          { name: "Tepung Terigu 1kg", qty: 8, price: 12500 },
+          { name: "Gula Pasir 1kg", qty: 6, price: 15500 },
+          { name: "Mentega 250gr", qty: 5, price: 18900 }
+        ]
+      },
+      {
+        trx: "TRX-20260903-5120",
+        time: "03/09/2026 11:25",
+        storeId: "cabang2",
+        store: "Amar Plastik - Cabang 2",
+        cashier: "Ahmad Rizki",
+        customer: "Warung Bu Devi",
+        payment: "QRIS",
+        items: [
+          { name: "Mica Bento Kotak", qty: 6, price: 12000 },
+          { name: "Cup Puding Isi 50", qty: 4, price: 21500 },
+          { name: "Plastik Kresek L", qty: 5, price: 8500 }
+        ]
+      },
+      {
+        trx: "TRX-20260901-4411",
+        time: "01/09/2026 13:10",
+        storeId: "cabang3",
+        store: "Amar Plastik - Cabang 3",
+        cashier: "Siti Rahma",
+        customer: "Pak Bambang",
+        payment: "Cash",
+        items: [
+          { name: "Tepung Terigu 1kg", qty: 5, price: 12500 },
+          { name: "Coklat Bubuk 500gr", qty: 2, price: 26500 },
+          { name: "Plastik Vacuum 1kg", qty: 2, price: 27500 }
+        ]
+      },
+      {
+        trx: "TRX-20260831-7781",
+        time: "31/08/2026 15:20",
+        storeId: "pusat",
+        store: "Amar Plastik - Pusat",
+        cashier: "Lina Puspa Melinda",
+        customer: "Catering Barokah",
+        payment: "QRIS",
+        items: [
+          { name: "Mica Bento Kotak", qty: 10, price: 12000 },
+          { name: "Gula Pasir 1kg", qty: 8, price: 15500 },
+          { name: "Mentega 250gr", qty: 4, price: 18900 }
+        ]
+      },
+      {
+        trx: "TRX-20260825-3310",
+        time: "25/08/2026 14:15",
+        storeId: "cabang2",
+        store: "Amar Plastik - Cabang 2",
+        cashier: "Ahmad Rizki",
+        customer: "Toko Manis",
+        payment: "Debit",
+        items: [
+          { name: "Tepung Terigu 1kg", qty: 7, price: 12500 },
+          { name: "Gula Pasir 1kg", qty: 7, price: 15500 }
+        ]
+      },
+      {
+        trx: "TRX-20260818-6622",
+        time: "18/08/2026 09:40",
+        storeId: "cabang3",
+        store: "Amar Plastik - Cabang 3",
+        cashier: "Siti Rahma",
+        customer: "Umum",
+        payment: "Cash",
+        items: [
+          { name: "Plastik Kresek L", qty: 6, price: 8500 },
+          { name: "Cup Puding Isi 50", qty: 2, price: 21500 }
+        ]
+      },
+      {
+        trx: "TRX-20260720-1120",
+        time: "20/07/2026 10:30",
+        storeId: "pusat",
+        store: "Amar Plastik - Pusat",
+        cashier: "Lina Puspa Melinda",
+        customer: "Bakery Prima",
+        payment: "Cash",
+        items: [
+          { name: "Mentega 250gr", qty: 12, price: 18900 },
+          { name: "Coklat Bubuk 500gr", qty: 6, price: 26500 },
+          { name: "Tepung Terigu 1kg", qty: 15, price: 12500 }
+        ]
+      },
+      {
+        trx: "TRX-20260615-4421",
+        time: "15/06/2026 11:45",
+        storeId: "cabang2",
+        store: "Amar Plastik - Cabang 2",
+        cashier: "Ahmad Rizki",
+        customer: "Dapur Kita",
+        payment: "QRIS",
+        items: [
+          { name: "Mica Bento Kotak", qty: 15, price: 12000 },
+          { name: "Plastik Kresek L", qty: 8, price: 8500 }
+        ]
+      },
+      {
+        trx: "TRX-C3ZC9754T4",
+        time: "07/04/2026 00:42",
+        storeId: "pusat",
+        store: "Amar Plastik - Pusat",
+        cashier: "Admin",
+        customer: "Budi",
+        payment: "Cash",
+        items: [
+          { name: "Tepung Terigu 1kg", qty: 2, price: 12500 },
+          { name: "Gula Pasir 1kg", qty: 1, price: 15500 },
+          { name: "Mentega 250gr", qty: 2, price: 18900 },
+          { name: "Plastik Kresek L", qty: 2, price: 8500 },
+          { name: "Mica Bento Kotak", qty: 1, price: 12000 }
+        ]
+      },
+      {
+        trx: "TRX-UI3TFGPG",
+        time: "22/02/2026 02:05",
+        storeId: "cabang2",
+        store: "Amar Plastik - Cabang 2",
+        cashier: "kasir",
+        customer: "Andi Nugraha",
+        payment: "QRIS",
+        items: [
+          { name: "Mica Bento Kotak", qty: 3, price: 12000 },
+          { name: "Plastik Kresek L", qty: 1, price: 8500 }
+        ]
+      },
+      {
+        trx: "TRX-YHCT9PIG",
+        time: "22/02/2026 02:05",
+        storeId: "pusat",
+        store: "Amar Plastik - Pusat",
+        cashier: "kasir",
+        customer: "Bunga Maharani",
+        payment: "Cash",
+        items: [
+          { name: "Cup Puding Isi 50", qty: 2, price: 21500 },
+          { name: "Mentega 250gr", qty: 1, price: 18900 },
+          { name: "Tepung Terigu 1kg", qty: 1, price: 12500 }
+        ]
+      },
+      {
+        trx: "TRX-ZOVJRCBT",
+        time: "22/02/2026 02:05",
+        storeId: "cabang3",
+        store: "Amar Plastik - Cabang 3",
+        cashier: "kasir",
+        customer: "Cici Amelia",
+        payment: "Debit",
+        items: [
+          { name: "Plastik Vacuum 1kg", qty: 4, price: 27500 },
+          { name: "Tepung Terigu 1kg", qty: 2, price: 12500 }
+        ]
+      },
+      {
+        trx: "TRX-W4LWB0AW",
+        time: "22/02/2026 02:05",
+        storeId: "cabang2",
+        store: "Amar Plastik - Cabang 2",
+        cashier: "kasir",
+        customer: "Davin Pradipta",
+        payment: "Cash",
+        items: [
+          { name: "Gula Pasir 1kg", qty: 2, price: 15500 },
+          { name: "Mentega 250gr", qty: 1, price: 18900 },
+          { name: "Plastik Kresek L", qty: 2, price: 8500 }
+        ]
+      },
+      {
+        trx: "TRX-O7CVEG5R",
+        time: "22/02/2026 02:05",
+        storeId: "pusat",
+        store: "Amar Plastik - Pusat",
+        cashier: "kasir",
+        customer: "Fitri Lestari",
+        payment: "QRIS",
+        items: [
+          { name: "Coklat Bubuk 500gr", qty: 4, price: 26500 },
+          { name: "Cup Puding Isi 50", qty: 3, price: 21500 }
+        ]
+      },
+      {
+        trx: "TRX-PFJMF8NL",
+        time: "22/02/2026 02:05",
+        storeId: "cabang3",
+        store: "Amar Plastik - Cabang 3",
+        cashier: "kasir",
+        customer: "Umum",
+        payment: "Cash",
+        items: [
+          { name: "Plastik Kresek L", qty: 2, price: 8500 },
+          { name: "Mica Bento Kotak", qty: 1, price: 12000 }
+        ]
+      }
+    ];
+
+    // Helper parse tanggal
+    function parseDate(str) {
+      if (!str) return null;
+      const parts = str.split(/[\/\-]/);
+      if (parts.length >= 3) {
+        const d = parseInt(parts[0], 10);
+        const m = parseInt(parts[1], 10) - 1;
+        const y = parseInt(parts[2].slice(0, 4), 10);
+        return new Date(y, m, d);
+      }
+      return null;
     }
 
-    renderReport();
+    // Helper standard format tanggal: dd/mm/yyyy HH:mm
+    function formatLogDate(val) {
+      if (!val) return "";
+      const trimmed = String(val).trim();
+      if (/^\d{2}\/\d{2}\/\d{4}\s+\d{2}:\d{2}$/.test(trimmed)) {
+        return trimmed;
+      }
+      const monthMap = {
+        jan: "01", feb: "02", mar: "03", apr: "04", may: "05", jun: "06",
+        jul: "07", aug: "08", sep: "09", oct: "10", nov: "11", dec: "12"
+      };
+      const m = trimmed.match(/^(\d{1,2})-([A-Za-z]{3})-(\d{4})\s+(\d{1,2}):(\d{1,2})/);
+      if (m) {
+        const d = m[1].padStart(2, "0");
+        const mo = monthMap[m[2].toLowerCase()] || "01";
+        const y = m[3];
+        const h = m[4].padStart(2, "0");
+        const mn = m[5].padStart(2, "0");
+        return `${d}/${mo}/${y} ${h}:${mn}`;
+      }
+      const dObj = new Date(trimmed);
+      if (!isNaN(dObj.getTime())) {
+        const pad = (v) => String(v).padStart(2, "0");
+        return `${pad(dObj.getDate())}/${pad(dObj.getMonth() + 1)}/${dObj.getFullYear()} ${pad(dObj.getHours())}:${pad(dObj.getMinutes())}`;
+      }
+      return trimmed;
+    }
+
+    // Helper periksa apakah baris transaksi cocok dengan filter periode terpilih
+    function matchesPeriod(timeStr, periodVal, type) {
+      if (!timeStr) return true;
+      const dateObj = parseDate(timeStr);
+      if (!dateObj || isNaN(dateObj.getTime())) return true;
+
+      if (type === "monthly") {
+        // periodVal format: "YYYY-MM" (misal "2026-09")
+        const [yStr, mStr] = periodVal.split("-");
+        const targetYear = parseInt(yStr, 10);
+        const targetMonth = parseInt(mStr, 10) - 1;
+        return dateObj.getFullYear() === targetYear && dateObj.getMonth() === targetMonth;
+      } else {
+        // type === "weekly"
+        // Target rentang tanggal per opsi mingguan
+        const d = new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate()).getTime();
+        const parseD = (s) => {
+          const [day, mo, yr] = s.split("/").map(Number);
+          return new Date(yr, mo - 1, day).getTime();
+        };
+
+        if (periodVal === "w_this") {
+          // 07/09/2026 - Sekarang
+          return d >= parseD("07/09/2026");
+        } else if (periodVal === "w_prev1") {
+          // 31/08/2026 - 06/09/2026
+          return d >= parseD("31/08/2026") && d <= parseD("06/09/2026");
+        } else if (periodVal === "w_prev2") {
+          // 24/08/2026 - 30/08/2026
+          return d >= parseD("24/08/2026") && d <= parseD("30/08/2026");
+        } else if (periodVal === "w_prev3") {
+          // 17/08/2026 - 23/08/2026
+          return d >= parseD("17/08/2026") && d <= parseD("23/08/2026");
+        } else if (periodVal === "w_prev4") {
+          // 10/08/2026 - 16/08/2026
+          return d >= parseD("10/08/2026") && d <= parseD("16/08/2026");
+        } else if (periodVal === "w_prev5") {
+          // 03/08/2026 - 09/08/2026
+          return d >= parseD("03/08/2026") && d <= parseD("09/08/2026");
+        }
+        return true;
+      }
+    }
+
+    // Helper hitung jumlah hari pada periode penjualan untuk rata² harian
+    function getPeriodDays() {
+      return periodType === "weekly" ? 7 : 30;
+    }
+
+    // Helper peta katalog produk
+    function getCatalogLookup() {
+      const map = {};
+      MENU.forEach(m => {
+        map[m.name] = m;
+      });
+      return map;
+    }
+
+    // Ekstrak seluruh baris penjualan item terpadu (Kasir Live + Riwayat Default)
+    function getAllItemizedSales() {
+      const catalog = getCatalogLookup();
+      const history = loadHistory();
+      const rows = [];
+
+      // 1. Ekstrak transaksi real dari kasir (di posisi teratas)
+      if (history && history.length > 0) {
+        history.forEach((t, tIdx) => {
+          (t.items || []).forEach((it, iIdx) => {
+            const catItem = catalog[it.name] || {};
+            const price = it.price || catItem.price || 0;
+            const cost = catItem.cost || Math.round(price * 0.75);
+            const qty = it.qty || 1;
+            const subtotal = price * qty;
+            const profit = (price - cost) * qty;
+            rows.push({
+              id: `${t.trx || 'TRX'}-${tIdx}-${iIdx}`,
+              trx: t.trx || `TRX-LIVE-${tIdx + 1}`,
+              time: t.time || nowText(),
+              storeId: t.storeId || "pusat",
+              store: t.store || "Amar Plastik - Pusat",
+              cashier: t.cashier || "Admin",
+              customer: t.customer || t.customerName || "Umum",
+              payment: t.payment || "Cash",
+              name: it.name,
+              sku: catItem.sku || `SKU-0000${catItem.id || 1}`,
+              emoji: catItem.emoji || "📦",
+              cat: catItem.cat || "kue",
+              catName: CAT_NAME[catItem.cat] || "Bahan Kue",
+              price: price,
+              cost: cost,
+              qty: qty,
+              subtotal: subtotal,
+              profit: profit
+            });
+          });
+        });
+      }
+
+      // 2. Tambahkan transaksi default referensi toko
+      DEFAULT_TRANSACTIONS_LOG.forEach((t, tIdx) => {
+        (t.items || []).forEach((it, iIdx) => {
+          const catItem = catalog[it.name] || {};
+          const price = it.price || catItem.price || 0;
+          const cost = catItem.cost || Math.round(price * 0.75);
+          const qty = it.qty || 1;
+          const subtotal = price * qty;
+          const profit = (price - cost) * qty;
+          rows.push({
+            id: `def-${t.trx}-${tIdx}-${iIdx}`,
+            trx: t.trx,
+            time: t.time,
+            storeId: t.storeId || "pusat",
+            store: t.store || "Amar Plastik - Pusat",
+            cashier: t.cashier,
+            customer: t.customer,
+            payment: t.payment,
+            name: it.name,
+            sku: catItem.sku || `SKU-0000${catItem.id || 1}`,
+            emoji: catItem.emoji || "📦",
+            cat: catItem.cat || "kue",
+            catName: CAT_NAME[catItem.cat] || "Bahan Kue",
+            price: price,
+            cost: cost,
+            qty: qty,
+            subtotal: subtotal,
+            profit: profit
+          });
+        });
+      });
+
+      return rows;
+    }
+
+    // Dapatkan data penjualan yang telah difilter oleh Toko dan Periode (Bulanan/Mingguan)
+    function getFilteredSalesLog() {
+      const allRows = getAllItemizedSales();
+      const storeVal = $("#topStoreSelect")?.value || "all";
+      const periodVal = $("#topPeriodSelect")?.value || (periodType === "monthly" ? "2026-09" : "w_this");
+
+      return allRows.filter(row => {
+        // Filter Toko
+        if (storeVal !== "all" && row.storeId !== storeVal) {
+          return false;
+        }
+        // Filter Periode
+        if (!matchesPeriod(row.time, periodVal, periodType)) {
+          return false;
+        }
+        return true;
+      });
+    }
+
+    // ==========================================
+    // LOGIKA TAB 1: REKAP PER PRODUK
+    // ==========================================
+    function getProductSalesReport() {
+      const productMap = {};
+      MENU.forEach(m => {
+        productMap[m.name] = {
+          id: m.id,
+          sku: m.sku || `SKU-0000${m.id}`,
+          name: m.name,
+          cat: m.cat,
+          catName: CAT_NAME[m.cat] || m.cat,
+          emoji: m.emoji,
+          price: m.price,
+          cost: m.cost || Math.round(m.price * 0.75),
+          soldQty: 0,
+          revenue: 0,
+          profit: 0
+        };
+      });
+
+      // Agregasi penjualan produk langsung dari transaksi terfilter toko & periode
+      const activeRows = getFilteredSalesLog();
+      activeRows.forEach(row => {
+        if (productMap[row.name]) {
+          productMap[row.name].soldQty += row.qty;
+          productMap[row.name].revenue += row.subtotal;
+          productMap[row.name].profit += row.profit;
+        }
+      });
+
+      return Object.values(productMap);
+    }
+
+    function renderReportView() {
+      const allProducts = getProductSalesReport();
+      const days = getPeriodDays();
+
+      const catVal = $("#filterCategory")?.value || "all";
+      const sortVal = $("#filterSort")?.value || "revenue_desc";
+
+      let filtered = allProducts.filter(p => {
+        if (catVal !== "all" && p.cat !== catVal) return false;
+        return true;
+      });
+
+      if (sortVal === "revenue_desc") {
+        filtered.sort((a, b) => b.revenue - a.revenue);
+      } else if (sortVal === "profit_desc") {
+        filtered.sort((a, b) => b.profit - a.profit);
+      } else if (sortVal === "profit_share_desc") {
+        filtered.sort((a, b) => b.profit - a.profit);
+      } else if (sortVal === "daily_desc") {
+        filtered.sort((a, b) => b.soldQty - a.soldQty);
+      } else if (sortVal === "qty_desc") {
+        filtered.sort((a, b) => b.soldQty - a.soldQty);
+      } else if (sortVal === "name_asc") {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      const totalRevenue = filtered.reduce((s, p) => s + p.revenue, 0);
+      const totalProfit = filtered.reduce((s, p) => s + p.profit, 0);
+      const totalSoldQty = filtered.reduce((s, p) => s + p.soldQty, 0);
+      const maxRevenue = Math.max(...filtered.map(p => p.revenue), 1);
+      const maxProfit = Math.max(...filtered.map(p => p.profit), 1);
+      const marginPct = totalRevenue > 0 ? ((totalProfit / totalRevenue) * 100).toFixed(1) : "0.0";
+      const topProduct = filtered.filter(p => p.soldQty > 0).length > 0
+        ? [...filtered.filter(p => p.soldQty > 0)].sort((a, b) => b.revenue - a.revenue)[0]
+        : null;
+
+      // Update Counter Tab 1
+      const tabSkuCount = $("#rptTabSkuCount");
+      if (tabSkuCount) tabSkuCount.textContent = `${allProducts.length} SKU`;
+
+      // Update 4 Kartu Stat (Hero Stat Cards - Terpadu & Sinkron)
+      // 1. Total Omzet
+      $("#rptNetRevenue").textContent = rp(totalRevenue);
+      // 2. Total Profit
+      const netProfitEl = $("#rptNetProfit");
+      if (netProfitEl) netProfitEl.textContent = `+${rp(totalProfit)}`;
+      const profitMarginEl = $("#rptProfitMargin");
+      if (profitMarginEl) profitMarginEl.textContent = `Margin laba: ${marginPct}%`;
+      // 3. Produk Terjual
+      $("#rptSoldItems").textContent = `${totalSoldQty} pcs`;
+      $("#rptSkuCount").textContent = `${filtered.filter(p => p.soldQty > 0).length} SKU berkontribusi`;
+      // 4. Produk Terlaris
+      if (topProduct) {
+        $("#rptTopProduct").textContent = topProduct.name;
+        $("#rptTopProductSub").textContent = `${topProduct.soldQty} pcs terjual (${rp(topProduct.revenue)})`;
+      } else {
+        $("#rptTopProduct").textContent = "-";
+        $("#rptTopProductSub").textContent = "Belum ada transaksi";
+      }
+
+      // Update 2026 AI Smart Decision & Executive Summary Bar
+      const aiTextEl = $("#rptAiInsightText");
+      const aiHealthLabel = $("#rptAiHealthLabel");
+      const aiHealthPill = $("#rptAiHealthPill");
+      if (aiTextEl && aiHealthLabel) {
+        const topProdName = topProduct ? topProduct.name : "Belum ada";
+        const topProdShare = (totalRevenue > 0 && topProduct) ? ((topProduct.revenue / totalRevenue) * 100).toFixed(0) : "0";
+        aiTextEl.innerHTML = `Omzet <strong style="color:#0f172a;">${rp(totalRevenue)}</strong> menghasilkan laba bersih <strong style="color:#059669;">+${rp(totalProfit)}</strong> (${marginPct}%). Driver utama: <strong style="color:#4f46e5;">${topProdName}</strong> menyumbang ${topProdShare}% total omzet.`;
+        
+        const numMargin = parseFloat(marginPct);
+        if (numMargin >= 25) {
+          aiHealthLabel.textContent = `Margin Sehat ${marginPct}%`;
+          if (aiHealthPill) aiHealthPill.style.background = "#ecfdf5";
+        } else if (numMargin >= 15) {
+          aiHealthLabel.textContent = `Margin Normal ${marginPct}%`;
+          if (aiHealthPill) aiHealthPill.style.background = "#eff6ff";
+        } else {
+          aiHealthLabel.textContent = `Perlu Evaluasi ${marginPct}%`;
+          if (aiHealthPill) aiHealthPill.style.background = "#fffbeb";
+        }
+      }
+
+      // Update Footer Tabel
+      $("#rptFooterQty").textContent = `${totalSoldQty.toLocaleString('id-ID')} Pcs`;
+      const footerDailyEl = $("#rptFooterDaily");
+      if (footerDailyEl) footerDailyEl.textContent = `${(totalSoldQty / days).toFixed(1)} pcs/hari`;
+      const footerProfitEl = $("#rptFooterProfit");
+      if (footerProfitEl) footerProfitEl.textContent = `+${rp(totalProfit)}`;
+      $("#rptFooterTotal").textContent = rp(totalRevenue);
+
+      const tbody = $("#rptTableBody");
+      if (!tbody) return;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="10" class="trx-empty-state">
+              Tidak ada data produk yang sesuai dengan filter.
+            </td>
+          </tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((p, idx) => {
+        const dailyQty = (p.soldQty / days).toFixed(1);
+        const dailyRevenue = Math.round(p.revenue / days);
+        const barPct = Math.min(100, Math.round((p.revenue / maxRevenue) * 100));
+        const sharePct = totalRevenue > 0 ? ((p.revenue / totalRevenue) * 100).toFixed(1) : "0.0";
+        const profitBarPct = Math.min(100, Math.round((p.profit / maxProfit) * 100));
+        const profitSharePct = totalProfit > 0 ? ((p.profit / totalProfit) * 100).toFixed(1) : "0.0";
+        const catClass = p.cat === "kue" ? "kue" : p.cat === "plastik" ? "plastik" : "kemasan";
+
+        return `
+          <tr>
+            <td class="trx-col-no">${idx + 1}</td>
+            <td style="font-family: monospace; font-size: 11.5px; color: #64748b; font-weight: 600;">${p.sku}</td>
+            <td>
+              <div class="rpt-prod-cell">
+                <span class="rpt-prod-emoji">${p.emoji || "📦"}</span>
+                <div class="rpt-prod-info">
+                  <strong class="rpt-prod-name">${p.name}</strong>
+                  <span class="rpt-prod-sku">${p.catName}</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="rpt-cat-badge ${catClass}">${p.catName}</span></td>
+            <td style="text-align: center;"><span class="rpt-qty-badge">${p.soldQty}</span></td>
+            <td style="text-align: center;">
+              <div style="font-weight: 700; color: #0f172a; font-size: 13px;">${dailyQty} <span style="font-size: 11px; font-weight: 500; color: #64748b;">pcs/hr</span></div>
+              <div style="font-size: 10.5px; color: #64748b; margin-top: 1px;">${rp(dailyRevenue)}/hr</div>
+            </td>
+            <td style="text-align: right; font-weight: 800; color: #0f172a; font-size: 13.5px; font-variant-numeric: tabular-nums;">${rp(p.revenue)}</td>
+            <td class="rpt-col-profit" style="text-align: right; font-size: 13.5px;">+${rp(p.profit)}</td>
+            <td>
+              <div class="rpt-share-cell">
+                <div class="rpt-share-bar-wrap">
+                  <div class="rpt-share-bar-fill" style="width: ${barPct}%"></div>
+                </div>
+                <span class="rpt-share-pct">${sharePct}%</span>
+              </div>
+            </td>
+            <td>
+              <div class="rpt-share-cell">
+                <div class="rpt-share-bar-wrap profit">
+                  <div class="rpt-share-bar-fill profit" style="width: ${profitBarPct}%"></div>
+                </div>
+                <span class="rpt-share-pct profit">${profitSharePct}%</span>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    // ==========================================
+    // LOGIKA TAB 2: LOG PENJUALAN TIAP ITEM
+    // ==========================================
+    function renderItemReportView() {
+      const baseItems = getFilteredSalesLog();
+
+      const catVal = $("#filterItemCategory")?.value || "all";
+      const payVal = $("#filterItemPayment")?.value || "all";
+
+      let filtered = baseItems.filter(item => {
+        if (catVal !== "all" && item.cat !== catVal) return false;
+        if (payVal !== "all" && item.payment.toLowerCase() !== payVal.toLowerCase()) return false;
+        return true;
+      });
+
+      // Total agregat baris item untuk ringkasan footer & hero stat cards
+      const totalVal = filtered.reduce((s, i) => s + i.subtotal, 0);
+      const totalCost = filtered.reduce((s, i) => s + (i.cost * i.qty), 0);
+      const totalProfit = filtered.reduce((s, i) => s + i.profit, 0);
+      const totalQty = filtered.reduce((s, i) => s + i.qty, 0);
+      const marginPct = totalVal > 0 ? ((totalProfit / totalVal) * 100).toFixed(1) : "0.0";
+
+      // Hitung produk terlaris di tab log item
+      const itemProdMap = {};
+      filtered.forEach(it => {
+        if (!itemProdMap[it.name]) itemProdMap[it.name] = { name: it.name, qty: 0, val: 0 };
+        itemProdMap[it.name].qty += it.qty;
+        itemProdMap[it.name].val += it.subtotal;
+      });
+      const topItemProd = Object.values(itemProdMap).sort((a, b) => b.val - a.val)[0] || null;
+
+      // Update 4 Kartu Stat saat berada di Tab 2
+      $("#rptNetRevenue").textContent = rp(totalVal);
+      const netProfitEl = $("#rptNetProfit");
+      if (netProfitEl) netProfitEl.textContent = `+${rp(totalProfit)}`;
+      const profitMarginEl = $("#rptProfitMargin");
+      if (profitMarginEl) profitMarginEl.textContent = `Margin laba: ${marginPct}%`;
+      $("#rptSoldItems").textContent = `${totalQty} pcs`;
+      $("#rptSkuCount").textContent = `${Object.keys(itemProdMap).length} SKU berkontribusi`;
+      if (topItemProd) {
+        $("#rptTopProduct").textContent = topItemProd.name;
+        $("#rptTopProductSub").textContent = `${topItemProd.qty} pcs terjual (${rp(topItemProd.val)})`;
+      } else {
+        $("#rptTopProduct").textContent = "-";
+        $("#rptTopProductSub").textContent = "Belum ada transaksi";
+      }
+
+      // Update 2026 AI Smart Decision & Executive Summary Bar saat di Tab 2
+      const aiTextEl = $("#rptAiInsightText");
+      const aiHealthLabel = $("#rptAiHealthLabel");
+      const aiHealthPill = $("#rptAiHealthPill");
+      if (aiTextEl && aiHealthLabel) {
+        const topProdName = topItemProd ? topItemProd.name : "Belum ada";
+        const topProdShare = (totalVal > 0 && topItemProd) ? ((topItemProd.val / totalVal) * 100).toFixed(0) : "0";
+        aiTextEl.innerHTML = `Audit log mencatat <strong style="color:#0f172a;">${rp(totalVal)}</strong> dari ${filtered.length} baris item dengan laba bersih <strong style="color:#059669;">+${rp(totalProfit)}</strong> (${marginPct}%). Driver utama: <strong style="color:#4f46e5;">${topProdName}</strong> (${topProdShare}%).`;
+        
+        const numMargin = parseFloat(marginPct);
+        if (numMargin >= 25) {
+          aiHealthLabel.textContent = `Margin Sehat ${marginPct}%`;
+          if (aiHealthPill) aiHealthPill.style.background = "#ecfdf5";
+        } else if (numMargin >= 15) {
+          aiHealthLabel.textContent = `Margin Normal ${marginPct}%`;
+          if (aiHealthPill) aiHealthPill.style.background = "#eff6ff";
+        } else {
+          aiHealthLabel.textContent = `Perlu Evaluasi ${marginPct}%`;
+          if (aiHealthPill) aiHealthPill.style.background = "#fffbeb";
+        }
+      }
+
+      // Update Pill Counter Tab 2
+      const tabItemCount = $("#rptTabItemCount");
+      if (tabItemCount) tabItemCount.textContent = `${filtered.length} Baris`;
+
+      // Update Footer Tabel Log Item
+      $("#rptItemFooterRows").textContent = `${filtered.length} Baris`;
+      $("#rptItemFooterQty").textContent = `${totalQty.toLocaleString('id-ID')} Pcs`;
+      const itemFooterCostEl = $("#rptItemFooterCost");
+      if (itemFooterCostEl) itemFooterCostEl.textContent = rp(totalCost);
+      const itemFooterProfitEl = $("#rptItemFooterProfit");
+      if (itemFooterProfitEl) itemFooterProfitEl.textContent = `+${rp(totalProfit)}`;
+      $("#rptItemFooterTotal").textContent = rp(totalVal);
+
+      const tbody = $("#rptItemTableBody");
+      if (!tbody) return;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="12" class="trx-empty-state">
+              Tidak ada data riwayat penjualan item yang cocok dengan filter toko & periode ini.
+            </td>
+          </tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((item, idx) => {
+        const formattedTime = formatLogDate(item.time);
+        const payClass = item.payment === "QRIS" ? "qris" : item.payment === "Debit" ? "debit" : "cash";
+        const payIcon = item.payment === "QRIS" ? "📱" : item.payment === "Debit" ? "💳" : "💵";
+        const storeBadgeClass = item.storeId === "cabang2" ? "cabang2" : item.storeId === "cabang3" ? "cabang3" : "pusat";
+        const storeShortName = item.storeId === "cabang2" ? "Cabang 2" : item.storeId === "cabang3" ? "Cabang 3" : "Pusat";
+
+        return `
+          <tr>
+            <td class="trx-col-no">${idx + 1}</td>
+            <td><span class="rpt-log-time">${formattedTime}</span></td>
+            <td><span class="rpt-log-invoice">${item.trx}</span></td>
+            <td>
+              <div class="rpt-prod-cell">
+                <span class="rpt-prod-emoji">${item.emoji}</span>
+                <div class="rpt-prod-info">
+                  <strong class="rpt-prod-name">${item.name}</strong>
+                  <span class="rpt-prod-sku">${item.sku} • ${item.catName}</span>
+                </div>
+              </div>
+            </td>
+            <td style="text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; color: #64748b; font-size: 12.5px;">${rp(item.cost)}</td>
+            <td style="text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: #334155; font-size: 12.5px;">${rp(item.price)}</td>
+            <td style="text-align: center;"><span class="rpt-qty-badge">${item.qty} pcs</span></td>
+            <td style="text-align: right; font-weight: 800; color: #0f172a; font-size: 13.5px; font-variant-numeric: tabular-nums;">${rp(item.subtotal)}</td>
+            <td class="rpt-col-profit" style="text-align: right; font-size: 13px;">+${rp(item.profit)}</td>
+            <td style="text-align: center;">
+              <span class="rpt-store-badge ${storeBadgeClass}" title="${item.store}">${storeShortName}</span>
+            </td>
+            <td style="text-align: center;"><span class="rpt-log-cashier">${item.cashier}</span></td>
+            <td style="text-align: center;">
+              <span class="trx-badge-pay ${payClass}">${payIcon} ${item.payment}</span>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    // ==========================================
+    // INISIALISASI KONTROL PERIODE
+    // ==========================================
+    function populatePeriodDropdown(type) {
+      const select = $("#topPeriodSelect");
+      if (!select) return;
+      const options = type === "monthly" ? MONTH_OPTIONS : WEEK_OPTIONS;
+      select.innerHTML = options.map(opt => `<option value="${opt.id}">${opt.label}</option>`).join("");
+      select.value = options[0].id;
+    }
+
+    function handlePeriodTypeChange(newType) {
+      if (periodType === newType) return;
+      periodType = newType;
+
+      const btnMonthly = $("#btnTypeMonthly");
+      const btnWeekly = $("#btnTypeWeekly");
+
+      if (btnMonthly && btnWeekly) {
+        btnMonthly.classList.toggle("is-active", newType === "monthly");
+        btnWeekly.classList.toggle("is-active", newType === "weekly");
+      }
+
+      populatePeriodDropdown(newType);
+      refreshCurrentView();
+    }
+
+    function refreshCurrentView() {
+      if (activeTab === "summary") {
+        renderReportView();
+      } else {
+        renderItemReportView();
+      }
+    }
+
+    // ==========================================
+    // TAB SWITCHING CONTROLLER
+    // ==========================================
+    function switchTab(targetTab) {
+      activeTab = targetTab;
+      const isSummary = targetTab === "summary";
+
+      // Update button classes
+      $("#tabBtnSummary")?.classList.toggle("is-active", isSummary);
+      $("#tabBtnSummary")?.setAttribute("aria-selected", String(isSummary));
+
+      $("#tabBtnItems")?.classList.toggle("is-active", !isSummary);
+      $("#tabBtnItems")?.setAttribute("aria-selected", String(!isSummary));
+
+      // Toggle panel visibility
+      const panelSummary = $("#panelSummary");
+      const panelItems = $("#panelItems");
+
+      if (panelSummary) panelSummary.hidden = !isSummary;
+      if (panelItems) panelItems.hidden = isSummary;
+
+      refreshCurrentView();
+    }
+
+    $("#tabBtnSummary")?.addEventListener("click", () => switchTab("summary"));
+    $("#tabBtnItems")?.addEventListener("click", () => switchTab("items"));
+
+    // Event Listeners Filter Dropdown Header
+    $("#topStoreSelect")?.addEventListener("change", () => {
+      renderReportView();
+      renderItemReportView();
+    });
+
+    $("#topPeriodSelect")?.addEventListener("change", () => {
+      renderReportView();
+      renderItemReportView();
+    });
+
+    $("#btnTypeMonthly")?.addEventListener("click", () => handlePeriodTypeChange("monthly"));
+    $("#btnTypeWeekly")?.addEventListener("click", () => handlePeriodTypeChange("weekly"));
+
+    // Event Listeners Filter Dropdown Tabel
+    $("#filterCategory")?.addEventListener("change", renderReportView);
+    $("#filterSort")?.addEventListener("change", renderReportView);
+    $("#filterItemCategory")?.addEventListener("change", renderItemReportView);
+    $("#filterItemPayment")?.addEventListener("change", renderItemReportView);
+
+    // Inisialisasi awal kontrol & view
+    populatePeriodDropdown("monthly");
+    renderReportView();
+    renderItemReportView();
+
     initSidebar("laporan");
   </script>
 </body>
+
 </html>

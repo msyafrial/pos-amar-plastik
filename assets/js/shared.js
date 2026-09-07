@@ -13,14 +13,14 @@ const CATEGORIES = [
 ];
 
 const MENU = [
-  { id: 1, name: "Tepung Terigu 1kg",  cat: "kue",     emoji: "🌾", tint: "#fdf3e7", price: 12500, old: 15000, stock: 48, exp: "03/27", sku: "SKU-00001", batch: "BRG001-0926-A" },
-  { id: 2, name: "Gula Pasir 1kg",     cat: "kue",     emoji: "🧂", tint: "#f6f1fd", price: 15500, old: null,  stock: 36, exp: "09/27", sku: "SKU-00002", batch: "BRG002-0826-B" },
-  { id: 3, name: "Mentega 250gr",      cat: "kue",     emoji: "🧈", tint: "#fdf6e3", price: 18900, old: 22000, stock: 24, exp: "01/27", sku: "SKU-00003", batch: "BRG003-0726-C" },
-  { id: 4, name: "Coklat Bubuk 500gr", cat: "kue",     emoji: "🍫", tint: "#f3e9e2", price: 26500, old: null,  stock: 18, exp: "05/27", sku: "SKU-00004", batch: "BRG004-0926-D" },
-  { id: 5, name: "Plastik Kresek L",   cat: "plastik", emoji: "🛍️", tint: "#eef4fd", price: 8500,  old: null,  stock: 3,  exp: null,    sku: "SKU-00005", batch: "BRG005-1026-A" },
-  { id: 6, name: "Mica Bento Kotak",   cat: "kemasan", emoji: "🍱", tint: "#eef7ee", price: 12000, old: 14500, stock: 60, exp: null,    sku: "SKU-00006", batch: "BRG006-0826-B" },
-  { id: 7, name: "Cup Puding Isi 50",  cat: "kemasan", emoji: "🧁", tint: "#fff0ec", price: 21500, old: null,  stock: 15, exp: null,    sku: "SKU-00007", batch: "BRG007-1026-C" },
-  { id: 8, name: "Plastik Vacuum 1kg", cat: "plastik", emoji: "🥡", tint: "#f0eefb", price: 27500, old: null,  stock: 0,  exp: null,    sku: "SKU-00008", batch: "BRG008-0926-D" },
+  { id: 1, name: "Tepung Terigu 1kg",  cat: "kue",     emoji: "🌾", tint: "#fdf3e7", price: 12500, cost: 9500,  old: 15000, stock: 48, exp: "03/27", sku: "SKU-00001", batch: "BRG001-0926-A" },
+  { id: 2, name: "Gula Pasir 1kg",     cat: "kue",     emoji: "🧂", tint: "#f6f1fd", price: 15500, cost: 12500, old: null,  stock: 36, exp: "09/27", sku: "SKU-00002", batch: "BRG002-0826-B" },
+  { id: 3, name: "Mentega 250gr",      cat: "kue",     emoji: "🧈", tint: "#fdf6e3", price: 18900, cost: 13900, old: 22000, stock: 24, exp: "01/27", sku: "SKU-00003", batch: "BRG003-0726-C" },
+  { id: 4, name: "Coklat Bubuk 500gr", cat: "kue",     emoji: "🍫", tint: "#f3e9e2", price: 26500, cost: 19500, old: null,  stock: 18, exp: "05/27", sku: "SKU-00004", batch: "BRG004-0926-D" },
+  { id: 5, name: "Plastik Kresek L",   cat: "plastik", emoji: "🛍️", tint: "#eef4fd", price: 8500,  cost: 5500,  old: null,  stock: 3,  exp: null,    sku: "SKU-00005", batch: "BRG005-1026-A" },
+  { id: 6, name: "Mica Bento Kotak",   cat: "kemasan", emoji: "🍱", tint: "#eef7ee", price: 12000, cost: 8000,  old: 14500, stock: 60, exp: null,    sku: "SKU-00006", batch: "BRG006-0826-B" },
+  { id: 7, name: "Cup Puding Isi 50",  cat: "kemasan", emoji: "🧁", tint: "#fff0ec", price: 21500, cost: 15000, old: null,  stock: 15, exp: null,    sku: "SKU-00007", batch: "BRG007-1026-C" },
+  { id: 8, name: "Plastik Vacuum 1kg", cat: "plastik", emoji: "🥡", tint: "#f0eefb", price: 27500, cost: 19000, old: null,  stock: 0,  exp: null,    sku: "SKU-00008", batch: "BRG008-0926-D" },
 ];
 
 const TAX_RATE = 0.10;

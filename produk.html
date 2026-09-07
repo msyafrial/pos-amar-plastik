@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/shared.css" />
 </head>
 <body>
   <div class="app app-single">
@@ -25,7 +25,7 @@
       <!-- Brand Logo Header -->
       <a class="rail-brand" href="index.html" title="Amar Plastik — Beranda">
         <div class="rail-logo">
-          <img src="logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
+          <img src="assets/images/logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
         </div>
         <div class="rail-brand-text">
           <strong class="rail-brand-name">AMAR PLASTIK</strong>
@@ -33,37 +33,57 @@
         </div>
       </a>
 
-      <!-- Section: MENU -->
-      <div class="rail-section-label">MENU</div>
+      <!-- Section: UTAMA -->
+      <div class="rail-section-label">UTAMA</div>
       <div class="rail-nav">
-        <a class="rail-btn" href="dashboard.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
+        <a class="rail-btn" href="index.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
           <span class="rail-label">Dashboard</span>
         </a>
-        <a class="rail-btn" href="index.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <a class="rail-btn" href="kasir.html" data-page="kasir" data-tooltip="Kasir" title="Kasir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span class="rail-label">Kasir</span>
         </a>
         <a class="rail-btn" href="transaksi.html" data-page="transaksi" data-tooltip="Transaksi" title="Transaksi">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12l1 6H5l1-6zM4 8h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8zm8 4v6m-3-3h6"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3"/><path d="M3.05 11a9 9 0 1 1 .5 4"/><path d="M3 5v6h6"/></svg>
           <span class="rail-label">Transaksi</span>
-        </a>
-        <a class="rail-btn is-active" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 5 5 2.7V15L12 17.7 7 15V9.7L12 7z"/></svg>
-          <span class="rail-label">Produk</span>
-        </a>
-        <a class="rail-btn" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
-          <span class="rail-label">Kategori</span>
-        </a>
-        <a class="rail-btn" href="laporan.html" data-page="laporan" data-tooltip="Laporan" title="Laporan">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7"/><path d="M2 20h20"/></svg>
-          <span class="rail-label">Laporan</span>
         </a>
       </div>
 
-      <!-- Section: LAINNYA -->
-      <div class="rail-section-label" style="margin-top: 10px;">LAINNYA</div>
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: KATALOG -->
+      <div class="rail-section-label">KATALOG</div>
+      <div class="rail-nav">
+        <a class="rail-btn is-active" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <span class="rail-label">Produk</span>
+        </a>
+        <a class="rail-btn" href="kategori.html" data-page="kategori" data-tooltip="Kategori" title="Kategori">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="14" rx="1.5"/><rect width="7" height="7" x="3" y="14" rx="1.5"/></svg>
+          <span class="rail-label">Kategori</span>
+        </a>
+      </div>
+
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: LAPORAN -->
+      <div class="rail-section-label">LAPORAN</div>
+      <div class="rail-nav">
+        <a class="rail-btn" href="laporan.html" data-page="laporan" data-tooltip="Penjualan" title="Laporan Penjualan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/><path d="M2 20h20"/></svg>
+          <span class="rail-label">Penjualan</span>
+        </a>
+        <a class="rail-btn" href="profit.html" data-page="profit" data-tooltip="Keuntungan" title="Laporan Keuntungan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M15 9.5a2.5 2.5 0 0 0-2.5-2H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9.5a2.5 2.5 0 0 1-2.5-2"/></svg>
+          <span class="rail-label">Keuntungan</span>
+        </a>
+      </div>
+
+      <div class="rail-section-divider"></div>
+
+      <!-- Section: SISTEM -->
+      <div class="rail-section-label">SISTEM</div>
       <div class="rail-nav">
         <a class="rail-btn" href="pengaturan.html" data-page="pengaturan" data-tooltip="Pengaturan" title="Pengaturan">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
@@ -116,10 +136,25 @@
             <option value="low">Stok menipis</option>
             <option value="out">Stok habis</option>
           </select>
+
+          <!-- View Mode Switcher: Card vs List (Table) -->
+          <div class="prod-view-toggles" role="radiogroup" aria-label="Tampilan produk">
+            <button type="button" class="prod-view-btn" id="prodViewCardBtn" aria-label="Tampilan kartu" title="Tampilan Kartu">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+            </button>
+            <button type="button" class="prod-view-btn is-active" id="prodViewListBtn" aria-label="Tampilan list/tabel" title="Tampilan List/Tabel">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </button>
+          </div>
+
           <button class="mexport" id="prodExport">↓ Ekspor</button>
         </div>
 
-        <div class="prod-table-wrap master-table">
+        <!-- Tampilan Card Grid (Sesuai Referensi Gambar) -->
+        <div class="prod-cards-grid" id="prodCardsContainer" hidden></div>
+
+        <!-- Tampilan List / Table -->
+        <div class="prod-table-wrap master-table" id="prodTableContainer">
           <table class="prod-table">
             <thead>
               <tr>
@@ -156,13 +191,33 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="shared.js"></script>
+  <script src="assets/js/shared.js"></script>
   <script>
     const prodFilter = { query: "", cat: "", stock: "" };
-    const PER_PAGE = 6;
+    const PER_PAGE = 8; // 8 items per page for balanced grid and list
     let prodPageNum = 1;
+    let currentViewMode = localStorage.getItem("ap_prod_view_mode") || "list"; // 'card' | 'list'
 
-    function renderProdTable() {
+    function updateViewModeButtons() {
+      const cardBtn = $("#prodViewCardBtn");
+      const listBtn = $("#prodViewListBtn");
+      const cardCont = $("#prodCardsContainer");
+      const tableCont = $("#prodTableContainer");
+
+      if (currentViewMode === "card") {
+        cardBtn.classList.add("is-active");
+        listBtn.classList.remove("is-active");
+        cardCont.hidden = false;
+        tableCont.hidden = true;
+      } else {
+        listBtn.classList.add("is-active");
+        cardBtn.classList.remove("is-active");
+        tableCont.hidden = false;
+        cardCont.hidden = true;
+      }
+    }
+
+    function renderProdData() {
       const total = MENU.length;
       const low = MENU.filter(m => stockStatus(m) === "low").length;
       const out = MENU.filter(m => stockStatus(m) === "out").length;
@@ -196,6 +251,7 @@
       prodPageNum = Math.min(prodPageNum, pages);
       const slice = list.slice((prodPageNum - 1) * PER_PAGE, prodPageNum * PER_PAGE);
 
+      // 1. Render Table View (List)
       $("#prodRows").innerHTML = slice.length ? slice.map(m => {
         const st = stockStatus(m);
         const statusLabel = { ok: "✓ Aman", low: "⚠ Stok menipis", out: "✕ Habis" }[st];
@@ -225,6 +281,49 @@
         </tr>`;
       }).join("") : `<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:34px">Tidak ada produk yang cocok dengan filter</td></tr>`;
 
+      // 2. Render Cards View (Grid Kartu Sesuai Referensi Gambar)
+      const buyPrice = m => m.old ? Math.round(m.old * 0.8) : Math.round(m.price * 0.78);
+      $("#prodCardsContainer").innerHTML = slice.length ? slice.map(m => {
+        const st = stockStatus(m);
+        const stockClass = st === "out" ? "out" : st === "low" ? "low" : "";
+        return `
+        <article class="prod-card-item" data-id="${m.id}">
+          <div class="prod-card-top" style="background: radial-gradient(circle at center, ${m.tint} 0%, #ffffff 80%);">
+            <div class="prod-card-actions">
+              <button class="prod-card-act-btn edit" data-edit="${m.id}" title="Edit ${m.name}" aria-label="Edit">
+                <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </button>
+              <button class="prod-card-act-btn del" data-del="${m.id}" title="Hapus ${m.name}" aria-label="Hapus">
+                <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            </div>
+            <span class="prod-card-stock ${stockClass}">Stok: ${m.stock}</span>
+            <div class="prod-card-media">
+              <span class="prod-card-emoji">${m.emoji}</span>
+            </div>
+          </div>
+          <div class="prod-card-details">
+            <span class="prod-card-cat">${CAT_NAME[m.cat]}</span>
+            <h3 class="prod-card-name" title="${m.name}">${m.name}</h3>
+            <div class="prod-card-sku">${m.sku}</div>
+            <div class="prod-card-prices">
+              <div class="prod-price-col buy">
+                <span class="prod-price-label">Harga Beli</span>
+                <span class="prod-price-val">${rp(buyPrice(m))}</span>
+              </div>
+              <div class="prod-price-col sell">
+                <span class="prod-price-label">Harga Jual</span>
+                <span class="prod-price-val sell">${rp(m.price)}</span>
+              </div>
+            </div>
+          </div>
+        </article>`;
+      }).join("") : `
+        <div style="grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 48px 20px; background: #fff; border-radius: 18px; border: 1px dashed #cbd5e1;">
+          Tidak ada produk yang cocok dengan filter
+        </div>`;
+
+      // 3. Render Pagination Footer
       const first = list.length ? (prodPageNum - 1) * PER_PAGE + 1 : 0;
       const last = Math.min(prodPageNum * PER_PAGE, list.length);
       $("#masterFoot").innerHTML = `
@@ -236,37 +335,59 @@
           ).join("")}
           <button data-goto="${prodPageNum + 1}" ${prodPageNum >= pages ? "disabled" : ""}>›</button>
         </div>`;
+
+      updateViewModeButtons();
     }
+
+    // Event View Switcher (Card vs List)
+    $("#prodViewCardBtn").addEventListener("click", () => {
+      currentViewMode = "card";
+      try { localStorage.setItem("ap_prod_view_mode", "card"); } catch {}
+      updateViewModeButtons();
+    });
+
+    $("#prodViewListBtn").addEventListener("click", () => {
+      currentViewMode = "list";
+      try { localStorage.setItem("ap_prod_view_mode", "list"); } catch {}
+      updateViewModeButtons();
+    });
 
     $("#prodSearch").addEventListener("input", e => {
       prodFilter.query = e.target.value;
       prodPageNum = 1;
-      renderProdTable();
+      renderProdData();
     });
     $("#prodCatFilter").addEventListener("change", e => {
       prodFilter.cat = e.target.value;
       prodPageNum = 1;
-      renderProdTable();
+      renderProdData();
     });
     $("#prodStockFilter").addEventListener("change", e => {
       prodFilter.stock = e.target.value;
       prodPageNum = 1;
-      renderProdTable();
+      renderProdData();
     });
     $("#masterFoot").addEventListener("click", e => {
       const btn = e.target.closest("[data-goto]");
       if (!btn || btn.disabled) return;
       prodPageNum = +btn.dataset.goto;
-      renderProdTable();
+      renderProdData();
     });
     $("#btnAddProduct").addEventListener("click", () => toast("Formulir tambah produk segera hadir"));
     $("#prodExport").addEventListener("click", () => toast("Ekspor daftar produk segera hadir"));
-    $("#prodRows").addEventListener("click", e => {
+
+    // Event Delegation for Edit & Delete on both Table and Cards
+    function handleActionClick(e) {
       const edit = e.target.closest("[data-edit]");
       const del = e.target.closest("[data-del]");
-      if (edit) toast(`Edit produk: ${ITEM[+edit.dataset.edit].name}`);
+      if (edit) {
+        const id = +edit.dataset.edit;
+        toast(`Edit produk: ${ITEM[id] ? ITEM[id].name : id}`);
+      }
       if (del) {
-        const m = ITEM[+del.dataset.del];
+        const id = +del.dataset.del;
+        const m = ITEM[id];
+        if (!m) return;
         showConfirm({
           icon: "🗑",
           title: "Hapus Produk",
@@ -276,7 +397,10 @@
           onOk: () => toast(`${m.name} dihapus dari master data (demo)`),
         });
       }
-    });
+    }
+
+    $("#prodRows").addEventListener("click", handleActionClick);
+    $("#prodCardsContainer").addEventListener("click", handleActionClick);
 
     $("#modalOk").addEventListener("click", () => closeConfirm(true));
     $("#modalCancel").addEventListener("click", () => closeConfirm(false));
@@ -284,7 +408,7 @@
       if (e.target === e.currentTarget) closeConfirm(false);
     });
 
-    renderProdTable();
+    renderProdData();
     initSidebar("produk");
   </script>
 </body>

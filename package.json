@@ -1,0 +1,20 @@
+{
+  "name": "amar-plastik-pos",
+  "version": "1.0.0",
+  "description": "Sistem Kasir (POS), Inventaris, & Analitik Retail Toko Bahan Kue dan Perlengkapan Plastik Amar Plastik",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node -e \"const http=require('http'), fs=require('fs'), path=require('path'); const server=http.createServer((req,res)=>{ let p=path.join(__dirname, req.url.split('?')[0]); if(req.url==='/') p=path.join(__dirname, 'index.html'); if(fs.existsSync(p) && fs.statSync(p).isFile()){ const ext=path.extname(p); const ct={'.html':'text/html','.js':'application/javascript','.css':'text/css','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'}[ext]||'text/plain'; res.writeHead(200,{'Content-Type':ct}); fs.createReadStream(p).pipe(res); } else { res.writeHead(404); res.end('Not Found'); } }); const PORT=process.env.PORT||4321; server.listen(PORT, ()=>console.log('POS Server berjalan di http://localhost:'+PORT));\"",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "pos",
+    "point-of-sale",
+    "retail",
+    "kasir",
+    "bento-dashboard",
+    "amar-plastik"
+  ],
+  "author": "Amar Plastik",
+  "license": "ISC"
+}

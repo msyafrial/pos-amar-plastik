@@ -1,0 +1,26 @@
+# ============================================================
+# Amar Plastik POS — .gitignore
+# ============================================================
+
+# Dependencies & package locks
+node_modules/
+package-lock.json
+
+# Browser automation, testing & temporary captures
+.playwright-mcp/
+test-results/
+screenshots/
+*.tmp
+
+# Operating system & Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
