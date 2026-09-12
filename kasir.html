@@ -296,6 +296,31 @@
     </div>
   </div>
 
+  <!-- ================= POPUP PEMILIHAN SATUAN / KEMASAN (OPTION B) ================= -->
+  <div class="unit-picker-backdrop" id="unitPickerModalBackdrop" hidden>
+    <div class="unit-picker-modal" role="dialog" aria-modal="true" aria-labelledby="unitPickerTitle">
+      <div class="unit-picker-header">
+        <div class="unit-picker-prod-info">
+          <div class="unit-picker-thumb" id="unitPickerThumb"></div>
+          <div class="unit-picker-meta">
+            <span class="unit-picker-badge" id="unitPickerCat">Bahan Kue</span>
+            <h3 class="unit-picker-title" id="unitPickerTitle">Gula Pasir</h3>
+            <p class="unit-picker-stock" id="unitPickerStock">Tersedia: 75 kg (1 Karung + 25 kg)</p>
+          </div>
+        </div>
+        <button type="button" class="unit-picker-close" id="unitPickerClose" aria-label="Tutup pilihan satuan" title="Tutup">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="unit-picker-body">
+        <p class="unit-picker-instruction">Pilih varian satuan / kemasan untuk dimasukkan ke keranjang:</p>
+        <div class="unit-picker-list" id="unitPickerList">
+          <!-- Varian satuan dynamically rendered via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <button class="cart-fab" id="cartFab" aria-label="Buka pesanan">
     🧾
     <span class="fab-count" id="fabCount">0</span>
@@ -303,6 +328,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="assets/js/shared.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

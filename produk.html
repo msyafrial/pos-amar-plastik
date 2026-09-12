@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Master Data Produk — Amar Plastik</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%234f46e5%22 stroke-width=%222%22><path d=%22M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z%22/><polyline points=%223.27 6.96 12 12.01 20.73 6.96%22/><line x1=%2212%22 y1=%2222.08%22 x2=%2212%22 y2=%2212%22/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,16 +13,13 @@
 </head>
 <body>
   <div class="app app-single">
-    <!-- Rail navigasi -->
-        <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
+    <!-- ================= MODERN CAPSULE SIDEBAR ================= -->
     <nav class="rail" id="sidebarRail" aria-label="Navigasi utama">
-      <!-- Floating Edge Toggle Pill (‹ / ›) on right border -->
       <button class="rail-edge-toggle" id="railEdgeToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
         <svg class="edge-icon-collapse" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
         <svg class="edge-icon-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
       </button>
 
-      <!-- Brand Logo Header -->
       <a class="rail-brand" href="index.html" title="Amar Plastik — Beranda">
         <div class="rail-logo">
           <img src="assets/images/logo.jpg" alt="Logo Amar Plastik" class="rail-logo-img" />
@@ -33,7 +30,6 @@
         </div>
       </a>
 
-      <!-- Section: UTAMA -->
       <div class="rail-section-label">UTAMA</div>
       <div class="rail-nav">
         <a class="rail-btn" href="index.html" data-page="dashboard" data-tooltip="Dashboard" title="Dashboard">
@@ -52,7 +48,6 @@
 
       <div class="rail-section-divider"></div>
 
-      <!-- Section: KATALOG -->
       <div class="rail-section-label">KATALOG</div>
       <div class="rail-nav">
         <a class="rail-btn is-active" href="produk.html" data-page="produk" data-tooltip="Produk" title="Produk">
@@ -67,7 +62,6 @@
 
       <div class="rail-section-divider"></div>
 
-      <!-- Section: LAPORAN -->
       <div class="rail-section-label">LAPORAN</div>
       <div class="rail-nav">
         <a class="rail-btn" href="laporan.html" data-page="laporan" data-tooltip="Penjualan" title="Laporan Penjualan">
@@ -82,18 +76,16 @@
 
       <div class="rail-section-divider"></div>
 
-      <!-- Section: SISTEM -->
       <div class="rail-section-label">SISTEM</div>
       <div class="rail-nav">
         <a class="rail-btn" href="pengaturan.html" data-page="pengaturan" data-tooltip="Pengaturan" title="Pengaturan">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 7.07 4.24l.06.06a1.7 1.7 0 0 0 1.87.34h.09a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.09a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0 1.55 1z"/></svg>
           <span class="rail-label">Pengaturan</span>
         </a>
       </div>
 
       <div class="rail-spacer"></div>
 
-      <!-- Profile Footer Area -->
       <div class="rail-profile">
         <span class="rail-avatar" title="Lina Puspa Melinda">LM</span>
         <div class="rail-profile-info">
@@ -104,40 +96,99 @@
     </nav>
     <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
 
-    <!-- Konten -->
+    <!-- ================= MAIN CONTENT ================= -->
     <main class="main">
       <div class="page-pad page-full">
+        <!-- Header with Store Filter Dropdown & Add Product Button -->
         <div class="master-head">
-          <div style="display:flex; align-items:flex-start; gap:14px;">
-            <button class="topbar-toggle-btn" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+          <div class="master-head-left">
+            <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="3"/><path d="M9 3v18"/></svg>
             </button>
             <div>
-              <h1 class="page-title">Master data produk</h1>
-              <p class="page-sub">Kelola seluruh produk, stok, dan batch di toko</p>
+              <h1 class="page-title">Master Data Produk</h1>
+              <p class="page-sub" id="prodHeaderSub">Kelola seluruh produk, stok multi-cabang, dan batch di toko</p>
             </div>
           </div>
-          <button class="btn-add" id="btnAddProduct">＋ Tambah produk</button>
+
+          <div class="master-head-right">
+            <!-- Filter Toko Capsule (Custom Popover 2026, Matching Laporan Page) -->
+            <div class="rpt-store-dropdown-wrap" id="prodStoreDropdownWrap">
+              <button type="button" class="rpt-top-ctrl-box rpt-store-dropdown-btn" id="btnStoreDropdown" aria-haspopup="listbox" aria-expanded="false" title="Filter Lokasi Toko">
+                <span class="rpt-top-icon-badge" id="topStoreIconBadge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                </span>
+                <div class="rpt-top-select-wrap">
+                  <span class="rpt-top-mini-label">LOKASI TOKO</span>
+                  <span class="rpt-top-select-name" id="topStoreSelectedName">Semua Toko</span>
+                </div>
+                <span class="rpt-select-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </button>
+
+              <!-- Custom Store Popover Menu with Scalable Instant Search for Dozens of Stores -->
+              <div class="rpt-store-popover" id="storeDropdownPopover" role="listbox" aria-label="Daftar Outlet Toko" hidden>
+                <div class="rpt-store-popover-header">
+                  <span class="rpt-store-popover-title">PILIH CABANG TOKO</span>
+                  <span class="rpt-store-popover-badge" id="storeActiveCountBadge">3 Cabang Aktif</span>
+                </div>
+                <div class="breakdown-search-wrap" style="padding: 8px 12px 0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <input type="text" id="storeSearchInput" class="breakdown-search-input" placeholder="Cari cabang toko..." autocomplete="off" />
+                </div>
+                <div class="rpt-store-list" id="storeDropdownList">
+                  <!-- Populated via JavaScript -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Batch Restock Multi-Item Button -->
+            <button type="button" class="btn-batch-stock" id="btnBatchStock" title="Restock Massal Multi-Item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              <span>Batch Stok</span>
+            </button>
+
+            <!-- Tambah Produk Button -->
+            <button type="button" class="btn-add" id="btnAddProduct">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <span>Tambah Produk</span>
+            </button>
+          </div>
         </div>
 
+        <!-- Bento KPI Metric Cards (Clean SVG Icons, Store Filter Reactive) -->
         <div class="master-cards" id="masterCards"></div>
 
+        <!-- Filter & Search Toolbar -->
         <div class="master-toolbar">
           <label class="msearch">
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <input id="prodSearch" type="search" placeholder="Cari nama produk atau SKU" autocomplete="off" />
+            <input id="prodSearch" type="search" placeholder="Cari nama produk atau kode SKU..." autocomplete="off" />
           </label>
           <select class="mfilter" id="prodCatFilter" aria-label="Filter kategori">
-            <option value="">Kategori</option>
+            <option value="">Semua Kategori</option>
           </select>
           <select class="mfilter" id="prodStockFilter" aria-label="Filter status stok">
-            <option value="">Status stok</option>
+            <option value="">Semua Status Stok</option>
             <option value="ok">Aman</option>
-            <option value="low">Stok menipis</option>
-            <option value="out">Stok habis</option>
+            <option value="low">Stok Menipis</option>
+            <option value="out">Stok Habis</option>
           </select>
 
-          <!-- View Mode Switcher: Card vs List (Table) -->
+          <!-- View Mode Switcher: Card vs Table -->
           <div class="prod-view-toggles" role="radiogroup" aria-label="Tampilan produk">
             <button type="button" class="prod-view-btn" id="prodViewCardBtn" aria-label="Tampilan kartu" title="Tampilan Kartu">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
@@ -147,44 +198,508 @@
             </button>
           </div>
 
-          <button class="mexport" id="prodExport">↓ Ekspor</button>
+          <button class="mexport" id="prodExport" title="Ekspor CSV">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Ekspor CSV</span>
+          </button>
         </div>
 
-        <!-- Tampilan Card Grid (Sesuai Referensi Gambar) -->
+        <!-- Tampilan Card Grid (Zero Emoji) -->
         <div class="prod-cards-grid" id="prodCardsContainer" hidden></div>
 
-        <!-- Tampilan List / Table -->
+        <!-- Tampilan Table (Zero Emoji) -->
         <div class="prod-table-wrap master-table" id="prodTableContainer">
           <table class="prod-table">
             <thead>
               <tr>
                 <th>Produk</th>
                 <th>Kategori</th>
-                <th>Batch terlama</th>
+                <th>Batch / No</th>
                 <th>Kedaluwarsa</th>
-                <th>Stok</th>
-                <th>Harga jual</th>
+                <th>Stok Toko</th>
+                <th>Harga Jual</th>
                 <th>Status</th>
-                <th></th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody id="prodRows"></tbody>
           </table>
         </div>
+
         <div class="master-foot" id="masterFoot"></div>
       </div>
     </main>
   </div>
 
-  <!-- Modal konfirmasi -->
+  <!-- ================= MODAL: BREAKDOWN DISTRIBUSI STOK PER CABANG ================= -->
+  <div class="modal-backdrop" id="breakdownModalBackdrop" hidden>
+    <div class="modal breakdown-modal" role="dialog" aria-modal="true" aria-labelledby="breakdownModalTitle">
+      <div class="cat-modal-head">
+        <div>
+          <h3 id="breakdownModalTitle">Distribusi Stok per Cabang</h3>
+          <p class="cat-modal-sub">Pemantauan stok spesifik seluruh cabang untuk item ini</p>
+        </div>
+        <button type="button" class="cat-modal-close" id="breakdownModalClose" aria-label="Tutup modal">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="breakdown-header-card">
+        <div class="breakdown-item-info">
+          <strong id="breakdownItemName">Tepung Terigu 1kg</strong>
+          <small id="breakdownItemSku">SKU-00001 • Bahan Kue</small>
+        </div>
+        <div class="breakdown-total-pill">
+          <span>TOTAL KONSOLIDASI</span>
+          <strong id="breakdownTotalQty">48 pcs</strong>
+        </div>
+      </div>
+
+      <!-- Search Outlet Filter for Dozens of Stores -->
+      <div class="breakdown-search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="breakdownSearchInput" class="breakdown-search-input" placeholder="Cari cabang toko..." autocomplete="off" />
+      </div>
+
+      <!-- List of Branches and their specific stocks -->
+      <div class="breakdown-list" id="breakdownStoreList">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="modal-actions" style="margin-top: 20px;">
+        <button type="button" class="modal-btn secondary" id="breakdownModalCancel">Tutup</button>
+        <button type="button" class="modal-btn primary" id="breakdownModalAdjustBtn">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+          <span>Sesuaikan Stok Produk Ini</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: UPDATE STOK (RESTOCK / DAMAGE / OPNAME) ================= -->
+  <div class="modal-backdrop" id="stockAdjustModalBackdrop" hidden>
+    <div class="modal adjust-modal" role="dialog" aria-modal="true" aria-labelledby="adjustModalTitle">
+      <div class="cat-modal-head">
+        <div>
+          <h3 id="adjustModalTitle">Penyesuaian Stok Cabang</h3>
+          <p class="cat-modal-sub">Catat mutasi restock supplier, barang rusak, atau koreksi opname fisik</p>
+        </div>
+        <button type="button" class="cat-modal-close" id="adjustModalClose" aria-label="Tutup modal">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <form id="stockAdjustForm">
+        <input type="hidden" id="adjustProdId" value="" />
+
+        <div class="adjust-target-card">
+          <div class="adjust-target-details">
+            <h4 id="adjustProdName">Tepung Terigu 1kg</h4>
+            <span id="adjustProdSku">SKU-00001</span>
+          </div>
+          <div class="adjust-curr-stock">
+            <small>STOK CABANG SAAT INI</small>
+            <strong id="adjustCurrentQty">0 pcs</strong>
+          </div>
+        </div>
+
+        <!-- Pilihan Lokasi Cabang Toko -->
+        <div class="cat-form-group">
+          <label for="adjustStoreSelect">Pilih Lokasi Cabang Toko *</label>
+          <select id="adjustStoreSelect" class="cat-input" required>
+            <!-- Populated via JS -->
+          </select>
+        </div>
+
+        <!-- Mode Tabs: Restock (+), Rusak (-), Opname (=) -->
+        <div class="adjust-mode-tabs" role="tablist">
+          <button type="button" class="adjust-tab-btn is-active" data-mode="restock">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <span>Restock (+)</span>
+          </button>
+          <button type="button" class="adjust-tab-btn" data-mode="damage">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <span>Rusak / Exp (-)</span>
+          </button>
+          <button type="button" class="adjust-tab-btn" data-mode="opname">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Opname Fisik (=)</span>
+          </button>
+        </div>
+
+        <div class="cat-form-group">
+          <label id="adjustQtyLabel" for="adjustQtyInput">Jumlah Masuk (pcs) *</label>
+          <input type="number" id="adjustQtyInput" class="cat-input" min="0" step="1" required placeholder="0" autocomplete="off" />
+        </div>
+
+        <!-- Input Harga Beli / HPP Masuk (Khusus Mode Restock) -->
+        <div class="cat-form-group" id="adjustCostGroup">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 6px;">
+            <label for="adjustCostInput" style="margin-bottom:0;">Harga Beli / HPP Baru (Rp/satuan) *</label>
+            <span class="adjust-cost-hint" id="adjustCostHint">HPP Lama: Rp 0</span>
+          </div>
+          <div class="cat-input-prefix">
+            <span class="prefix">Rp</span>
+            <input type="number" id="adjustCostInput" class="cat-input with-prefix" min="0" step="100" placeholder="0" autocomplete="off" />
+          </div>
+        </div>
+
+        <!-- Live Calculation Box with WAC Breakdown -->
+        <div class="adjust-calc-box" id="adjustCalcBox">
+          <div class="adjust-calc-row">
+            <span class="adjust-calc-label" id="adjustCalcLabel">Kalkulasi Stok:</span>
+            <strong class="adjust-calc-formula" id="adjustCalcFormula">0 + 0 = 0 pcs</strong>
+          </div>
+          <div class="adjust-calc-row adjust-hpp-row" id="adjustHppCalcRow">
+            <span class="adjust-calc-label">HPP Rata-Rata (WAC):</span>
+            <div class="adjust-hpp-calc-detail">
+              <span class="adjust-hpp-formula" id="adjustHppFormula">Rp 0 → Rp 0</span>
+              <span class="adjust-hpp-badge" id="adjustHppBadge">Tetap</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-form-group">
+          <label for="adjustNoteInput">Nomor Referensi / Catatan Dokumen (Opsional)</label>
+          <input type="text" id="adjustNoteInput" class="cat-input" placeholder="Contoh: Surat Jalan SJ-2026/09/01" autocomplete="off" />
+        </div>
+
+        <div class="modal-actions" style="margin-top: 20px;">
+          <button type="button" class="modal-btn secondary" id="adjustModalCancel">Batal</button>
+          <button type="submit" class="modal-btn success" id="adjustModalSubmit">Terapkan Perubahan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: BATCH RESTOCK (INPUT STOK MASSAL SATU CABANG) ================= -->
+  <div class="modal-backdrop" id="batchStockModalBackdrop" hidden>
+    <div class="modal batch-modal" style="max-width: 1140px; width: min(1140px, 96vw);" role="dialog" aria-modal="true" aria-labelledby="batchModalTitle">
+      <div class="cat-modal-head">
+        <div>
+          <div class="batch-title-row">
+            <h3 id="batchModalTitle">Batch Restock Multi-Item</h3>
+            <span class="batch-tag-badge">Multi-Item Entry</span>
+          </div>
+          <p class="cat-modal-sub">Input penambahan stok dan HPP untuk banyak produk sekaligus dalam satu cabang toko</p>
+        </div>
+        <button type="button" class="cat-modal-close" id="batchModalClose" aria-label="Tutup modal batch">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <form id="batchStockForm" class="batch-form-layout">
+        <!-- Scrollable Form Body: Header meta, toolbar, table, summary -->
+        <div class="batch-form-scroll" id="batchFormScroll">
+          <!-- Meta Dokumen Penerimaan Barang -->
+          <div class="batch-doc-grid">
+            <div class="cat-form-group">
+              <label for="batchStoreSelect">Toko / Cabang Penerima *</label>
+              <select id="batchStoreSelect" class="cat-input" required></select>
+            </div>
+            <div class="cat-form-group">
+              <label for="batchRefInput">No. Dokumen / PO / Surat Jalan</label>
+              <input type="text" id="batchRefInput" class="cat-input" placeholder="Contoh: PO-2026/09/BRG-01" autocomplete="off" />
+            </div>
+            <div class="cat-form-group">
+              <label for="batchDateInput">Tanggal Penerimaan *</label>
+              <input type="date" id="batchDateInput" class="cat-input" required />
+            </div>
+            <div class="cat-form-group">
+              <label for="batchSupplierInput">Supplier / Catatan Dokumen</label>
+              <input type="text" id="batchSupplierInput" class="cat-input" placeholder="Contoh: PT Bogasari Flour Mills" autocomplete="off" />
+            </div>
+          </div>
+
+          <!-- Searchable Combobox Product Selector Toolbar & Clear All -->
+          <div class="batch-add-toolbar">
+            <div class="batch-combobox-wrap" id="batchComboboxWrap">
+              <button type="button" class="batch-combobox-trigger" id="batchComboboxTrigger" aria-haspopup="listbox" aria-expanded="false">
+                <div class="batch-combobox-trigger-main">
+                  <svg class="batch-search-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                  <span class="batch-combobox-placeholder" id="batchComboboxPlaceholder">Cari & Pilih Produk (+ Tambah Otomatis)...</span>
+                </div>
+                <div class="batch-combobox-trigger-extra">
+                  <span class="batch-combobox-count" id="batchAvailableCountBadge">0 Tersedia</span>
+                  <svg class="batch-chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </div>
+              </button>
+
+              <!-- Searchable Popover Dropdown Panel -->
+              <div class="batch-combobox-dropdown" id="batchComboboxDropdown" hidden>
+                <div class="batch-combobox-search-box">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                  <input type="text" id="batchProdSearchInput" class="batch-combobox-search-input" placeholder="Ketik nama, SKU, atau kategori..." autocomplete="off" />
+                  <button type="button" class="batch-combobox-search-clear" id="batchProdSearchClear" hidden title="Hapus pencarian">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </button>
+                </div>
+                <div class="batch-combobox-list" id="batchComboboxList" role="listbox">
+                  <!-- Populated dynamically via JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Delete All Toolbar Action (Only active when list has items) -->
+            <div class="batch-toolbar-actions">
+              <button type="button" class="btn-batch-clear-all" id="btnBatchClearAll" title="Kosongkan seluruh produk dari daftar restock" disabled>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                <span>Kosongkan List</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Table of Batch Items -->
+          <div class="batch-table-wrap">
+            <table class="batch-table" id="batchTable">
+              <thead>
+                <tr>
+                  <th style="width: 230px; min-width: 230px;">Produk & Stok Cabang</th>
+                  <th style="width: 80px; min-width: 80px; text-align: center;">Jml Masuk</th>
+                  <th style="width: 200px; min-width: 200px;">
+                    <div class="batch-th-cost-wrap">
+                      <span>Harga Beli</span>
+                      <div class="batch-global-cost-toggle" id="batchGlobalCostMode" title="Ubah mode input harga beli untuk semua baris">
+                        <button type="button" class="batch-cost-mode-btn active" data-mode="unit">Satuan</button>
+                        <button type="button" class="batch-cost-mode-btn" data-mode="subtotal">Subtotal</button>
+                      </div>
+                    </div>
+                  </th>
+                  <th style="width: 160px; min-width: 160px;">Harga Jual</th>
+                  <th style="min-width: 270px;">Proyeksi Stok, HPP & Subtotal</th>
+                  <th style="width: 48px; min-width: 48px; text-align: center;">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="batchTableBody">
+                <!-- Rendered dynamically via JS -->
+              </tbody>
+            </table>
+            <div id="batchEmptyState" class="batch-empty-state" hidden>
+              <div class="batch-empty-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+              </div>
+              <strong style="color:#1e293b; font-size:13px;">Belum Ada Produk di Daftar Batch</strong>
+              <p style="font-size:12px; margin-top:2px;">Pilih atau cari produk pada dropdown di atas untuk langsung menambahkannya ke daftar.</p>
+            </div>
+          </div>
+
+          <!-- Summary Metric Bar -->
+          <div class="batch-summary-bar">
+            <div class="batch-summary-stat">
+              <span class="batch-stat-label">TOTAL PRODUK</span>
+              <strong class="batch-stat-val" id="batchTotalItemsCount">0 Item</strong>
+            </div>
+            <div class="batch-summary-divider"></div>
+            <div class="batch-summary-stat">
+              <span class="batch-stat-label">TOTAL KUANTITAS MASUK</span>
+              <strong class="batch-stat-val" id="batchTotalQtyCount">0 unit</strong>
+            </div>
+            <div class="batch-summary-divider"></div>
+            <div class="batch-summary-stat primary">
+              <span class="batch-stat-label">ESTIMASI NILAI PEMBELIAN</span>
+              <strong class="batch-stat-val" id="batchTotalPriceVal">Rp 0</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Fixed Modal Actions (Never Clipped) -->
+        <div class="modal-actions batch-modal-actions">
+          <button type="button" class="modal-btn secondary" id="batchModalCancel">Batal</button>
+          <button type="submit" class="modal-btn success" id="batchModalSubmit">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Terapkan Batch Stok</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL KONFIRMASI: KOSONGKAN DAFTAR BATCH ================= -->
+  <div class="modal-backdrop" id="batchClearConfirmModalBackdrop" hidden style="z-index: 1050;">
+    <div class="modal batch-confirm-modal" role="alertdialog" aria-modal="true" style="max-width: 440px; width: 92vw; text-align: center; padding: 24px 20px;">
+      <div class="batch-confirm-icon-wrap">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#dc2626" stroke-width="2">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      <h3 class="batch-confirm-title" style="margin-top: 12px; font-size: 16px; font-weight: 800; color: #0f172a;">Kosongkan Daftar Restock?</h3>
+      <p class="batch-confirm-desc" id="batchClearConfirmDesc" style="margin-top: 6px; font-size: 13px; color: #64748b; line-height: 1.4;">
+        Apakah Anda yakin ingin menghapus seluruh produk dari daftar batch restock ini? Data kuantitas dan harga beli yang telah diinput akan hilang.
+      </p>
+      <div class="modal-actions" style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+        <button type="button" class="modal-btn secondary" id="btnBatchClearCancel" style="flex: 1;">Batal</button>
+        <button type="button" class="modal-btn danger" id="btnBatchClearConfirm" style="flex: 1.2; background: #dc2626; color: #fff; border: none;">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          <span>Ya, Kosongkan</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: TAMBAH / EDIT PRODUK ================= -->
+  <div class="modal-backdrop" id="prodModalBackdrop" hidden>
+    <div class="modal cat-modal" style="max-width: 820px; width: 94vw;" role="dialog" aria-modal="true" aria-labelledby="prodModalTitle">
+      <div class="cat-modal-head">
+        <div>
+          <h3 id="prodModalTitle">Tambah Produk Baru</h3>
+          <p class="cat-modal-sub">Daftarkan SKU produk, unggah foto, dan alokasikan stok awal untuk masing-masing cabang</p>
+        </div>
+        <button type="button" class="cat-modal-close" id="prodModalClose" aria-label="Tutup modal">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <form id="prodForm">
+        <input type="hidden" id="prodIdInput" value="" />
+        <input type="hidden" id="prodImageData" value="" />
+
+        <div class="prod-modal-body">
+          <!-- Top Section: Foto Produk (Kiri) & Info Dasar (Kanan) -->
+          <div class="prod-modal-top-section">
+            <div class="prod-img-uploader">
+              <label>Foto Produk</label>
+              <div class="prod-img-dropzone" id="prodImgDropzone" title="Klik atau tarik gambar ke sini">
+                <input type="file" id="prodImageFileInput" accept="image/*" style="display:none;" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <strong>Tarik foto ke sini atau <span style="color:#4f46e5; text-decoration:underline;">Pilih File</span></strong>
+                <small>PNG, JPG, WEBP maks 2MB</small>
+
+                <div class="prod-img-preview-box" id="prodImgPreviewBox">
+                  <img src="" id="prodImgPreview" alt="Preview Foto Produk" class="prod-img-preview-img" />
+                  <button type="button" class="prod-img-remove-btn" id="btnRemoveProdImg" title="Hapus Foto">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="prod-img-url-wrap">
+                <input type="url" id="prodImageUrlInput" placeholder="Atau masukkan tautan/URL gambar..." class="cat-input prod-img-url-input" />
+              </div>
+            </div>
+
+            <!-- Detail Info Produk -->
+            <div class="prod-info-fields">
+              <div class="cat-form-group">
+                <label for="prodNameInput">Nama Produk *</label>
+                <input type="text" id="prodNameInput" required placeholder="Contoh: Tepung Terigu Segitiga Biru 1kg" class="cat-input" autocomplete="off" />
+              </div>
+              <div class="cat-form-row">
+                <div class="cat-form-group">
+                  <label for="prodSkuInput">Kode SKU *</label>
+                  <input type="text" id="prodSkuInput" required placeholder="SKU-00009" class="cat-input" style="font-family:var(--font-mono, monospace); text-transform:uppercase;" autocomplete="off" />
+                </div>
+                <div class="cat-form-group">
+                  <label for="prodCategorySelect">Kategori *</label>
+                  <select id="prodCategorySelect" class="cat-input" required>
+                    <!-- Dynamic Categories -->
+                  </select>
+                </div>
+              </div>
+              <div class="cat-form-group">
+                <label for="prodUnitInput">Satuan Barang</label>
+                <select id="prodUnitInput" class="cat-input">
+                  <option value="kg">Kilogram (kg)</option>
+                  <option value="pcs">Pcs / Buah</option>
+                  <option value="lembar">Lembar</option>
+                  <option value="liter">Liter (L)</option>
+                  <option value="pack">Pack / Bungkus</option>
+                  <option value="roll">Roll</option>
+                  <option value="dus">Dus / Karton</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section: Harga, Margin & Parameter Batch -->
+          <div class="prod-form-row-3">
+            <div class="cat-form-group">
+              <label for="prodCostPriceInput">Harga Modal (HPP)</label>
+              <input type="number" id="prodCostPriceInput" placeholder="0" class="cat-input" min="0" step="100" />
+            </div>
+            <div class="cat-form-group">
+              <label for="prodSellPriceInput">Harga Jual *</label>
+              <input type="number" id="prodSellPriceInput" required placeholder="12500" class="cat-input" min="0" step="100" />
+            </div>
+            <div class="cat-form-group">
+              <label for="prodMinStockInput">Batas Min Stok (Alert)</label>
+              <input type="number" id="prodMinStockInput" placeholder="10" class="cat-input" min="0" step="1" />
+            </div>
+          </div>
+
+          <div class="cat-form-row">
+            <div class="cat-form-group">
+              <label for="prodBatchInput">Nomor Batch Pabrik</label>
+              <input type="text" id="prodBatchInput" placeholder="BRG009-0926-A" class="cat-input" autocomplete="off" />
+            </div>
+            <div class="cat-form-group">
+              <label for="prodExpInput">Kedaluwarsa (MM/YY)</label>
+              <input type="text" id="prodExpInput" placeholder="03/27" class="cat-input" autocomplete="off" />
+            </div>
+          </div>
+
+          <!-- Bagian Variasi Jual & Satuan Kemasan (User Request #2) -->
+          <div class="cat-form-group prod-var-section" id="prodVariationsSection">
+            <div class="prod-var-header">
+              <div class="prod-var-header-left">
+                <label class="prod-var-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                  <span>Variasi Jual & Kemasan Eceran</span>
+                </label>
+                <div class="prod-var-subtitle">Tambah variasi ukuran eceran/kemasan dengan hitungan harga proporsional dan diskon khusus (bulat 500 ke bawah)</div>
+              </div>
+              <button type="button" class="btn-add-var" id="btnAddProdVariation">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <span>Tambah Variasi</span>
+              </button>
+            </div>
+
+            <div class="prod-var-list" id="prodVariationsList">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Alokasi Stok Awal per Cabang -->
+          <div class="cat-form-group" style="margin-top: 2px;">
+            <label style="display:flex; align-items:center; justify-content:space-between;">
+              <span>Alokasi Stok Awal per Cabang</span>
+              <small style="color:var(--muted); font-weight:400;">Bisa diedit kapan saja</small>
+            </label>
+            <div class="prod-stocks-grid" id="prodStoreStocksGrid">
+              <!-- Dynamic store inputs via JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions" style="margin-top: 20px;">
+          <button type="button" class="modal-btn secondary" id="prodModalCancel">Batal</button>
+          <button type="submit" class="modal-btn success" id="prodModalSubmit">Simpan Produk</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Konfirmasi Hapus Bebas Emoji -->
   <div class="modal-backdrop" id="modalBackdrop" hidden>
     <div class="modal" role="dialog" aria-modal="true">
-      <div class="modal-icon" id="modalIcon">🗑</div>
+      <div class="modal-icon" id="modalIcon">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"/>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+        </svg>
+      </div>
       <h3 id="modalTitle">Konfirmasi</h3>
       <p id="modalBody">Apakah Anda yakin?</p>
       <div class="modal-actions">
         <button class="modal-btn secondary" id="modalCancel">Batal</button>
-        <button class="modal-btn danger" id="modalOk">Ya, Lanjutkan</button>
+        <button class="modal-btn danger" id="modalOk">Ya, Hapus</button>
       </div>
     </div>
   </div>
@@ -193,10 +708,378 @@
 
   <script src="assets/js/shared.js"></script>
   <script>
+    // State Filter & Toko Aktif
+    let currentStoreFilter = localStorage.getItem("ap_prod_store_filter") || "all";
     const prodFilter = { query: "", cat: "", stock: "" };
-    const PER_PAGE = 8; // 8 items per page for balanced grid and list
+    const PER_PAGE = 8;
     let prodPageNum = 1;
     let currentViewMode = localStorage.getItem("ap_prod_view_mode") || "list"; // 'card' | 'list'
+    let currentAdjustMode = "restock"; // 'restock' | 'damage' | 'opname'
+    let activeBreakdownProduct = null;
+
+    let masterProducts = [];
+    let masterStores = [];
+    let masterCategories = [];
+
+    // Baca parameter URL jika user datang dari kategori.html?cat=id
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get("cat");
+    if (catParam) {
+      prodFilter.cat = catParam;
+    }
+
+    function initData() {
+      masterStores = loadStores();
+      masterCategories = loadCategories();
+      masterProducts = loadProducts();
+      initStoreDropdown();
+      populateCategoryFilter();
+      renderProdData();
+    }
+
+    /* ---- Filter Cabang Toko (Mengadopsi pola Laporan Penjualan) ---- */
+    function initStoreDropdown() {
+      const listEl = $("#storeDropdownList");
+      const activeCountEl = $("#storeActiveCountBadge");
+      activeCountEl.textContent = `${masterStores.length} Cabang Aktif`;
+
+      renderStoreDropdownOptions();
+
+      // Toggle Popover
+      $("#btnStoreDropdown").addEventListener("click", e => {
+        e.stopPropagation();
+        const popover = $("#storeDropdownPopover");
+        const isOpen = !popover.hidden;
+        popover.hidden = isOpen;
+        $("#btnStoreDropdown").classList.toggle("is-open", !isOpen);
+        $("#btnStoreDropdown").setAttribute("aria-expanded", String(!isOpen));
+        if (!isOpen) {
+          $("#storeSearchInput").value = "";
+          renderStoreDropdownOptions();
+          setTimeout(() => $("#storeSearchInput").focus(), 80);
+        }
+      });
+
+      // Filter Toko di dalam popover (skalabilitas puluhan cabang)
+      $("#storeSearchInput").addEventListener("input", e => {
+        renderStoreDropdownOptions(e.target.value);
+      });
+
+      document.addEventListener("click", e => {
+        if (!e.target.closest("#prodStoreDropdownWrap")) {
+          $("#storeDropdownPopover").hidden = true;
+          $("#btnStoreDropdown").classList.remove("is-open");
+          $("#btnStoreDropdown").setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    function renderStoreDropdownOptions(filterTerm = "") {
+      const term = (filterTerm || "").trim().toLowerCase();
+      const listEl = $("#storeDropdownList");
+
+      const filteredStores = masterStores.filter(s => 
+        !term || s.name.toLowerCase().includes(term) || s.code.toLowerCase().includes(term) || s.shortName.toLowerCase().includes(term)
+      );
+
+      const allSelected = currentStoreFilter === "all";
+      let html = `
+        <button type="button" class="rpt-store-opt ${allSelected ? "is-selected" : ""}" data-value="all" role="option" aria-selected="${allSelected}">
+          <div class="rpt-store-opt-icon all">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="rpt-store-opt-content">
+            <div class="rpt-store-opt-row">
+              <strong class="rpt-store-opt-name">Semua Toko</strong>
+              <span class="rpt-store-badge all">Konsolidasi</span>
+            </div>
+            <span class="rpt-store-opt-sub">Akumulasi seluruh cabang & pusat</span>
+          </div>
+          <span class="rpt-store-opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        </button>
+      `;
+
+      filteredStores.forEach(s => {
+        const isSel = currentStoreFilter === s.id;
+        const iconSvg = s.isCentral ? getCategorySvg("building") : getCategorySvg("store");
+        html += `
+          <button type="button" class="rpt-store-opt ${isSel ? "is-selected" : ""}" data-value="${s.id}" role="option" aria-selected="${isSel}">
+            <div class="rpt-store-opt-icon ${s.badgeClass || 'pusat'}">
+              ${iconSvg}
+            </div>
+            <div class="rpt-store-opt-content">
+              <div class="rpt-store-opt-row">
+                <strong class="rpt-store-opt-name">${s.name}</strong>
+                <span class="rpt-store-badge ${s.badgeClass || 'pusat'}">${s.shortName || s.code}</span>
+              </div>
+              <span class="rpt-store-opt-sub">${s.address || 'Outlet Toko'}</span>
+            </div>
+            <span class="rpt-store-opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </button>
+        `;
+      });
+
+      listEl.innerHTML = html;
+
+      listEl.querySelectorAll(".rpt-store-opt").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const val = btn.dataset.value;
+          currentStoreFilter = val;
+          localStorage.setItem("ap_prod_store_filter", val);
+          updateStoreDropdownHeader();
+          $("#storeDropdownPopover").hidden = true;
+          $("#btnStoreDropdown").classList.remove("is-open");
+          prodPageNum = 1;
+          renderProdData();
+        });
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function updateStoreDropdownHeader() {
+      const nameEl = $("#topStoreSelectedName");
+      const iconEl = $("#topStoreIconBadge");
+
+      if (currentStoreFilter === "all") {
+        nameEl.textContent = "Semua Toko";
+        iconEl.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
+        $("#prodHeaderSub").textContent = `Konsolidasi seluruh stok (${masterStores.length} cabang terdaftar)`;
+      } else {
+        const store = masterStores.find(s => s.id === currentStoreFilter);
+        const name = store ? store.name : currentStoreFilter;
+        nameEl.textContent = name;
+        iconEl.innerHTML = store?.isCentral ? getCategorySvg("building") : getCategorySvg("store");
+        $("#prodHeaderSub").textContent = `Menampilkan data khusus: ${name}`;
+      }
+    }
+
+    /* ---- Kategori Filter Toolbar ---- */
+    function populateCategoryFilter() {
+      const catSel = $("#prodCatFilter");
+      catSel.innerHTML = `<option value="">Semua Kategori</option>` +
+        masterCategories.map(c => `<option value="${c.id}" ${prodFilter.cat === c.id ? "selected" : ""}>${c.name}</option>`).join("");
+    }
+
+    /* ---- Render Master Produk Data ---- */
+    function renderProdData() {
+      updateStoreDropdownHeader();
+
+      // Hitung KPI berbasis toko aktif
+      const total = masterProducts.length;
+      const low = masterProducts.filter(m => stockStatus(m, currentStoreFilter) === "low").length;
+      const out = masterProducts.filter(m => stockStatus(m, currentStoreFilter) === "out").length;
+      const nearExp = masterProducts.filter(m => {
+        if (!m.exp) return false;
+        const [mm, yy] = m.exp.split("/").map(Number);
+        const expDate = new Date(2000 + yy, mm - 1, 1);
+        return (expDate - new Date()) / 86400000 <= 60;
+      }).length;
+
+      const storeTag = currentStoreFilter === "all" ? "Total Cabang" : masterStores.find(s => s.id === currentStoreFilter)?.shortName || "Cabang";
+
+      $("#masterCards").innerHTML = `
+        <div class="mcard">
+          <div class="mc-label">TOTAL PRODUK</div>
+          <div class="mc-value">${total}</div>
+        </div>
+        <div class="mcard">
+          <div class="mc-label">STOK MENIPIS (${storeTag})</div>
+          <div class="mc-value orange">${low}</div>
+        </div>
+        <div class="mcard">
+          <div class="mc-label">STOK HABIS (${storeTag})</div>
+          <div class="mc-value red">${out}</div>
+        </div>
+        <div class="mcard">
+          <div class="mc-label">MENDEKATI KEDALUWARSA</div>
+          <div class="mc-value orange">${nearExp}</div>
+        </div>
+      `;
+
+      // Filter data
+      const q = prodFilter.query.toLowerCase();
+      const list = masterProducts.filter(m =>
+        (!q || m.name.toLowerCase().includes(q) || (m.sku && m.sku.toLowerCase().includes(q))) &&
+        (!prodFilter.cat || m.cat === prodFilter.cat) &&
+        (!prodFilter.stock || stockStatus(m, currentStoreFilter) === prodFilter.stock)
+      );
+
+      const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+      prodPageNum = Math.min(prodPageNum, pages);
+      const slice = list.slice((prodPageNum - 1) * PER_PAGE, prodPageNum * PER_PAGE);
+
+      // 1. Render Table View
+      $("#prodRows").innerHTML = slice.length ? slice.map(m => {
+        const st = stockStatus(m, currentStoreFilter);
+        const statusLabel = { ok: "Aman", low: "Stok Menipis", out: "Habis" }[st];
+        const statusClass = st;
+        const expText = m.exp ? `EXP ${m.exp}` : "—";
+        const categoryObj = masterCategories.find(c => c.id === m.cat) || { name: m.cat, icon: "package" };
+        const iconSvg = getCategorySvg(categoryObj.icon || m.icon || "package", "cat-card-svg");
+        const tint = m.tint || "#f1f5f9";
+
+        // Nilai Stok Berdasarkan Filter
+        const qty = getProductStock(m, currentStoreFilter);
+        const unit = m.unit || "pcs";
+        const stockFormatted = typeof formatDualUnitStock === "function"
+          ? formatDualUnitStock(m, currentStoreFilter)
+          : `${qty} ${unit}`;
+
+        // Kolom Stok Pintar: Tampilkan pill breakdown jika mode "Semua Toko"
+        let stockCellHtml = "";
+        if (currentStoreFilter === "all") {
+          stockCellHtml = `
+            <div class="prod-stock-cell">
+              <div class="prod-stock-qty-row">
+                <strong style="font-size:14px; font-weight:700;">${stockFormatted}</strong>
+                <button type="button" class="prod-branch-pill" data-breakdown="${m.id}" title="Lihat distribusi stok ${masterStores.length} cabang">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/></svg>
+                  <span>${masterStores.length} Cabang</span>
+                  <svg class="prod-pill-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+              <small style="color:var(--muted); font-size:11px;">Total Konsolidasi</small>
+            </div>
+          `;
+        } else {
+          const storeName = masterStores.find(s => s.id === currentStoreFilter)?.shortName || "Cabang";
+          stockCellHtml = `
+            <div class="prod-stock-cell">
+              <strong style="font-size:14px; font-weight:700;">${stockFormatted}</strong>
+              <small style="color:#4f46e5; font-size:11px; font-weight:600;">Stok di ${storeName}</small>
+            </div>
+          `;
+        }
+
+        const thumbHtml = m.image
+          ? `<span class="p-thumb has-img" title="${m.name}"><img src="${m.image}" alt="${m.name}" class="p-thumb-img" /></span>`
+          : `<span class="p-thumb" style="background:${tint}; color:#475569; display:grid; place-items:center;">${iconSvg}</span>`;
+
+        return `
+        <tr>
+          <td>
+            <div class="p-name">
+              ${thumbHtml}
+              <span>
+                <strong>${m.name}</strong>
+                <small style="font-family:var(--font-mono, monospace);">${m.sku || 'SKU-00000'}</small>
+              </span>
+            </div>
+          </td>
+          <td><span class="p-cat">${categoryObj.name}</span></td>
+          <td class="td-num" style="font-family:var(--font-mono, monospace);">${m.batch || '—'}</td>
+          <td><span style="font-size:12px; color:#64748b;">${expText}</span></td>
+          <td>${stockCellHtml}</td>
+          <td class="td-num"><strong>${rp(m.price)}</strong></td>
+          <td><span class="p-status ${statusClass}">${statusLabel}</span></td>
+          <td>
+            <div class="p-actions">
+              <button class="p-act stock" data-adjust="${m.id}" title="Update & Sesuaikan Stok" aria-label="Update Stok">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </button>
+              <button class="p-act" data-edit="${m.id}" title="Edit Data Produk" aria-label="Edit">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </button>
+              <button class="p-act del" data-del="${m.id}" title="Hapus Produk" aria-label="Hapus">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            </div>
+          </td>
+        </tr>`;
+      }).join("") : `<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:40px">Tidak ada produk yang cocok dengan filter</td></tr>`;
+
+      // 2. Render Cards View (Grid Modern Tanpa Emoji)
+      $("#prodCardsContainer").innerHTML = slice.length ? slice.map(m => {
+        const st = stockStatus(m, currentStoreFilter);
+        const stockClass = st === "out" ? "out" : st === "low" ? "low" : "";
+        const categoryObj = masterCategories.find(c => c.id === m.cat) || { name: m.cat, icon: "package" };
+        const iconSvg = getCategorySvg(categoryObj.icon || m.icon || "package");
+        const qty = getProductStock(m, currentStoreFilter);
+        const unit = m.unit || "pcs";
+        const stockFormatted = typeof formatDualUnitStock === "function"
+          ? formatDualUnitStock(m, currentStoreFilter)
+          : `${qty} ${unit}`;
+        const hppObj = typeof formatDisplayHpp === "function"
+          ? formatDisplayHpp(m)
+          : { text: rp(m.cost || m.price * 0.8), unit: unit };
+
+        const cardMediaHtml = m.image
+          ? `<img src="${m.image}" alt="${m.name}" class="prod-card-full-img" />`
+          : `<div class="prod-card-media"><span class="prod-card-emoji" style="display:grid; place-items:center; width:52px; height:52px; color:#334155;">${iconSvg}</span></div>`;
+
+        return `
+        <article class="prod-card-item" data-id="${m.id}">
+          <div class="prod-card-top ${m.image ? 'has-img' : ''}" style="${m.image ? '' : `background: radial-gradient(circle at center, ${m.tint || '#eff6ff'} 0%, #ffffff 80%);`}">
+            ${cardMediaHtml}
+            <div class="prod-card-actions">
+              <button class="prod-card-act-btn stock" data-adjust="${m.id}" title="Update Stok" aria-label="Update Stok">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+              </button>
+              <button class="prod-card-act-btn edit" data-edit="${m.id}" title="Edit ${m.name}" aria-label="Edit">
+                <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </button>
+              <button class="prod-card-act-btn del" data-del="${m.id}" title="Hapus ${m.name}" aria-label="Hapus">
+                <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            </div>
+            <span class="prod-card-stock ${stockClass}">Stok: ${stockFormatted}</span>
+          </div>
+          <div class="prod-card-details">
+            <span class="prod-card-cat">${categoryObj.name}</span>
+            <h3 class="prod-card-name" title="${m.name}">${m.name}</h3>
+            <div class="prod-card-sku">${m.sku || 'SKU-00000'}</div>
+            
+            ${currentStoreFilter === 'all' ? `
+              <div style="margin-top:6px;">
+                <button type="button" class="prod-branch-pill" data-breakdown="${m.id}" style="width:100%; justify-content:center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/></svg>
+                  <span>Lihat Distribusi ${masterStores.length} Cabang</span>
+                  <svg class="prod-pill-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+            ` : ''}
+
+            <div class="prod-card-prices">
+              <div class="prod-price-col buy">
+                <span class="prod-price-label">HPP (${hppObj.unit})</span>
+                <span class="prod-price-val">${hppObj.text}</span>
+              </div>
+              <div class="prod-price-col sell">
+                <span class="prod-price-label">Harga Jual</span>
+                <span class="prod-price-val sell">${rp(m.price)}</span>
+              </div>
+            </div>
+          </div>
+        </article>`;
+      }).join("") : `
+        <div style="grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 48px 20px; background: #fff; border-radius: 18px; border: 1px dashed #cbd5e1;">
+          Tidak ada produk yang cocok dengan filter
+        </div>`;
+
+      // 3. Render Pagination Footer
+      const first = list.length ? (prodPageNum - 1) * PER_PAGE + 1 : 0;
+      const last = Math.min(prodPageNum * PER_PAGE, list.length);
+      $("#masterFoot").innerHTML = `
+        <span>Menampilkan ${first}–${last} dari ${list.length} produk (${currentStoreFilter === 'all' ? 'Semua Cabang' : 'Cabang Terpilih'})</span>
+        <div class="master-pager">
+          <button data-goto="${prodPageNum - 1}" ${prodPageNum <= 1 ? "disabled" : ""}>‹</button>
+          ${Array.from({ length: pages }, (_, i) =>
+            `<button data-goto="${i + 1}" class="${i + 1 === prodPageNum ? "is-active" : ""}">${i + 1}</button>`
+          ).join("")}
+          <button data-goto="${prodPageNum + 1}" ${prodPageNum >= pages ? "disabled" : ""}>›</button>
+        </div>`;
+
+      updateViewModeButtons();
+    }
 
     function updateViewModeButtons() {
       const cardBtn = $("#prodViewCardBtn");
@@ -217,129 +1100,1681 @@
       }
     }
 
-    function renderProdData() {
-      const total = MENU.length;
-      const low = MENU.filter(m => stockStatus(m) === "low").length;
-      const out = MENU.filter(m => stockStatus(m) === "out").length;
-      const nearExp = MENU.filter(m => {
-        if (!m.exp) return false;
-        const [mm, yy] = m.exp.split("/").map(Number);
-        const expDate = new Date(2000 + yy, mm - 1, 1);
-        return (expDate - new Date()) / 86400000 <= 60;
-      }).length;
-      $("#masterCards").innerHTML = `
-        <div class="mcard"><div class="mc-label">Total produk</div><div class="mc-value">${total}</div></div>
-        <div class="mcard"><div class="mc-label">Stok menipis</div><div class="mc-value orange">${low}</div></div>
-        <div class="mcard"><div class="mc-label">Stok habis</div><div class="mc-value red">${out}</div></div>
-        <div class="mcard"><div class="mc-label">Mendekati kedaluwarsa</div><div class="mc-value orange">${nearExp}</div></div>`;
+    /* ================= BREAKDOWN DISTRIBUSI STOK PER CABANG ================= */
+    function openBreakdownModal(productId) {
+      const p = masterProducts.find(item => item.id === productId);
+      if (!p) return;
+      activeBreakdownProduct = p;
 
-      const catSel = $("#prodCatFilter");
-      if (catSel.options.length <= 1) {
-        catSel.innerHTML = `<option value="">Kategori</option>` +
-          Object.entries(CAT_NAME).filter(([id]) => id !== "all")
-            .map(([id, n]) => `<option value="${id}">${n}</option>`).join("");
-      }
+      $("#breakdownItemName").textContent = p.name;
+      const categoryName = masterCategories.find(c => c.id === p.cat)?.name || p.cat;
+      $("#breakdownItemSku").textContent = `${p.sku || 'SKU'} • ${categoryName}`;
+      const totalQty = getProductStock(p, "all");
+      $("#breakdownTotalQty").textContent = `${totalQty} ${p.unit || 'pcs'}`;
 
-      const q = prodFilter.query.toLowerCase();
-      const list = MENU.filter(m =>
-        (!q || m.name.toLowerCase().includes(q) || m.sku.toLowerCase().includes(q)) &&
-        (!prodFilter.cat || m.cat === prodFilter.cat) &&
-        (!prodFilter.stock || stockStatus(m) === prodFilter.stock)
-      );
-
-      const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
-      prodPageNum = Math.min(prodPageNum, pages);
-      const slice = list.slice((prodPageNum - 1) * PER_PAGE, prodPageNum * PER_PAGE);
-
-      // 1. Render Table View (List)
-      $("#prodRows").innerHTML = slice.length ? slice.map(m => {
-        const st = stockStatus(m);
-        const statusLabel = { ok: "✓ Aman", low: "⚠ Stok menipis", out: "✕ Habis" }[st];
-        const expText = m.exp
-          ? `${m.exp.split("/")[0]} ${["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"][+m.exp.split("/")[0] - 1]} ${2000 + +m.exp.split("/")[1]}`
-          : "—";
-        return `
-        <tr>
-          <td>
-            <div class="p-name">
-              <span class="p-thumb" style="background:${m.tint}">${m.emoji}</span>
-              <span><strong>${m.name}</strong><small>${m.sku}</small></span>
-            </div>
-          </td>
-          <td><span class="p-cat">${CAT_NAME[m.cat]}</span></td>
-          <td class="td-num">${m.batch}</td>
-          <td>${expText}</td>
-          <td class="td-num">${m.stock}</td>
-          <td class="td-num">${rp(m.price)}</td>
-          <td><span class="p-status ${st}">${statusLabel}</span></td>
-          <td>
-            <div class="p-actions">
-              <button class="p-act" data-edit="${m.id}" aria-label="Edit ${m.name}" title="Edit">✎</button>
-              <button class="p-act del" data-del="${m.id}" aria-label="Hapus ${m.name}" title="Hapus">🗑</button>
-            </div>
-          </td>
-        </tr>`;
-      }).join("") : `<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:34px">Tidak ada produk yang cocok dengan filter</td></tr>`;
-
-      // 2. Render Cards View (Grid Kartu Sesuai Referensi Gambar)
-      const buyPrice = m => m.old ? Math.round(m.old * 0.8) : Math.round(m.price * 0.78);
-      $("#prodCardsContainer").innerHTML = slice.length ? slice.map(m => {
-        const st = stockStatus(m);
-        const stockClass = st === "out" ? "out" : st === "low" ? "low" : "";
-        return `
-        <article class="prod-card-item" data-id="${m.id}">
-          <div class="prod-card-top" style="background: radial-gradient(circle at center, ${m.tint} 0%, #ffffff 80%);">
-            <div class="prod-card-actions">
-              <button class="prod-card-act-btn edit" data-edit="${m.id}" title="Edit ${m.name}" aria-label="Edit">
-                <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              </button>
-              <button class="prod-card-act-btn del" data-del="${m.id}" title="Hapus ${m.name}" aria-label="Hapus">
-                <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-              </button>
-            </div>
-            <span class="prod-card-stock ${stockClass}">Stok: ${m.stock}</span>
-            <div class="prod-card-media">
-              <span class="prod-card-emoji">${m.emoji}</span>
-            </div>
-          </div>
-          <div class="prod-card-details">
-            <span class="prod-card-cat">${CAT_NAME[m.cat]}</span>
-            <h3 class="prod-card-name" title="${m.name}">${m.name}</h3>
-            <div class="prod-card-sku">${m.sku}</div>
-            <div class="prod-card-prices">
-              <div class="prod-price-col buy">
-                <span class="prod-price-label">Harga Beli</span>
-                <span class="prod-price-val">${rp(buyPrice(m))}</span>
-              </div>
-              <div class="prod-price-col sell">
-                <span class="prod-price-label">Harga Jual</span>
-                <span class="prod-price-val sell">${rp(m.price)}</span>
-              </div>
-            </div>
-          </div>
-        </article>`;
-      }).join("") : `
-        <div style="grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 48px 20px; background: #fff; border-radius: 18px; border: 1px dashed #cbd5e1;">
-          Tidak ada produk yang cocok dengan filter
-        </div>`;
-
-      // 3. Render Pagination Footer
-      const first = list.length ? (prodPageNum - 1) * PER_PAGE + 1 : 0;
-      const last = Math.min(prodPageNum * PER_PAGE, list.length);
-      $("#masterFoot").innerHTML = `
-        <span>Menampilkan ${first}–${last} dari ${list.length} produk</span>
-        <div class="master-pager">
-          <button data-goto="${prodPageNum - 1}" ${prodPageNum <= 1 ? "disabled" : ""}>‹</button>
-          ${Array.from({ length: pages }, (_, i) =>
-            `<button data-goto="${i + 1}" class="${i + 1 === prodPageNum ? "is-active" : ""}">${i + 1}</button>`
-          ).join("")}
-          <button data-goto="${prodPageNum + 1}" ${prodPageNum >= pages ? "disabled" : ""}>›</button>
-        </div>`;
-
-      updateViewModeButtons();
+      $("#breakdownSearchInput").value = "";
+      renderBreakdownStoreRows();
+      $("#breakdownModalBackdrop").hidden = false;
     }
 
-    // Event View Switcher (Card vs List)
+    function renderBreakdownStoreRows(searchTerm = "") {
+      if (!activeBreakdownProduct) return;
+      const p = activeBreakdownProduct;
+      const term = (searchTerm || "").trim().toLowerCase();
+      const listEl = $("#breakdownStoreList");
+
+      const filtered = masterStores.filter(s =>
+        !term || s.name.toLowerCase().includes(term) || s.shortName.toLowerCase().includes(term) || s.code.toLowerCase().includes(term)
+      );
+
+      if (!filtered.length) {
+        listEl.innerHTML = `<div style="text-align:center; padding:20px; color:var(--muted); font-size:12.5px;">Cabang tidak ditemukan</div>`;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map(s => {
+        const qty = p.stocks ? Number(p.stocks[s.id] || 0) : 0;
+        const status = qty <= 0 ? "out" : qty <= (p.minStock || 5) ? "low" : "ok";
+        const iconSvg = s.isCentral ? getCategorySvg("building") : getCategorySvg("store");
+
+        return `
+          <div class="breakdown-row">
+            <div class="breakdown-store-col">
+              <div class="breakdown-store-icon ${s.badgeClass || 'pusat'}">
+                ${iconSvg}
+              </div>
+              <div class="breakdown-store-meta">
+                <strong>${s.name}</strong>
+                <small>${s.code} • ${s.address}</small>
+              </div>
+            </div>
+            <div class="breakdown-stock-col">
+              <span class="breakdown-stock-qty ${status}">${qty} ${p.unit || 'pcs'}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    $("#breakdownSearchInput").addEventListener("input", e => {
+      renderBreakdownStoreRows(e.target.value);
+    });
+
+    $("#breakdownModalClose").addEventListener("click", () => $("#breakdownModalBackdrop").hidden = true);
+    $("#breakdownModalCancel").addEventListener("click", () => $("#breakdownModalBackdrop").hidden = true);
+    $("#breakdownModalBackdrop").addEventListener("click", e => {
+      if (e.target === e.currentTarget) $("#breakdownModalBackdrop").hidden = true;
+    });
+
+    $("#breakdownModalAdjustBtn").addEventListener("click", () => {
+      if (activeBreakdownProduct) {
+        $("#breakdownModalBackdrop").hidden = true;
+        openStockAdjustModal(activeBreakdownProduct.id);
+      }
+    });
+
+    /* ================= MODAL PENYESUAIAN STOK (RESTOCK / DAMAGE / OPNAME) ================= */
+    function openStockAdjustModal(productId) {
+      const p = masterProducts.find(item => item.id === productId);
+      if (!p) return;
+
+      $("#adjustProdId").value = p.id;
+      $("#adjustProdName").textContent = p.name;
+      $("#adjustProdSku").textContent = `${p.sku || 'SKU'} • Satuan: ${p.unit || 'pcs'}`;
+
+      // Populate dropdown toko
+      const storeSel = $("#adjustStoreSelect");
+      storeSel.innerHTML = masterStores.map(s => `
+        <option value="${s.id}" ${currentStoreFilter === s.id ? "selected" : ""}>${s.name} (${s.shortName})</option>
+      `).join("");
+
+      currentAdjustMode = "restock";
+      $("#adjustCostInput").value = p.cost || "";
+      $("#adjustCostHint").textContent = `HPP Lama: ${rp(p.cost || 0)}`;
+
+      updateAdjustModeButtons();
+
+      $("#adjustQtyInput").value = "";
+      $("#adjustNoteInput").value = "";
+      updateAdjustCalc();
+
+      $("#stockAdjustModalBackdrop").hidden = false;
+      $("#adjustQtyInput").focus();
+    }
+
+    function updateAdjustModeButtons() {
+      document.querySelectorAll(".adjust-tab-btn").forEach(btn => {
+        btn.classList.toggle("is-active", btn.dataset.mode === currentAdjustMode);
+      });
+
+      const label = $("#adjustQtyLabel");
+      const costGroup = $("#adjustCostGroup");
+      const hppCalcRow = $("#adjustHppCalcRow");
+
+      if (currentAdjustMode === "restock") {
+        label.textContent = "Jumlah Stok Masuk (pcs) *";
+        if (costGroup) costGroup.hidden = false;
+        if (hppCalcRow) hppCalcRow.hidden = false;
+      } else if (currentAdjustMode === "damage") {
+        label.textContent = "Jumlah Barang Rusak / Kedaluwarsa (pcs) *";
+        if (costGroup) costGroup.hidden = true;
+        if (hppCalcRow) hppCalcRow.hidden = true;
+      } else {
+        label.textContent = "Hasil Hitung Fisik Sebenarnya (Stok Opname) *";
+        if (costGroup) costGroup.hidden = true;
+        if (hppCalcRow) hppCalcRow.hidden = true;
+      }
+      updateAdjustCalc();
+    }
+
+    function updateAdjustCalc() {
+      const pId = +$("#adjustProdId").value;
+      const p = masterProducts.find(item => item.id === pId);
+      if (!p) return;
+
+      const storeId = $("#adjustStoreSelect").value;
+      const currStock = p.stocks ? Number(p.stocks[storeId] || 0) : 0;
+      $("#adjustCurrentQty").textContent = `${currStock} ${p.unit || 'pcs'}`;
+
+      const deltaVal = Number($("#adjustQtyInput").value || 0);
+      let newStock = currStock;
+      let formulaText = "";
+      const calcBox = $("#adjustCalcBox");
+
+      if (currentAdjustMode === "restock") {
+        newStock = currStock + deltaVal;
+        formulaText = `${currStock} + ${deltaVal} = ${newStock} ${p.unit || 'pcs'}`;
+        calcBox.className = "adjust-calc-box";
+
+        // WAC (Weighted Average Costing) Live Calculation
+        const totalConsolidatedBefore = getProductStock(p, "all");
+        const oldHpp = Number(p.cost || 0);
+        const costInputVal = $("#adjustCostInput").value;
+        const buyCost = costInputVal !== "" ? Number(costInputVal) : oldHpp;
+
+        let projectedHpp = oldHpp;
+        if (totalConsolidatedBefore <= 0) {
+          projectedHpp = buyCost;
+        } else if (deltaVal > 0) {
+          projectedHpp = Math.round(((totalConsolidatedBefore * oldHpp) + (deltaVal * buyCost)) / (totalConsolidatedBefore + deltaVal));
+        }
+
+        $("#adjustHppFormula").textContent = `${rp(oldHpp)} → ${rp(projectedHpp)}`;
+        const diff = projectedHpp - oldHpp;
+        const badge = $("#adjustHppBadge");
+        if (diff > 0) {
+          badge.textContent = `+${rp(diff)}`;
+          badge.className = "adjust-hpp-badge up";
+        } else if (diff < 0) {
+          badge.textContent = `-${rp(Math.abs(diff))}`;
+          badge.className = "adjust-hpp-badge down";
+        } else {
+          badge.textContent = "Tetap";
+          badge.className = "adjust-hpp-badge";
+        }
+      } else if (currentAdjustMode === "damage") {
+        newStock = Math.max(0, currStock - deltaVal);
+        formulaText = `${currStock} - ${deltaVal} = ${newStock} ${p.unit || 'pcs'}`;
+        calcBox.className = "adjust-calc-box negative";
+      } else {
+        newStock = Math.max(0, deltaVal);
+        const diff = newStock - currStock;
+        const sign = diff >= 0 ? `+${diff}` : `${diff}`;
+        formulaText = `Fisik: ${newStock} (${sign} dari sebelumnya ${currStock} ${p.unit || 'pcs'})`;
+        calcBox.className = diff < 0 ? "adjust-calc-box negative" : "adjust-calc-box";
+      }
+
+      $("#adjustCalcFormula").textContent = formulaText;
+    }
+
+    $("#adjustStoreSelect").addEventListener("change", updateAdjustCalc);
+    $("#adjustQtyInput").addEventListener("input", updateAdjustCalc);
+    $("#adjustCostInput").addEventListener("input", updateAdjustCalc);
+
+    document.querySelectorAll(".adjust-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentAdjustMode = btn.dataset.mode;
+        updateAdjustModeButtons();
+      });
+    });
+
+    $("#adjustModalClose").addEventListener("click", () => $("#stockAdjustModalBackdrop").hidden = true);
+    $("#adjustModalCancel").addEventListener("click", () => $("#stockAdjustModalBackdrop").hidden = true);
+    $("#stockAdjustModalBackdrop").addEventListener("click", e => {
+      if (e.target === e.currentTarget) $("#stockAdjustModalBackdrop").hidden = true;
+    });
+
+    $("#stockAdjustForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const pId = +$("#adjustProdId").value;
+      const pIndex = masterProducts.findIndex(item => item.id === pId);
+      if (pIndex === -1) return;
+
+      const p = masterProducts[pIndex];
+      const storeId = $("#adjustStoreSelect").value;
+      const storeObj = masterStores.find(s => s.id === storeId);
+      const storeName = storeObj ? storeObj.name : storeId;
+
+      if (!p.stocks) p.stocks = {};
+      const beforeQty = Number(p.stocks[storeId] || 0);
+      const inputVal = Number($("#adjustQtyInput").value || 0);
+      let afterQty = beforeQty;
+      let delta = 0;
+      let oldCost = p.cost || 0;
+      let newCost = oldCost;
+      let purchaseCost = oldCost;
+
+      if (currentAdjustMode === "restock") {
+        delta = inputVal;
+        afterQty = beforeQty + delta;
+
+        // WAC Calculation
+        const totalConsolidatedBefore = getProductStock(p, "all");
+        const costInputVal = $("#adjustCostInput").value;
+        purchaseCost = costInputVal !== "" ? Number(costInputVal) : oldCost;
+
+        if (totalConsolidatedBefore <= 0) {
+          newCost = purchaseCost;
+        } else if (delta > 0) {
+          newCost = Math.round(((totalConsolidatedBefore * oldCost) + (delta * purchaseCost)) / (totalConsolidatedBefore + delta));
+        }
+        p.cost = newCost;
+      } else if (currentAdjustMode === "damage") {
+        delta = -inputVal;
+        afterQty = Math.max(0, beforeQty - inputVal);
+      } else {
+        afterQty = Math.max(0, inputVal);
+        delta = afterQty - beforeQty;
+      }
+
+      p.stocks[storeId] = afterQty;
+      saveProducts(masterProducts);
+
+      // Catat log mutasi stok
+      const note = $("#adjustNoteInput").value.trim();
+      recordStockMutation({
+        productId: p.id,
+        storeId,
+        storeName,
+        type: currentAdjustMode,
+        delta,
+        beforeQty,
+        afterQty,
+        costBefore: oldCost,
+        costAfter: newCost,
+        purchaseCost,
+        note
+      });
+
+      if (currentAdjustMode === "restock" && newCost !== oldCost) {
+        toast(`Stok "${p.name}" bertambah (+${delta} ${p.unit || 'pcs'}). HPP disesuaikan: ${rp(newCost)}`);
+      } else {
+        toast(`Stok "${p.name}" di ${storeObj?.shortName || storeName} berhasil disesuaikan (${afterQty} ${p.unit || 'pcs'})`);
+      }
+
+      $("#stockAdjustModalBackdrop").hidden = true;
+      renderProdData();
+    });
+
+    /* ================= FITUR BATCH RESTOCK (RESTOCK MASSAL) ================= */
+    let batchItems = []; // Array of { id: number, qty: number, cost: number, price: number, costMode?: string, subtotalBuy?: number }
+    let batchGlobalCostMode = 'unit'; // 'unit' | 'subtotal'
+
+    function openBatchStockModal() {
+      // Default toko: jika user sedang filter toko tertentu (bukan 'all'), gunakan itu
+      const storeSel = $("#batchStoreSelect");
+      storeSel.innerHTML = masterStores.map(s => `
+        <option value="${s.id}" ${(currentStoreFilter !== "all" ? currentStoreFilter : "pusat") === s.id ? "selected" : ""}>${s.name} (${s.shortName})</option>
+      `).join("");
+
+      // Tanggal hari ini
+      const today = new Date().toISOString().slice(0, 10);
+      $("#batchDateInput").value = today;
+
+      // No Ref Default
+      const randSuffix = Math.floor(1000 + Math.random() * 9000);
+      $("#batchRefInput").value = `PO-${today.replace(/-/g, "")}-${randSuffix}`;
+      $("#batchSupplierInput").value = "";
+
+      batchItems = [];
+      $("#batchProdSearchInput").value = "";
+      $("#batchProdSearchClear").hidden = true;
+      $("#batchComboboxDropdown").hidden = true;
+      $("#batchComboboxTrigger").setAttribute("aria-expanded", "false");
+
+      renderBatchComboboxOptions("");
+      renderBatchRows();
+
+      $("#batchStockModalBackdrop").hidden = false;
+    }
+
+    function renderBatchComboboxOptions(searchTerm) {
+      const listEl = $("#batchComboboxList");
+      if (!listEl) return;
+
+      const storeId = $("#batchStoreSelect").value;
+      const currentIds = new Set(batchItems.map(item => item.id));
+      const availableProds = masterProducts.filter(p => !currentIds.has(p.id));
+
+      const countBadge = $("#batchAvailableCountBadge");
+      if (countBadge) {
+        countBadge.textContent = `${availableProds.length} Tersedia`;
+      }
+
+      const term = (searchTerm || "").trim().toLowerCase();
+      const filtered = term
+        ? availableProds.filter(p => {
+            const nameMatch = p.name && p.name.toLowerCase().includes(term);
+            const skuMatch = p.sku && p.sku.toLowerCase().includes(term);
+            const catMatch = p.cat && p.cat.toLowerCase().includes(term);
+            return nameMatch || skuMatch || catMatch;
+          })
+        : availableProds;
+
+      if (!filtered.length) {
+        listEl.innerHTML = `
+          <div class="batch-combobox-empty">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span>${term ? `Tidak ada produk yang cocok dengan "${escapeHtml(term)}"` : 'Semua produk sudah berada di dalam daftar restock'}</span>
+          </div>
+        `;
+        return;
+      }
+
+      let html = "";
+      filtered.forEach(p => {
+        const storeQty = p.stocks ? Number(p.stocks[storeId] || 0) : 0;
+        const thumbHtml = p.image
+          ? `<img src="${p.image}" alt="${escapeHtml(p.name)}" />`
+          : `<span class="batch-combobox-item-fallback">${p.name.slice(0, 2).toUpperCase()}</span>`;
+
+        html += `
+          <div class="batch-combobox-item" role="option" data-id="${p.id}" tabindex="0">
+            <div class="batch-combobox-item-thumb">${thumbHtml}</div>
+            <div class="batch-combobox-item-body">
+              <div class="batch-combobox-item-top">
+                <strong class="batch-combobox-item-name">${escapeHtml(p.name)}</strong>
+                <span class="batch-combobox-item-price">${rp(p.price || 0)}</span>
+              </div>
+              <div class="batch-combobox-item-bottom">
+                <span class="batch-combobox-item-sku">${p.sku || 'SKU'}</span>
+                <span class="batch-combobox-item-sep">•</span>
+                <span class="batch-combobox-item-stock">Stok: <strong>${storeQty} ${p.unit || 'pcs'}</strong></span>
+                <span class="batch-combobox-item-sep">•</span>
+                <span class="batch-combobox-item-hpp">HPP: <strong>${rp(p.cost || 0)}</strong></span>
+              </div>
+            </div>
+            <div class="batch-combobox-item-add-tag" title="Klik untuk langsung tambahkan ke list">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>Tambah</span>
+            </div>
+          </div>
+        `;
+      });
+
+      listEl.innerHTML = html;
+    }
+
+    function getMarginHtml(sellingPrice, projectedHpp) {
+      const sell = Number(sellingPrice || 0);
+      const hpp = Number(projectedHpp || 0);
+      if (sell <= 0) {
+        return `<span style="color:#64748b;">Belum diset</span>`;
+      }
+      const marginRp = sell - hpp;
+      if (marginRp > 0) {
+        const pct = hpp > 0 ? Math.round((marginRp / sell) * 100) : 100;
+        return `<span style="color:#059669; font-weight:700;">Margin: +${rp(marginRp)} (${pct}%)</span>`;
+      } else if (marginRp < 0) {
+        return `<span style="color:#dc2626; font-weight:800;">Rugi: -${rp(Math.abs(marginRp))}</span>`;
+      } else {
+        return `<span style="color:#64748b; font-weight:600;">Impas (Rp 0)</span>`;
+      }
+    }
+
+    function renderBatchRows() {
+      const tbody = $("#batchTableBody");
+      const emptyState = $("#batchEmptyState");
+      const table = $("#batchTable");
+      const storeSelect = $("#batchStoreSelect");
+      const storeId = storeSelect ? storeSelect.value : "store-1";
+      const selectedStoreName = storeSelect?.options[storeSelect.selectedIndex]?.text || "Cabang";
+      const clearAllBtn = $("#btnBatchClearAll");
+
+      if (clearAllBtn) {
+        clearAllBtn.disabled = batchItems.length === 0;
+        clearAllBtn.hidden = false;
+      }
+
+      if (!batchItems.length) {
+        tbody.innerHTML = "";
+        emptyState.hidden = false;
+        table.hidden = true;
+        updateBatchSummary();
+        renderBatchComboboxOptions($("#batchProdSearchInput")?.value || "");
+        return;
+      }
+
+      emptyState.hidden = true;
+      table.hidden = false;
+
+      let html = "";
+      batchItems.forEach((item, idx) => {
+        const p = masterProducts.find(x => x.id === item.id);
+        if (!p) return;
+
+        const storeQty = p.stocks ? Number(p.stocks[storeId] || 0) : 0;
+        const totalStockBefore = getProductStock(p, "all");
+        const oldCost = Number(p.cost || 0);
+        const buyCost = Number(item.cost || oldCost);
+        const qtyVal = Number(item.qty || 0);
+        const sellingPrice = item.price !== undefined ? Number(item.price) : Number(p.price || 0);
+        item.price = sellingPrice;
+
+        const itemCostMode = item.costMode || 'unit';
+        item.costMode = itemCostMode;
+        const displayCostVal = itemCostMode === 'subtotal'
+          ? (item.subtotalBuy !== undefined ? item.subtotalBuy : (qtyVal * buyCost))
+          : buyCost;
+
+        const afterStoreQty = storeQty + qtyVal;
+
+        // Subtotal & Projected WAC
+        const subtotal = qtyVal * buyCost;
+        let projectedHpp = oldCost;
+        if (totalStockBefore <= 0) {
+          projectedHpp = buyCost;
+        } else if (qtyVal > 0) {
+          projectedHpp = Math.round(((totalStockBefore * oldCost) + (qtyVal * buyCost)) / (totalStockBefore + qtyVal));
+        }
+
+        // HPP Status: Naik = Merah, Turun = Hijau, Tetap = Netral
+        const hppDiff = projectedHpp - oldCost;
+        const hppStatus = hppDiff > 0 ? "up" : (hppDiff < 0 ? "down" : "same");
+        const oldHppFormatted = typeof formatDisplayHpp === "function" ? formatDisplayHpp(p, oldCost).text : rp(oldCost);
+        const projHppFormatted = typeof formatDisplayHpp === "function" ? formatDisplayHpp(p, projectedHpp).text : rp(projectedHpp);
+        const hppDiffFormatted = typeof formatDisplayHpp === "function" ? formatDisplayHpp(p, Math.abs(hppDiff)).text : rp(Math.abs(hppDiff));
+        const marginHtml = getMarginHtml(sellingPrice, projectedHpp);
+
+        const costHintHtml = itemCostMode === 'subtotal'
+          ? `Satuan: <strong>${rp(buyCost)}</strong> • HPP lama: ${oldHppFormatted}`
+          : `HPP lama: ${oldHppFormatted}`;
+
+        const thumbHtml = p.image
+          ? `<img src="${p.image}" alt="${escapeHtml(p.name)}" />`
+          : `<span style="font-size:11px; font-weight:700; color:#64748b;">${p.name.slice(0, 2).toUpperCase()}</span>`;
+
+        html += `
+          <tr data-idx="${idx}">
+            <td>
+              <div class="batch-prod-meta">
+                <div class="batch-prod-thumb">${thumbHtml}</div>
+                <div class="batch-prod-info">
+                  <strong class="batch-prod-title" title="${escapeHtml(p.name)}">${escapeHtml(p.name)}</strong>
+                  <div class="batch-prod-meta-line">
+                    <span class="batch-prod-sku">${p.sku || 'SKU'}</span>
+                    <span class="batch-prod-dot">•</span>
+                    <span class="batch-prod-stock-badge" title="Stok cabang ${escapeHtml(selectedStoreName)} saat ini">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/></svg>
+                      Stok: <strong>${storeQty} ${p.unit || 'pcs'}</strong>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td style="text-align: center;">
+              <input type="number" class="batch-input-qty" data-idx="${idx}" min="1" step="1" value="${item.qty}" autocomplete="off" />
+            </td>
+            <td>
+              <div class="batch-cost-cell">
+                <div class="batch-row-mode-switch">
+                  <span class="batch-row-mode-title">${itemCostMode === 'subtotal' ? 'Total (' + qtyVal + ' ' + (p.unit || 'pcs') + ')' : 'Harga Satuan'}</span>
+                  <div class="batch-mini-mode-pills" role="group" aria-label="Mode input harga beli">
+                    <button type="button" class="batch-mini-pill ${itemCostMode !== 'subtotal' ? 'active' : ''}" data-row-mode="unit" data-idx="${idx}" title="Input harga beli per satuan">Satuan</button>
+                    <button type="button" class="batch-mini-pill ${itemCostMode === 'subtotal' ? 'active' : ''}" data-row-mode="subtotal" data-idx="${idx}" title="Input total harga pembelian baris ini">Subtotal</button>
+                  </div>
+                </div>
+                <div class="batch-input-price-wrap">
+                  <span class="batch-price-prefix">Rp</span>
+                  <input type="number" class="batch-input-price" data-idx="${idx}" min="0" step="100" value="${displayCostVal}" autocomplete="off" />
+                </div>
+                <small class="batch-cost-sub-hint" data-idx="${idx}">${costHintHtml}</small>
+              </div>
+            </td>
+            <td>
+              <div class="batch-input-price-wrap">
+                <span class="batch-price-prefix">Rp</span>
+                <input type="number" class="batch-input-selling-price" data-idx="${idx}" min="0" step="100" value="${sellingPrice}" autocomplete="off" />
+              </div>
+              <small class="batch-selling-margin-hint" data-idx="${idx}" style="font-size:10.5px; margin-top:2px; display:block;">
+                ${marginHtml}
+              </small>
+            </td>
+            <td>
+              <div class="batch-impact-cell">
+                <!-- Proyeksi Jumlah Stok Item -->
+                <div class="batch-proj-row batch-proj-stock">
+                  <span class="batch-proj-lbl">Proyeksi Stok:</span>
+                  <div class="batch-proj-val">
+                    <span class="batch-proj-curr">${storeQty}</span>
+                    <svg class="batch-proj-arrow" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <strong class="batch-proj-after">${afterStoreQty} ${p.unit || 'pcs'}</strong>
+                    <span class="batch-proj-delta-tag">+${qtyVal}</span>
+                  </div>
+                </div>
+                <!-- Proyeksi HPP WAC (Merah jika naik, Hijau jika turun) -->
+                <div class="batch-proj-row batch-proj-hpp is-${hppStatus}">
+                  <span class="batch-proj-lbl">Proyeksi HPP:</span>
+                  <div class="batch-proj-val">
+                    <span class="batch-proj-curr">${oldHppFormatted}</span>
+                    <svg class="batch-proj-arrow" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <strong class="batch-proj-after hpp-after-${hppStatus}">${projHppFormatted}</strong>
+                    <span class="batch-proj-hpp-badge badge-${hppStatus}">
+                      ${hppStatus === 'up' ? `↑ +${hppDiffFormatted}` : (hppStatus === 'down' ? `↓ -${hppDiffFormatted}` : 'Tetap')}
+                    </span>
+                  </div>
+                </div>
+                <!-- Subtotal Pembelian -->
+                <div class="batch-proj-row batch-proj-subtotal">
+                  <span class="batch-proj-lbl">Subtotal Beli:</span>
+                  <strong class="batch-impact-subtotal">${rp(subtotal)}</strong>
+                </div>
+              </div>
+            </td>
+            <td style="text-align: center;">
+              <button type="button" class="batch-btn-remove" data-remove="${idx}" title="Hapus produk dari batch" aria-label="Hapus produk">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            </td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = html;
+      updateBatchSummary();
+      renderBatchComboboxOptions($("#batchProdSearchInput")?.value || "");
+    }
+
+    function updateBatchSummary() {
+      const totalItems = batchItems.length;
+      let totalQty = 0;
+      let totalPrice = 0;
+
+      batchItems.forEach(item => {
+        const q = Number(item.qty || 0);
+        const c = Number(item.cost || 0);
+        totalQty += q;
+        totalPrice += (q * c);
+      });
+
+      $("#batchTotalItemsCount").textContent = `${totalItems} Item`;
+      $("#batchTotalQtyCount").textContent = `${totalQty} unit`;
+      $("#batchTotalPriceVal").textContent = rp(totalPrice);
+    }
+
+    /* Event Listeners untuk Batch Restock Modal */
+    $("#btnBatchStock").addEventListener("click", openBatchStockModal);
+    $("#batchModalClose").addEventListener("click", () => $("#batchStockModalBackdrop").hidden = true);
+    $("#batchModalCancel").addEventListener("click", () => $("#batchStockModalBackdrop").hidden = true);
+    $("#batchStockModalBackdrop").addEventListener("click", e => {
+      if (e.target === e.currentTarget) $("#batchStockModalBackdrop").hidden = true;
+    });
+
+    $("#batchStoreSelect").addEventListener("change", () => {
+      renderBatchRows();
+      renderBatchComboboxOptions($("#batchProdSearchInput")?.value || "");
+    });
+
+    /* Combobox Trigger Toggle & Outside Click */
+    $("#batchComboboxTrigger").addEventListener("click", e => {
+      e.stopPropagation();
+      const dropdown = $("#batchComboboxDropdown");
+      const isHidden = dropdown.hidden;
+      dropdown.hidden = !isHidden;
+      $("#batchComboboxTrigger").setAttribute("aria-expanded", String(isHidden));
+      if (isHidden) {
+        setTimeout(() => $("#batchProdSearchInput").focus(), 50);
+        renderBatchComboboxOptions($("#batchProdSearchInput").value);
+      }
+    });
+
+    // Close combobox when clicking outside
+    document.addEventListener("click", e => {
+      if (!e.target.isConnected) return;
+      if (!e.target.closest("#batchComboboxWrap")) {
+        const dropdown = $("#batchComboboxDropdown");
+        if (dropdown && !dropdown.hidden) {
+          dropdown.hidden = true;
+          $("#batchComboboxTrigger").setAttribute("aria-expanded", "false");
+        }
+      }
+    });
+
+    // Search input live filtering
+    $("#batchProdSearchInput").addEventListener("input", e => {
+      const val = e.target.value;
+      $("#batchProdSearchClear").hidden = !val.trim();
+      renderBatchComboboxOptions(val);
+    });
+
+    $("#batchProdSearchClear").addEventListener("click", e => {
+      e.stopPropagation();
+      $("#batchProdSearchInput").value = "";
+      $("#batchProdSearchClear").hidden = true;
+      $("#batchProdSearchInput").focus();
+      renderBatchComboboxOptions("");
+    });
+
+    // Auto-add product when clicking an option in the searchable dropdown
+    $("#batchComboboxList").addEventListener("click", e => {
+      const itemEl = e.target.closest(".batch-combobox-item");
+      if (!itemEl) return;
+      const pId = +itemEl.dataset.id;
+      if (!pId) return;
+
+      const p = masterProducts.find(x => x.id === pId);
+      if (!p) return;
+
+      // Add to batch with default qty 10, default cost & selling price
+      batchItems.push({
+        id: p.id,
+        qty: 10,
+        cost: p.cost || (p.old ? Math.round(p.old * 0.8) : Math.round(p.price * 0.78)),
+        price: Number(p.price || 0),
+        costMode: batchGlobalCostMode || 'unit'
+      });
+
+      renderBatchRows();
+      toast(`"${p.name}" otomatis ditambahkan ke daftar batch`);
+
+      // Otomatis tutup dropdown setelah item dipilih (Permintaan user #2)
+      $("#batchComboboxDropdown").hidden = true;
+      $("#batchComboboxTrigger").setAttribute("aria-expanded", "false");
+      $("#batchProdSearchInput").value = "";
+      $("#batchProdSearchClear").hidden = true;
+    });
+
+    /* Kosongkan Seluruh List Batch (dengan Modal Validasi) */
+    $("#btnBatchClearAll").addEventListener("click", () => {
+      if (!batchItems.length || $("#btnBatchClearAll").disabled) return;
+      $("#batchClearConfirmDesc").textContent = `Apakah Anda yakin ingin menghapus seluruh (${batchItems.length}) item dari daftar batch restock ini? Data kuantitas dan harga beli yang telah diinput akan hilang.`;
+      $("#batchClearConfirmModalBackdrop").hidden = false;
+    });
+
+    $("#btnBatchClearCancel").addEventListener("click", () => {
+      $("#batchClearConfirmModalBackdrop").hidden = true;
+    });
+
+    $("#batchClearConfirmModalBackdrop").addEventListener("click", e => {
+      if (e.target === e.currentTarget) $("#batchClearConfirmModalBackdrop").hidden = true;
+    });
+
+    $("#btnBatchClearConfirm").addEventListener("click", () => {
+      const count = batchItems.length;
+      batchItems = [];
+      $("#batchClearConfirmModalBackdrop").hidden = true;
+      renderBatchRows();
+      toast(`Seluruh ${count} item dalam daftar batch berhasil dikosongkan.`);
+    });
+
+    // Global Cost Mode Toggle (Satuan vs Subtotal di Header Kolom)
+    $("#batchGlobalCostMode")?.addEventListener("click", e => {
+      const btn = e.target.closest(".batch-cost-mode-btn");
+      if (!btn) return;
+      const mode = btn.dataset.mode;
+      batchGlobalCostMode = mode;
+      $("#batchGlobalCostMode").querySelectorAll(".batch-cost-mode-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.mode === mode);
+      });
+      batchItems.forEach(item => {
+        item.costMode = mode;
+        if (mode === 'subtotal') {
+          item.subtotalBuy = (item.qty || 1) * (item.cost || 0);
+        } else {
+          delete item.subtotalBuy;
+        }
+      });
+      renderBatchRows();
+    });
+
+    // Event delegation untuk input qty, price, selling price, dan remove button di batch table
+    $("#batchTableBody").addEventListener("input", e => {
+      const target = e.target;
+      const idx = +target.dataset.idx;
+      if (isNaN(idx) || !batchItems[idx]) return;
+
+      if (target.classList.contains("batch-input-qty")) {
+        const newQty = Math.max(0, Number(target.value || 0));
+        batchItems[idx].qty = newQty;
+        if (batchItems[idx].costMode === 'subtotal') {
+          const sub = batchItems[idx].subtotalBuy !== undefined ? batchItems[idx].subtotalBuy : (newQty * (batchItems[idx].cost || 0));
+          batchItems[idx].cost = newQty > 0 ? Math.round(sub / newQty) : sub;
+        }
+      } else if (target.classList.contains("batch-input-price")) {
+        const inputVal = Math.max(0, Number(target.value || 0));
+        if (batchItems[idx].costMode === 'subtotal') {
+          batchItems[idx].subtotalBuy = inputVal;
+          const q = Number(batchItems[idx].qty || 1);
+          batchItems[idx].cost = q > 0 ? Math.round(inputVal / q) : inputVal;
+        } else {
+          batchItems[idx].cost = inputVal;
+          delete batchItems[idx].subtotalBuy;
+        }
+      } else if (target.classList.contains("batch-input-selling-price")) {
+        batchItems[idx].price = Math.max(0, Number(target.value || 0));
+      }
+
+      // Update baris tersebut & summary tanpa mereset fokus kursor
+      const p = masterProducts.find(x => x.id === batchItems[idx].id);
+      if (p) {
+        const tr = target.closest("tr");
+        const storeId = $("#batchStoreSelect").value;
+        const storeQty = p.stocks ? Number(p.stocks[storeId] || 0) : 0;
+        const totalStockBefore = getProductStock(p, "all");
+        const oldCost = Number(p.cost || 0);
+        const buyCost = Number(batchItems[idx].cost || oldCost);
+        const qtyVal = Number(batchItems[idx].qty || 0);
+        const sellPrice = Number(batchItems[idx].price || 0);
+        const afterStoreQty = storeQty + qtyVal;
+        const subtotal = qtyVal * buyCost;
+        let projectedHpp = oldCost;
+        if (totalStockBefore <= 0) {
+          projectedHpp = buyCost;
+        } else if (qtyVal > 0) {
+          projectedHpp = Math.round(((totalStockBefore * oldCost) + (qtyVal * buyCost)) / (totalStockBefore + qtyVal));
+        }
+
+        const hppDiff = projectedHpp - oldCost;
+        const hppStatus = hppDiff > 0 ? "up" : (hppDiff < 0 ? "down" : "same");
+        const marginHtml = getMarginHtml(sellPrice, projectedHpp);
+
+        // Update Proyeksi Stok
+        const stockAfterEl = tr.querySelector(".batch-proj-stock .batch-proj-after");
+        const stockDeltaEl = tr.querySelector(".batch-proj-stock .batch-proj-delta-tag");
+        if (stockAfterEl) stockAfterEl.textContent = `${afterStoreQty} ${p.unit || 'pcs'}`;
+        if (stockDeltaEl) stockDeltaEl.textContent = `+${qtyVal}`;
+
+        // Update Proyeksi HPP (Merah jika naik, Hijau jika turun, Netral jika tetap)
+        const hppAfterEl = tr.querySelector(".batch-proj-hpp .batch-proj-after");
+        const hppBadgeEl = tr.querySelector(".batch-proj-hpp .batch-proj-hpp-badge");
+        const liveOldHpp = typeof formatDisplayHpp === "function" ? formatDisplayHpp(p, oldCost).text : rp(oldCost);
+        const liveProjHpp = typeof formatDisplayHpp === "function" ? formatDisplayHpp(p, projectedHpp).text : rp(projectedHpp);
+        const liveDiffHpp = typeof formatDisplayHpp === "function" ? formatDisplayHpp(p, Math.abs(hppDiff)).text : rp(Math.abs(hppDiff));
+
+        if (hppAfterEl) {
+          hppAfterEl.textContent = liveProjHpp;
+          hppAfterEl.className = `batch-proj-after hpp-after-${hppStatus}`;
+        }
+        if (hppBadgeEl) {
+          hppBadgeEl.textContent = hppStatus === 'up' ? `↑ +${liveDiffHpp}` : (hppStatus === 'down' ? `↓ -${liveDiffHpp}` : 'Tetap');
+          hppBadgeEl.className = `batch-proj-hpp-badge badge-${hppStatus}`;
+        }
+
+        // Update Subtotal
+        const subtotalEl = tr.querySelector(".batch-impact-subtotal");
+        if (subtotalEl) subtotalEl.textContent = rp(subtotal);
+
+        // Update Margin Hint di bawah input harga jual
+        const marginHintEl = tr.querySelector(".batch-selling-margin-hint");
+        if (marginHintEl) marginHintEl.innerHTML = marginHtml;
+
+        // Update Cost Mode Hint & Title di atas input harga beli
+        const modeTitleEl = tr.querySelector(".batch-row-mode-title");
+        if (modeTitleEl) {
+          modeTitleEl.textContent = batchItems[idx].costMode === 'subtotal'
+            ? `Total (${qtyVal} ${p.unit || 'pcs'})`
+            : 'Harga Satuan';
+        }
+        const costHintEl = tr.querySelector(`.batch-cost-sub-hint[data-idx="${idx}"]`);
+        if (costHintEl) {
+          costHintEl.innerHTML = batchItems[idx].costMode === 'subtotal'
+            ? `Satuan: <strong>${rp(buyCost)}</strong> • HPP lama: ${liveOldHpp}`
+            : `HPP lama: ${liveOldHpp}`;
+        }
+      }
+      updateBatchSummary();
+    });
+
+    $("#batchTableBody").addEventListener("click", e => {
+      // Toggle mode satuan vs subtotal per baris
+      const btnRowMode = e.target.closest(".batch-mini-pill[data-row-mode]");
+      if (btnRowMode) {
+        const idx = +btnRowMode.dataset.idx;
+        const newMode = btnRowMode.dataset.rowMode;
+        if (!isNaN(idx) && batchItems[idx] && batchItems[idx].costMode !== newMode) {
+          batchItems[idx].costMode = newMode;
+          if (newMode === 'subtotal') {
+            batchItems[idx].subtotalBuy = (batchItems[idx].qty || 1) * (batchItems[idx].cost || 0);
+          } else {
+            delete batchItems[idx].subtotalBuy;
+          }
+          renderBatchRows();
+        }
+        return;
+      }
+
+      const btn = e.target.closest(".batch-btn-remove");
+      if (!btn) return;
+      const idx = +btn.dataset.remove;
+      if (isNaN(idx) || !batchItems[idx]) return;
+
+      batchItems.splice(idx, 1);
+      renderBatchRows();
+    });
+
+    $("#batchStockForm").addEventListener("submit", e => {
+      e.preventDefault();
+      if (!batchItems.length) {
+        toast("Daftar batch masih kosong. Tambahkan minimal 1 item.");
+        return;
+      }
+
+      const storeId = $("#batchStoreSelect").value;
+      const storeObj = masterStores.find(s => s.id === storeId);
+      const storeName = storeObj ? storeObj.name : storeId;
+      const docRef = $("#batchRefInput").value.trim() || `PO-${Date.now()}`;
+      const supplier = $("#batchSupplierInput").value.trim();
+      const dateVal = $("#batchDateInput").value;
+
+      let totalAddedQty = 0;
+
+      batchItems.forEach(item => {
+        const p = masterProducts.find(x => x.id === item.id);
+        if (!p) return;
+
+        if (!p.stocks) p.stocks = {};
+        const beforeQty = Number(p.stocks[storeId] || 0);
+        const addQty = Number(item.qty || 0);
+        const afterQty = beforeQty + addQty;
+        totalAddedQty += addQty;
+
+        // Hitung WAC berdasarkan stok total konsolidasi sebelum restock ini
+        const totalConsolidatedBefore = getProductStock(p, "all");
+        const oldHpp = Number(p.cost || 0);
+        const buyCost = Number(item.cost || oldHpp);
+        let newHpp = oldHpp;
+
+        if (totalConsolidatedBefore <= 0) {
+          newHpp = buyCost;
+        } else if (addQty > 0) {
+          newHpp = Math.round(((totalConsolidatedBefore * oldHpp) + (addQty * buyCost)) / (totalConsolidatedBefore + addQty));
+        }
+
+        p.stocks[storeId] = afterQty;
+        p.cost = newHpp;
+
+        // Update Harga Jual jika user mengeditnya
+        if (typeof item.price === "number" && item.price > 0) {
+          p.price = item.price;
+        }
+
+        // Catat mutasi individual
+        recordStockMutation({
+          productId: p.id,
+          storeId,
+          storeName,
+          type: "restock",
+          delta: addQty,
+          beforeQty,
+          afterQty,
+          costBefore: oldHpp,
+          costAfter: newHpp,
+          purchaseCost: buyCost,
+          note: `Batch Restock [${docRef}] ${supplier ? '• ' + supplier : ''}`.trim()
+        });
+      });
+
+      saveProducts(masterProducts);
+      toast(`Berhasil restock massal ${batchItems.length} item (+${totalAddedQty} unit) di ${storeObj?.shortName || storeName}`);
+      $("#batchStockModalBackdrop").hidden = true;
+      renderProdData();
+    });
+
+    /* ================= MANAJEMEN UPLOAD & PREVIEW GAMBAR PRODUK ================= */
+    let currentProdImage = "";
+
+    function setProductImagePreview(imgSrc) {
+      currentProdImage = imgSrc || "";
+      const box = $("#prodImgPreviewBox");
+      const img = $("#prodImgPreview");
+      const urlInput = $("#prodImageUrlInput");
+
+      if (imgSrc) {
+        img.src = imgSrc;
+        box.classList.add("has-preview");
+        if (urlInput && !imgSrc.startsWith("data:") && urlInput.value !== imgSrc) {
+          urlInput.value = imgSrc;
+        }
+      } else {
+        img.src = "";
+        box.classList.remove("has-preview");
+        if (urlInput) urlInput.value = "";
+        const fileInput = $("#prodImageFileInput");
+        if (fileInput) fileInput.value = "";
+      }
+    }
+
+    function handleImageFile(file) {
+      if (!file) return;
+      if (!file.type.startsWith("image/")) {
+        toast("File harus berupa gambar (JPG, PNG, WEBP, dll)");
+        return;
+      }
+      if (file.size > 3 * 1024 * 1024) {
+        toast("Ukuran gambar maksimal 3MB");
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = e => {
+        setProductImagePreview(e.target.result);
+        toast("Foto produk berhasil dimuat");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Bind Image Uploader Listeners
+    const prodDropzone = $("#prodImgDropzone");
+    const prodFileInput = $("#prodImageFileInput");
+    const prodUrlInput = $("#prodImageUrlInput");
+    const prodRemoveImgBtn = $("#btnRemoveProdImg");
+
+    if (prodDropzone && prodFileInput) {
+      prodDropzone.addEventListener("click", e => {
+        if (e.target.closest("#btnRemoveProdImg")) return;
+        prodFileInput.click();
+      });
+
+      prodDropzone.addEventListener("dragover", e => {
+        e.preventDefault();
+        prodDropzone.classList.add("is-dragover");
+      });
+
+      prodDropzone.addEventListener("dragleave", e => {
+        e.preventDefault();
+        prodDropzone.classList.remove("is-dragover");
+      });
+
+      prodDropzone.addEventListener("drop", e => {
+        e.preventDefault();
+        prodDropzone.classList.remove("is-dragover");
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+          handleImageFile(e.dataTransfer.files[0]);
+        }
+      });
+
+      prodFileInput.addEventListener("change", e => {
+        if (e.target.files && e.target.files[0]) {
+          handleImageFile(e.target.files[0]);
+        }
+      });
+    }
+
+    if (prodUrlInput) {
+      prodUrlInput.addEventListener("input", e => {
+        const val = e.target.value.trim();
+        if (val) {
+          setProductImagePreview(val);
+        } else if (!currentProdImage.startsWith("data:")) {
+          setProductImagePreview("");
+        }
+      });
+    }
+
+    if (prodRemoveImgBtn) {
+      prodRemoveImgBtn.addEventListener("click", e => {
+        e.stopPropagation();
+        setProductImagePreview("");
+        toast("Foto produk dihapus");
+      });
+    }
+
+    /* ================= MANAJEMEN VARIASI JUAL & DISKON (User Request #2) ================= */
+    let currentVariations = []; // Array of variation objects for the open modal
+
+    function getAvailableUnitsForBase(baseUnit) {
+      const b = (baseUnit || "pcs").toLowerCase();
+      if (b === "kg" || b === "kilogram") {
+        return [
+          { val: "gr", label: "gr (Gram)", ratioToBase: 0.001 },
+          { val: "kg", label: "kg (Kilogram)", ratioToBase: 1 }
+        ];
+      }
+      if (b === "liter" || b === "ltr") {
+        return [
+          { val: "ml", label: "ml (Mililiter)", ratioToBase: 0.001 },
+          { val: "liter", label: "Liter (L)", ratioToBase: 1 }
+        ];
+      }
+      if (b === "lembar" || b === "lbr") {
+        return [
+          { val: "lembar", label: "Lembar", ratioToBase: 1 },
+          { val: "pack", label: "Pack (50 lbr)", ratioToBase: 50 },
+          { val: "rim", label: "Rim (500 lbr)", ratioToBase: 500 }
+        ];
+      }
+      if (b === "pcs" || b === "buah" || b === "butir") {
+        return [
+          { val: "pcs", label: "Pcs (Satuan)", ratioToBase: 1 },
+          { val: "pack", label: "Pack (10 pcs)", ratioToBase: 10 },
+          { val: "lusin", label: "Lusin (12 pcs)", ratioToBase: 12 },
+          { val: "dus", label: "Dus (50 pcs)", ratioToBase: 50 }
+        ];
+      }
+      if (b === "pack") {
+        return [
+          { val: "pack", label: "Pack", ratioToBase: 1 },
+          { val: "dus", label: "Dus (10 pack)", ratioToBase: 10 }
+        ];
+      }
+      if (b === "roll") {
+        return [
+          { val: "roll", label: "Roll", ratioToBase: 1 },
+          { val: "dus", label: "Dus (12 roll)", ratioToBase: 12 }
+        ];
+      }
+      return [
+        { val: b, label: b, ratioToBase: 1 },
+        { val: "pack", label: "Pack", ratioToBase: 10 },
+        { val: "dus", label: "Dus", ratioToBase: 50 }
+      ];
+    }
+
+    function calcProportionalPrice(qty, unit, baseUnit, basePrice) {
+      if (!basePrice || basePrice <= 0 || !qty || qty <= 0) return 0;
+      const b = (baseUnit || "pcs").toLowerCase();
+      const u = (unit || b).toLowerCase();
+
+      let ratio = 1;
+      if (b === "kg") {
+        if (u === "gr") ratio = qty / 1000;
+        else if (u === "kg") ratio = qty;
+      } else if (b === "liter") {
+        if (u === "ml") ratio = qty / 1000;
+        else if (u === "liter") ratio = qty;
+      } else if (b === "pcs") {
+        if (u === "pack") ratio = qty * 10;
+        else if (u === "lusin") ratio = qty * 12;
+        else if (u === "dus") ratio = qty * 50;
+        else ratio = qty;
+      } else if (b === "lembar") {
+        if (u === "pack") ratio = qty * 50;
+        else if (u === "rim") ratio = qty * 500;
+        else ratio = qty;
+      } else if (b === "pack") {
+        if (u === "dus") ratio = qty * 10;
+        else ratio = qty;
+      } else {
+        ratio = qty;
+      }
+      return Math.round(ratio * basePrice);
+    }
+
+    function renderProdVariations() {
+      const listEl = $("#prodVariationsList");
+      if (!listEl) return;
+
+      const baseUnit = $("#prodUnitInput")?.value || "pcs";
+      const basePrice = Number($("#prodSellPriceInput")?.value || 0);
+
+      if (!currentVariations.length) {
+        listEl.innerHTML = `
+          <div class="prod-var-empty">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#94a3b8" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <div class="prod-var-empty-text">
+              <strong>Belum ada variasi eceran / kemasan</strong>
+              <span>Klik tombol <strong>+ Tambah Variasi</strong> untuk menambahkan variasi (mis. 250 gr, 500 gr, 1 kg)</span>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      const availableUnits = getAvailableUnitsForBase(baseUnit);
+
+      listEl.innerHTML = currentVariations.map((v, idx) => {
+        const rawQty = v.rawQty !== undefined ? v.rawQty : 1;
+        const rawUnit = v.rawUnit || availableUnits[0]?.val || baseUnit;
+        const normalPrice = Number(v.price || 0);
+        const discType = v.discountType || "none";
+        const discVal = Number(v.discountVal || 0);
+        const finalPrice = typeof calcFinalPrice === "function" ? calcFinalPrice(normalPrice, discType, discVal) : normalPrice;
+        const hasDiscount = discType !== "none" && discVal > 0 && finalPrice < normalPrice;
+
+        const unitOptionsHtml = availableUnits.map(u => `
+          <option value="${u.val}" ${u.val === rawUnit ? "selected" : ""}>${u.label}</option>
+        `).join("");
+
+        return `
+          <div class="prod-var-row" data-idx="${idx}">
+            <div class="prod-var-fields">
+              <!-- Nama Variasi -->
+              <div class="prod-var-col col-name">
+                <label class="prod-var-label">Nama Variasi</label>
+                <input type="text" class="cat-input prod-var-name" value="${v.name || ''}" placeholder="Misal: 250 gr" required />
+              </div>
+
+              <!-- Takaran & Satuan -->
+              <div class="prod-var-col col-measure">
+                <label class="prod-var-label">Takaran & Satuan</label>
+                <div class="prod-var-measure-combo">
+                  <input type="number" class="cat-input prod-var-qty" value="${rawQty}" min="0.001" step="any" placeholder="250" required />
+                  <select class="cat-input prod-var-unit">
+                    ${unitOptionsHtml}
+                  </select>
+                </div>
+              </div>
+
+              <!-- Harga Normal -->
+              <div class="prod-var-col col-price">
+                <label class="prod-var-label">Harga Normal</label>
+                <div class="cat-input-prefix-wrap">
+                  <span class="cat-input-prefix">Rp</span>
+                  <input type="number" class="cat-input prod-var-price" value="${normalPrice}" min="0" step="100" placeholder="4000" required />
+                </div>
+              </div>
+
+              <!-- Diskon -->
+              <div class="prod-var-col col-disc">
+                <label class="prod-var-label">Diskon</label>
+                <div class="prod-var-disc-combo">
+                  <input type="number" class="cat-input prod-var-disc-val" value="${discVal || 0}" min="0" step="any" placeholder="0" />
+                  <select class="cat-input prod-var-disc-type">
+                    <option value="none" ${discType === "none" ? "selected" : ""}>Tanpa</option>
+                    <option value="percent" ${discType === "percent" ? "selected" : ""}>%</option>
+                    <option value="nominal" ${discType === "nominal" ? "selected" : ""}>Rp</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Harga Final (Bulat 500) -->
+              <div class="prod-var-col col-final">
+                <label class="prod-var-label">Harga Final</label>
+                <div class="prod-var-final-box">
+                  <strong class="prod-var-final-num">${rp(finalPrice)}</strong>
+                  <span class="prod-var-final-sub ${hasDiscount ? 'has-disc' : ''}">
+                    ${hasDiscount ? `Hemat ${rp(normalPrice - finalPrice)} (Bulat 500)` : 'Tanpa Diskon'}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Tombol Hapus -->
+              <div class="prod-var-col col-del">
+                <label class="prod-var-label">&nbsp;</label>
+                <button type="button" class="btn-del-var" data-idx="${idx}" title="Hapus variasi" aria-label="Hapus variasi">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Event listener: Tambah Variasi
+    $("#btnAddProdVariation")?.addEventListener("click", () => {
+      const baseUnit = $("#prodUnitInput")?.value || "pcs";
+      const basePrice = Number($("#prodSellPriceInput")?.value || 0);
+      const availableUnits = getAvailableUnitsForBase(baseUnit);
+
+      let defaultQty = 1;
+      let defaultUnit = availableUnits[0]?.val || baseUnit;
+      let defaultName = "";
+
+      if (baseUnit === "kg") {
+        if (!currentVariations.length) {
+          defaultQty = 250;
+          defaultUnit = "gr";
+          defaultName = "250 gr";
+        } else {
+          const has500 = currentVariations.some(v => v.rawQty === 500 && v.rawUnit === "gr");
+          const has1kg = currentVariations.some(v => v.rawQty === 1 && v.rawUnit === "kg");
+          if (!has500) {
+            defaultQty = 500;
+            defaultUnit = "gr";
+            defaultName = "500 gr";
+          } else if (!has1kg) {
+            defaultQty = 1;
+            defaultUnit = "kg";
+            defaultName = "1 kg";
+          } else {
+            defaultQty = 2;
+            defaultUnit = "kg";
+            defaultName = "2 kg";
+          }
+        }
+      } else if (baseUnit === "liter") {
+        defaultQty = 250;
+        defaultUnit = "ml";
+        defaultName = "250 ml";
+      } else if (baseUnit === "pcs") {
+        defaultQty = currentVariations.length ? 10 : 1;
+        defaultUnit = currentVariations.length ? "pack" : "pcs";
+        defaultName = currentVariations.length ? "1 Pack (10 pcs)" : "1 Pcs";
+      } else if (baseUnit === "lembar") {
+        defaultQty = currentVariations.length ? 50 : 1;
+        defaultUnit = currentVariations.length ? "pack" : "lembar";
+        defaultName = currentVariations.length ? "1 Pack (50 lbr)" : "1 Lembar";
+      } else {
+        defaultQty = 1;
+        defaultUnit = baseUnit;
+        defaultName = `1 ${baseUnit}`;
+      }
+
+      const autoPrice = calcProportionalPrice(defaultQty, defaultUnit, baseUnit, basePrice);
+
+      currentVariations.push({
+        id: `u-${Date.now()}-${currentVariations.length}`,
+        name: defaultName,
+        rawQty: defaultQty,
+        rawUnit: defaultUnit,
+        price: autoPrice,
+        discountType: "none",
+        discountVal: 0,
+        finalPrice: autoPrice,
+        isAutoPrice: true
+      });
+
+      renderProdVariations();
+      toast(`Variasi "${defaultName}" ditambahkan. Harga dihitung otomatis.`);
+    });
+
+    // Event delegation untuk input dan perubahan nilai variasi
+    $("#prodVariationsList")?.addEventListener("input", e => {
+      const row = e.target.closest(".prod-var-row");
+      if (!row) return;
+      const idx = +row.dataset.idx;
+      if (isNaN(idx) || !currentVariations[idx]) return;
+
+      const v = currentVariations[idx];
+      const baseUnit = $("#prodUnitInput")?.value || "pcs";
+      const basePrice = Number($("#prodSellPriceInput")?.value || 0);
+
+      if (e.target.classList.contains("prod-var-name")) {
+        v.name = e.target.value.trim();
+      } else if (e.target.classList.contains("prod-var-qty")) {
+        v.rawQty = parseFloat(e.target.value) || 0;
+        if (v.isAutoPrice !== false) {
+          v.price = calcProportionalPrice(v.rawQty, v.rawUnit, baseUnit, basePrice);
+          const priceInp = row.querySelector(".prod-var-price");
+          if (priceInp) priceInp.value = v.price;
+        }
+        if (!v.name || v.name.match(/^\d+(\.\d+)?\s*(gr|kg|ml|liter|pcs|pack|dus|lembar)$/i)) {
+          v.name = `${v.rawQty} ${v.rawUnit}`;
+          const nameInp = row.querySelector(".prod-var-name");
+          if (nameInp) nameInp.value = v.name;
+        }
+      } else if (e.target.classList.contains("prod-var-price")) {
+        v.price = Math.max(0, parseInt(e.target.value, 10) || 0);
+        v.isAutoPrice = false;
+      } else if (e.target.classList.contains("prod-var-disc-val")) {
+        v.discountVal = Math.max(0, parseFloat(e.target.value) || 0);
+      }
+
+      const normalPrice = Number(v.price || 0);
+      const discType = v.discountType || "none";
+      const discVal = Number(v.discountVal || 0);
+      v.finalPrice = typeof calcFinalPrice === "function" ? calcFinalPrice(normalPrice, discType, discVal) : normalPrice;
+      const hasDiscount = discType !== "none" && discVal > 0 && v.finalPrice < normalPrice;
+
+      const finalNumEl = row.querySelector(".prod-var-final-num");
+      const finalSubEl = row.querySelector(".prod-var-final-sub");
+      if (finalNumEl) finalNumEl.textContent = rp(v.finalPrice);
+      if (finalSubEl) {
+        finalSubEl.className = `prod-var-final-sub ${hasDiscount ? 'has-disc' : ''}`;
+        finalSubEl.textContent = hasDiscount ? `Hemat ${rp(normalPrice - v.finalPrice)} (Bulat 500)` : 'Tanpa Diskon';
+      }
+    });
+
+    $("#prodVariationsList")?.addEventListener("change", e => {
+      const row = e.target.closest(".prod-var-row");
+      if (!row) return;
+      const idx = +row.dataset.idx;
+      if (isNaN(idx) || !currentVariations[idx]) return;
+
+      const v = currentVariations[idx];
+      const baseUnit = $("#prodUnitInput")?.value || "pcs";
+      const basePrice = Number($("#prodSellPriceInput")?.value || 0);
+
+      if (e.target.classList.contains("prod-var-unit")) {
+        v.rawUnit = e.target.value;
+        if (v.isAutoPrice !== false) {
+          v.price = calcProportionalPrice(v.rawQty, v.rawUnit, baseUnit, basePrice);
+          const priceInp = row.querySelector(".prod-var-price");
+          if (priceInp) priceInp.value = v.price;
+        }
+        if (!v.name || v.name.match(/^\d+(\.\d+)?\s*(gr|kg|ml|liter|pcs|pack|dus|lembar)$/i)) {
+          v.name = `${v.rawQty} ${v.rawUnit}`;
+          const nameInp = row.querySelector(".prod-var-name");
+          if (nameInp) nameInp.value = v.name;
+        }
+      } else if (e.target.classList.contains("prod-var-disc-type")) {
+        v.discountType = e.target.value;
+      }
+
+      const normalPrice = Number(v.price || 0);
+      const discType = v.discountType || "none";
+      const discVal = Number(v.discountVal || 0);
+      v.finalPrice = typeof calcFinalPrice === "function" ? calcFinalPrice(normalPrice, discType, discVal) : normalPrice;
+      const hasDiscount = discType !== "none" && discVal > 0 && v.finalPrice < normalPrice;
+
+      const finalNumEl = row.querySelector(".prod-var-final-num");
+      const finalSubEl = row.querySelector(".prod-var-final-sub");
+      if (finalNumEl) finalNumEl.textContent = rp(v.finalPrice);
+      if (finalSubEl) {
+        finalSubEl.className = `prod-var-final-sub ${hasDiscount ? 'has-disc' : ''}`;
+        finalSubEl.textContent = hasDiscount ? `Hemat ${rp(normalPrice - v.finalPrice)} (Bulat 500)` : 'Tanpa Diskon';
+      }
+    });
+
+    $("#prodVariationsList")?.addEventListener("click", e => {
+      const delBtn = e.target.closest(".btn-del-var");
+      if (!delBtn) return;
+      const idx = +delBtn.dataset.idx;
+      if (isNaN(idx) || !currentVariations[idx]) return;
+
+      const removed = currentVariations.splice(idx, 1);
+      renderProdVariations();
+      toast(`Variasi "${removed[0]?.name || ''}" dihapus.`);
+    });
+
+    // Sinkronkan harga saat harga jual dasar diubah
+    $("#prodSellPriceInput")?.addEventListener("input", () => {
+      const basePrice = Number($("#prodSellPriceInput").value || 0);
+      const baseUnit = $("#prodUnitInput")?.value || "pcs";
+      currentVariations.forEach(v => {
+        if (v.isAutoPrice !== false) {
+          v.price = calcProportionalPrice(v.rawQty, v.rawUnit, baseUnit, basePrice);
+        }
+        v.finalPrice = typeof calcFinalPrice === "function" ? calcFinalPrice(v.price, v.discountType, v.discountVal) : v.price;
+      });
+      renderProdVariations();
+    });
+
+    // Perbarui dropdown satuan saat satuan produk utama diubah
+    $("#prodUnitInput")?.addEventListener("change", () => {
+      const baseUnit = $("#prodUnitInput").value;
+      const basePrice = Number($("#prodSellPriceInput")?.value || 0);
+      const availableUnits = getAvailableUnitsForBase(baseUnit);
+      currentVariations.forEach(v => {
+        if (!availableUnits.some(u => u.val === v.rawUnit)) {
+          v.rawUnit = availableUnits[0]?.val || baseUnit;
+        }
+        if (v.isAutoPrice !== false) {
+          v.price = calcProportionalPrice(v.rawQty, v.rawUnit, baseUnit, basePrice);
+        }
+        v.finalPrice = typeof calcFinalPrice === "function" ? calcFinalPrice(v.price, v.discountType, v.discountVal) : v.price;
+      });
+      renderProdVariations();
+    });
+
+    /* ================= MODAL TAMBAH & EDIT PRODUK ================= */
+    function openProductModal(prod = null) {
+      const title = $("#prodModalTitle");
+      const idInput = $("#prodIdInput");
+      const nameInput = $("#prodNameInput");
+      const skuInput = $("#prodSkuInput");
+      const catSelect = $("#prodCategorySelect");
+      const unitSelect = $("#prodUnitInput");
+      const costInput = $("#prodCostPriceInput");
+      const sellInput = $("#prodSellPriceInput");
+      const minStockInput = $("#prodMinStockInput");
+      const batchInput = $("#prodBatchInput");
+      const expInput = $("#prodExpInput");
+      const stocksGrid = $("#prodStoreStocksGrid");
+
+      // Populate Categories
+      catSelect.innerHTML = masterCategories.map(c => `
+        <option value="${c.id}">${c.name}</option>
+      `).join("");
+
+      if (prod) {
+        title.textContent = "Edit Data Produk";
+        idInput.value = prod.id;
+        nameInput.value = prod.name;
+        skuInput.value = prod.sku || "";
+        catSelect.value = prod.cat;
+        
+        const isWeight = (prod.unit === "gr" && prod.baseUnit === "gr") || prod.unit === "kg" || prod.baseUnit === "gr";
+        unitSelect.value = isWeight ? "kg" : (prod.unit || "pcs");
+        
+        // HPP Normalisasi: tampilkan per 1 kg untuk produk berat
+        const displayCost = isWeight && prod.cost < 100 ? Math.round(prod.cost * 1000) : (prod.cost || "");
+        costInput.value = displayCost;
+        sellInput.value = prod.price;
+        minStockInput.value = prod.minStock || 10;
+        batchInput.value = prod.batch || "";
+        expInput.value = prod.exp || "";
+        setProductImagePreview(prod.image || "");
+
+        // Stocks per branch inputs (tampilkan dalam kg jika berat)
+        stocksGrid.innerHTML = masterStores.map(s => {
+          const sQty = prod.stocks ? Number(prod.stocks[s.id] || 0) : 0;
+          const displayQty = isWeight && sQty >= 1000 ? (sQty / 1000) : sQty;
+          return `
+            <div class="prod-stock-input-box">
+              <label for="storeStock_${s.id}">${s.shortName} ${isWeight ? '(kg)' : ''}</label>
+              <input type="number" id="storeStock_${s.id}" data-store="${s.id}" value="${displayQty}" min="0" step="any" />
+            </div>
+          `;
+        }).join("");
+
+        // Populate variations from prod.units
+        if (Array.isArray(prod.units) && prod.units.length > 0) {
+          currentVariations = prod.units.map((u, i) => {
+            let rawQty = u.rawQty;
+            let rawUnit = u.rawUnit;
+            if (rawQty === undefined) {
+              const ratio = Number(u.qtyRatio || 1);
+              if (isWeight) {
+                if (ratio >= 1000) {
+                  rawQty = ratio / 1000;
+                  rawUnit = "kg";
+                } else {
+                  rawQty = ratio;
+                  rawUnit = "gr";
+                }
+              } else {
+                rawQty = ratio;
+                rawUnit = prod.unit || "pcs";
+              }
+            }
+            return {
+              id: u.id || `u-${prod.id}-${i}`,
+              name: u.name || `${rawQty} ${rawUnit}`,
+              rawQty,
+              rawUnit,
+              price: Number(u.price || 0),
+              discountType: u.discountType || "none",
+              discountVal: Number(u.discountVal || 0),
+              finalPrice: u.finalPrice !== undefined ? Number(u.finalPrice) : Number(u.price || 0),
+              isAutoPrice: false
+            };
+          });
+        } else {
+          currentVariations = [];
+        }
+      } else {
+        title.textContent = "Tambah Produk Baru";
+        idInput.value = "";
+        nameInput.value = "";
+        const nextId = masterProducts.length + 1;
+        skuInput.value = `SKU-${String(nextId).padStart(5, "0")}`;
+        if (prodFilter.cat) catSelect.value = prodFilter.cat;
+        unitSelect.value = "kg";
+        costInput.value = "";
+        sellInput.value = "";
+        minStockInput.value = "10";
+        batchInput.value = `BRG${String(nextId).padStart(3, "0")}-0926-A`;
+        expInput.value = "";
+        setProductImagePreview("");
+        currentVariations = [];
+
+        // Default initial stock allocation per branch
+        stocksGrid.innerHTML = masterStores.map(s => `
+          <div class="prod-stock-input-box">
+            <label for="storeStock_${s.id}">${s.shortName}</label>
+            <input type="number" id="storeStock_${s.id}" data-store="${s.id}" value="0" min="0" step="1" />
+          </div>
+        `).join("");
+      }
+
+      renderProdVariations();
+      $("#prodModalBackdrop").hidden = false;
+      nameInput.focus();
+    }
+
+    $("#btnAddProduct").addEventListener("click", () => openProductModal());
+    $("#prodModalClose").addEventListener("click", () => $("#prodModalBackdrop").hidden = true);
+    $("#prodModalCancel").addEventListener("click", () => $("#prodModalBackdrop").hidden = true);
+    $("#prodModalBackdrop").addEventListener("click", e => {
+      if (e.target === e.currentTarget) $("#prodModalBackdrop").hidden = true;
+    });
+
+    $("#prodForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const id = $("#prodIdInput").value ? +$("#prodIdInput").value : null;
+      const name = $("#prodNameInput").value.trim();
+      const sku = $("#prodSkuInput").value.trim().toUpperCase();
+      const cat = $("#prodCategorySelect").value;
+      const unit = $("#prodUnitInput").value;
+      const rawCost = $("#prodCostPriceInput").value ? +$("#prodCostPriceInput").value : Math.round(+$("#prodSellPriceInput").value * 0.75);
+      const price = +$("#prodSellPriceInput").value;
+      const minStock = $("#prodMinStockInput").value ? +$("#prodMinStockInput").value : 10;
+      const batch = $("#prodBatchInput").value.trim();
+      const exp = $("#prodExpInput").value.trim();
+
+      const isKg = unit === "kg";
+      const baseUnit = isKg ? "gr" : (unit === "liter" ? "ml" : unit);
+      const cost = isKg && rawCost >= 100 ? rawCost / 1000 : rawCost;
+
+      // Read stocks per store
+      const stocks = {};
+      document.querySelectorAll("#prodStoreStocksGrid input[data-store]").forEach(inp => {
+        const val = Math.max(0, +inp.value || 0);
+        stocks[inp.dataset.store] = isKg ? Math.round(val * 1000) : (unit === "liter" ? Math.round(val * 1000) : Math.round(val));
+      });
+
+      // Collect variations
+      let units = [];
+      if (currentVariations.length > 0) {
+        units = currentVariations.map((v, i) => {
+          let ratio = Number(v.rawQty || 1);
+          if (unit === "kg") {
+            if (v.rawUnit === "kg") ratio = Math.round(v.rawQty * 1000);
+            else if (v.rawUnit === "gr") ratio = Math.round(v.rawQty);
+          } else if (unit === "liter") {
+            if (v.rawUnit === "liter") ratio = Math.round(v.rawQty * 1000);
+            else if (v.rawUnit === "ml") ratio = Math.round(v.rawQty);
+          } else if (unit === "pcs") {
+            if (v.rawUnit === "pack") ratio = Math.round(v.rawQty * 10);
+            else if (v.rawUnit === "lusin") ratio = Math.round(v.rawQty * 12);
+            else if (v.rawUnit === "dus") ratio = Math.round(v.rawQty * 50);
+            else ratio = Math.round(v.rawQty);
+          } else if (unit === "lembar") {
+            if (v.rawUnit === "pack") ratio = Math.round(v.rawQty * 50);
+            else if (v.rawUnit === "rim") ratio = Math.round(v.rawQty * 500);
+            else ratio = Math.round(v.rawQty);
+          } else if (unit === "pack") {
+            if (v.rawUnit === "dus") ratio = Math.round(v.rawQty * 10);
+            else ratio = Math.round(v.rawQty);
+          }
+
+          const normalPrice = Number(v.price || 0);
+          const discType = v.discountType || "none";
+          const discVal = Number(v.discountVal || 0);
+          const finalPrice = typeof calcFinalPrice === "function" ? calcFinalPrice(normalPrice, discType, discVal) : normalPrice;
+
+          return {
+            id: v.id || `u-${Date.now()}-${i}`,
+            name: v.name || `${v.rawQty} ${v.rawUnit}`,
+            rawQty: v.rawQty,
+            rawUnit: v.rawUnit,
+            qtyRatio: ratio,
+            price: normalPrice,
+            discountType: discType,
+            discountVal: discVal,
+            finalPrice,
+            isDefault: (i === 0)
+          };
+        });
+      } else {
+        units = [{
+          id: "u-default",
+          name: `Satuan (${unit})`,
+          qtyRatio: unit === "kg" ? 1000 : 1,
+          price,
+          discountType: "none",
+          discountVal: 0,
+          finalPrice: price,
+          isDefault: true
+        }];
+      }
+
+      if (id) {
+        // Update
+        const idx = masterProducts.findIndex(p => p.id === id);
+        if (idx !== -1) {
+          masterProducts[idx] = {
+            ...masterProducts[idx],
+            name,
+            sku,
+            cat,
+            unit,
+            baseUnit,
+            cost,
+            price,
+            minStock,
+            batch,
+            exp,
+            image: currentProdImage || "",
+            stocks,
+            units
+          };
+          saveProducts(masterProducts);
+          toast(`Produk "${name}" berhasil diperbarui`);
+        }
+      } else {
+        // Add
+        const newId = masterProducts.length ? Math.max(...masterProducts.map(p => p.id)) + 1 : 1;
+        const categoryObj = masterCategories.find(c => c.id === cat);
+        const newProd = {
+          id: newId,
+          name,
+          sku,
+          cat,
+          unit,
+          baseUnit,
+          cost,
+          price,
+          minStock,
+          batch,
+          exp,
+          image: currentProdImage || "",
+          icon: categoryObj?.icon || "package",
+          tint: "#f8fafc",
+          stocks,
+          units
+        };
+        masterProducts.push(newProd);
+        saveProducts(masterProducts);
+        toast(`Produk "${name}" berhasil ditambahkan`);
+      }
+
+      $("#prodModalBackdrop").hidden = true;
+      renderProdData();
+    });
+
+    /* ---- Event Delegation for Table and Card Actions ---- */
+    function handleActionClick(e) {
+      const breakdownBtn = e.target.closest("[data-breakdown]");
+      const adjustBtn = e.target.closest("[data-adjust]");
+      const editBtn = e.target.closest("[data-edit]");
+      const delBtn = e.target.closest("[data-del]");
+
+      if (breakdownBtn) {
+        openBreakdownModal(+breakdownBtn.dataset.breakdown);
+        return;
+      }
+
+      if (adjustBtn) {
+        openStockAdjustModal(+adjustBtn.dataset.adjust);
+        return;
+      }
+
+      if (editBtn) {
+        const id = +editBtn.dataset.edit;
+        const p = masterProducts.find(item => item.id === id);
+        if (p) openProductModal(p);
+        return;
+      }
+
+      if (delBtn) {
+        const id = +delBtn.dataset.del;
+        const p = masterProducts.find(item => item.id === id);
+        if (!p) return;
+
+        showConfirm({
+          icon: `<svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#ef4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`,
+          title: "Hapus Produk",
+          body: `Apakah Anda yakin ingin menghapus produk "${p.name}" (${p.sku}) dari database?`,
+          okText: "Ya, Hapus",
+          okClass: "danger",
+          onOk: () => {
+            masterProducts = masterProducts.filter(item => item.id !== id);
+            saveProducts(masterProducts);
+            toast(`Produk "${p.name}" telah dihapus`);
+            renderProdData();
+          }
+        });
+      }
+    }
+
+    $("#prodRows").addEventListener("click", handleActionClick);
+    $("#prodCardsContainer").addEventListener("click", handleActionClick);
+
+    // View Switcher (Card vs Table)
     $("#prodViewCardBtn").addEventListener("click", () => {
       currentViewMode = "card";
       try { localStorage.setItem("ap_prod_view_mode", "card"); } catch {}
@@ -352,55 +2787,57 @@
       updateViewModeButtons();
     });
 
+    // Toolbar Filters
     $("#prodSearch").addEventListener("input", e => {
       prodFilter.query = e.target.value;
       prodPageNum = 1;
       renderProdData();
     });
+
     $("#prodCatFilter").addEventListener("change", e => {
       prodFilter.cat = e.target.value;
       prodPageNum = 1;
       renderProdData();
     });
+
     $("#prodStockFilter").addEventListener("change", e => {
       prodFilter.stock = e.target.value;
       prodPageNum = 1;
       renderProdData();
     });
+
     $("#masterFoot").addEventListener("click", e => {
       const btn = e.target.closest("[data-goto]");
       if (!btn || btn.disabled) return;
       prodPageNum = +btn.dataset.goto;
       renderProdData();
     });
-    $("#btnAddProduct").addEventListener("click", () => toast("Formulir tambah produk segera hadir"));
-    $("#prodExport").addEventListener("click", () => toast("Ekspor daftar produk segera hadir"));
 
-    // Event Delegation for Edit & Delete on both Table and Cards
-    function handleActionClick(e) {
-      const edit = e.target.closest("[data-edit]");
-      const del = e.target.closest("[data-del]");
-      if (edit) {
-        const id = +edit.dataset.edit;
-        toast(`Edit produk: ${ITEM[id] ? ITEM[id].name : id}`);
-      }
-      if (del) {
-        const id = +del.dataset.del;
-        const m = ITEM[id];
-        if (!m) return;
-        showConfirm({
-          icon: "🗑",
-          title: "Hapus Produk",
-          body: `Hapus produk "${m.name}" (${m.sku})?`,
-          okText: "Ya, Hapus",
-          okClass: "danger",
-          onOk: () => toast(`${m.name} dihapus dari master data (demo)`),
-        });
-      }
-    }
-
-    $("#prodRows").addEventListener("click", handleActionClick);
-    $("#prodCardsContainer").addEventListener("click", handleActionClick);
+    // Ekspor CSV Sederhana
+    $("#prodExport").addEventListener("click", () => {
+      const headers = ["ID", "SKU", "Nama Produk", "Kategori", "Harga Modal", "Harga Jual", "Stok Total", "Satuan", "Batch", "EXP"];
+      const rows = masterProducts.map(p => [
+        p.id,
+        p.sku,
+        `"${p.name.replace(/"/g, '""')}"`,
+        p.cat,
+        p.cost || 0,
+        p.price,
+        getProductStock(p, "all"),
+        p.unit || "pcs",
+        p.batch || "",
+        p.exp || ""
+      ]);
+      const csv = [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `master-produk-amar-plastik-${Date.now()}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast("Data produk berhasil diekspor ke CSV");
+    });
 
     $("#modalOk").addEventListener("click", () => closeConfirm(true));
     $("#modalCancel").addEventListener("click", () => closeConfirm(false));
@@ -408,7 +2845,7 @@
       if (e.target === e.currentTarget) closeConfirm(false);
     });
 
-    renderProdData();
+    initData();
     initSidebar("produk");
   </script>
 </body>

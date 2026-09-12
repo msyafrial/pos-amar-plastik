@@ -3143,7 +3143,8 @@
       if (btnMonthly) btnMonthly.classList.toggle("is-active", newType === "monthly");
 
       populatePeriodDropdown(newType);
-      refreshCurrentView();
+      updateBentoKpis();
+      refreshCurrentView(true);
     }
 
     function refreshCurrentView(resetPages = false) {
@@ -4189,7 +4190,6 @@
       // 3. Ambil data & susun tabel sesuai activeTab
       let tabTitle = "";
       let tabSubtitle = "";
-      let filterDetails = "";
       let tableHeaders = "";
       let tableRows = "";
       let tableFooter = "";
@@ -4197,43 +4197,12 @@
 
       if (activeTab === "summary") {
         tabTitle = "LAPORAN REKAP PENJUALAN PRODUK";
-        tabSubtitle = "Ringkasan performa penjualan produk, omzet, laba kotor, dan kontribusi profit";
+        tabSubtitle = "Ringkasan performa penjualan seluruh produk, omzet, laba kotor, dan kontribusi profit";
         
-        // Ambil data produk yang sudah difilter kategori & search
+        // Ambil seluruh data produk murni berdasarkan Toko & Periode (tanpa pengaruh filter tabel di bawah)
         const allProducts = getProductSalesReport();
-        const catVal = selectedSummaryCategory;
-        const searchVal = ($("#summarySearchInput")?.value || "").trim().toLowerCase();
-
-        let filtered = allProducts.filter(p => {
-          if (catVal !== "all" && p.cat !== catVal) return false;
-          if (searchVal) {
-            const matchName = p.name.toLowerCase().includes(searchVal);
-            const matchSku = p.sku.toLowerCase().includes(searchVal);
-            if (!matchName && !matchSku) return false;
-          }
-          return true;
-        });
-
-        // Urutkan sesuai sort metric yang aktif
-        filtered.sort((a, b) => {
-          let valA = a[summarySortMetric];
-          let valB = b[summarySortMetric];
-          if (summarySortMetric === "daily") {
-            const days = getPeriodDays();
-            valA = a.soldQty / days;
-            valB = b.soldQty / days;
-          } else if (summarySortMetric === "profit_share") {
-            valA = a.profit;
-            valB = b.profit;
-          } else if (summarySortMetric === "name") {
-            return summarySortDirection === "asc" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name);
-          }
-          return summarySortDirection === "asc" ? valA - valB : valB - valA;
-        });
-
-        const catObj = getDynamicCategoriesList().find(c => c.id === catVal);
-        const catName = catObj ? catObj.name : "Semua Kategori";
-        filterDetails = `Kategori: <strong>${catName}</strong> ${searchVal ? `• Pencarian: "<strong>${searchVal}</strong>"` : ""}`;
+        // Urutkan default berdasarkan total omzet tertinggi
+        const filtered = [...allProducts].sort((a, b) => b.revenue - a.revenue);
 
         const totalSold = filtered.reduce((s, p) => s + p.soldQty, 0);
         const totalRev = filtered.reduce((s, p) => s + p.revenue, 0);
@@ -4290,30 +4259,10 @@
 
       } else if (activeTab === "items") {
         tabTitle = "LAPORAN LOG PENJUALAN ITEM";
-        tabSubtitle = "Rincian transaksi per baris item produk, harga pokok penjualan, toko, dan kasir";
+        tabSubtitle = "Rincian seluruh transaksi per baris item produk, harga pokok penjualan, toko, dan kasir";
 
-        const baseItems = getFilteredSalesLog();
-        const catVal = selectedItemCategory;
-        const payVal = selectedItemPayment;
-        const searchVal = ($("#itemSearchInput")?.value || "").trim().toLowerCase();
-
-        let filtered = baseItems.filter(item => {
-          if (catVal !== "all" && item.cat !== catVal) return false;
-          if (payVal !== "all" && item.payment.toLowerCase() !== payVal.toLowerCase()) return false;
-          if (searchVal) {
-            const matchName = (item.name || "").toLowerCase().includes(searchVal);
-            const matchTrx = (item.trx || "").toLowerCase().includes(searchVal);
-            const matchCashier = (item.cashier || "").toLowerCase().includes(searchVal);
-            const matchSku = (item.sku || "").toLowerCase().includes(searchVal);
-            if (!matchName && !matchTrx && !matchCashier && !matchSku) return false;
-          }
-          return true;
-        });
-
-        const catObj = getDynamicCategoriesList().find(c => c.id === catVal);
-        const catName = catObj ? catObj.name : "Semua Kategori";
-        const payName = payVal === "all" ? "Semua Metode" : payVal;
-        filterDetails = `Kategori: <strong>${catName}</strong> • Pembayaran: <strong>${payName}</strong> ${searchVal ? `• Pencarian: "<strong>${searchVal}</strong>"` : ""}`;
+        // Ambil seluruh log penjualan item murni berdasarkan Toko & Periode (tanpa pengaruh filter tabel di bawah)
+        const filtered = getFilteredSalesLog();
 
         const totalQty = filtered.reduce((s, i) => s + i.qty, 0);
         const totalVal = filtered.reduce((s, i) => s + i.subtotal, 0);
@@ -4376,28 +4325,17 @@
       } else {
         // activeTab === "trx"
         tabTitle = "LAPORAN LOG TRANSAKSI PENJUALAN";
-        tabSubtitle = "Daftar struk transaksi penjualan kasir, total belanja, metode pembayaran, dan status";
+        tabSubtitle = "Daftar seluruh struk transaksi penjualan kasir, total belanja, metode pembayaran, dan status";
 
+        // Ambil seluruh transaksi murni berdasarkan Toko & Periode (tanpa pengaruh filter tabel di bawah)
         const all = getAllTransactionsData();
         const periodVal = periodType === "monthly" ? selectedMonthlyPeriod : ($("#topPeriodSelect")?.value || "2026-09");
-        const payVal = selectedTrxPayment;
-        const searchVal = ($("#trxSearchInput")?.value || "").trim().toLowerCase();
 
-        let filtered = all.filter(t => {
+        const filtered = all.filter(t => {
           if (storeVal !== "all" && t.storeId !== storeVal) return false;
           if (!matchesPeriod(t.time, periodVal, periodType)) return false;
-          if (payVal !== "all" && t.payment.toLowerCase() !== payVal.toLowerCase()) return false;
-          if (searchVal) {
-            const matchTrx = t.trx.toLowerCase().includes(searchVal);
-            const matchCashier = t.cashier.toLowerCase().includes(searchVal);
-            const matchCustomer = t.customer.toLowerCase().includes(searchVal);
-            if (!matchTrx && !matchCashier && !matchCustomer) return false;
-          }
           return true;
         });
-
-        const payName = payVal === "all" ? "Semua Metode" : payVal;
-        filterDetails = `Pembayaran: <strong>${payName}</strong> ${searchVal ? `• Pencarian: "<strong>${searchVal}</strong>"` : ""}`;
 
         const totalCount = filtered.length;
         const totalItems = filtered.reduce((s, t) => s + (t.itemCount || 1), 0);
@@ -4525,10 +4463,10 @@
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
-      padding: 8px 12px;
+      padding: 8px 14px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 20px;
+      grid-template-columns: 1fr 1.3fr 1fr;
+      gap: 8px 16px;
       font-size: 11.5px;
     }
     .meta-item {
@@ -4666,8 +4604,7 @@
     <div class="meta-table">
       <div class="meta-item"><span>Periode:</span> <strong>${periodLabel}</strong></div>
       <div class="meta-item"><span>Lokasi Cabang:</span> <strong>${storeName}</strong></div>
-      <div class="meta-item"><span>Filter Aktif:</span> <span>${filterDetails}</span></div>
-      <div class="meta-item"><span>Waktu Cetak:</span> <strong>${printTime} WIB</strong></div>
+      <div class="meta-item" style="text-align: right; justify-content: flex-end;"><span>Waktu Cetak:</span> <strong>${printTime} WIB</strong></div>
     </div>
 
     ${kpiSummaryHtml}
