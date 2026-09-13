@@ -1236,12 +1236,12 @@ if (typeof renderStoreDropdownWidget === "function") {
   renderStoreDropdownWidget("#posStoreDropdownWrap", {
     storageKey: "ap_active_store",
     defaultStore: "pusat",
-    allowAll: true,
+    allowAll: false,
     onSelect: (storeId, storeObj) => {
       state.storeId = storeId;
       const sub = $("#posCashierOutletSub");
       if (sub && storeObj) {
-        sub.textContent = storeId === "all" ? "Kasir · Semua Cabang" : `Kasir · ${storeObj.shortName || storeObj.name}`;
+        sub.textContent = `Kasir · ${storeObj.shortName || storeObj.name}`;
       }
       refreshProducts();
       renderMenu();
@@ -1255,7 +1255,7 @@ if (typeof renderStoreDropdownWidget === "function") {
   const curInitialStore = (typeof loadStores === "function" ? loadStores() : []).find(s => s.id === state.storeId);
   if (curInitialStore) {
     const sub = $("#posCashierOutletSub");
-    if (sub) sub.textContent = state.storeId === "all" ? "Kasir · Semua Cabang" : `Kasir · ${curInitialStore.shortName || curInitialStore.name}`;
+    if (sub) sub.textContent = `Kasir · ${curInitialStore.shortName || curInitialStore.name}`;
   }
 }
 
