@@ -80,6 +80,227 @@ function getCategorySvg(iconName, customClass = "") {
   return svgStr.replace('<svg ', `<svg class="${customClass}" `);
 }
 
+/* ============================================================
+   Reusable StoreDropdownWidget Capsule (Standard 2026 Enterprise)
+   Digunakan seragam di: dashboard, transaksi, kasir, produk, laporan
+   ============================================================ */
+function renderStoreDropdownWidget(containerOrSel, options = {}) {
+  const container = typeof containerOrSel === "string" ? document.querySelector(containerOrSel) : containerOrSel;
+  if (!container) return null;
+
+  const storageKey = options.storageKey || "ap_active_store";
+  const defaultStore = options.defaultStore !== undefined ? options.defaultStore : "all";
+  const allowAll = options.allowAll !== false;
+  const miniLabel = options.miniLabel || "LOKASI TOKO";
+  const onSelect = typeof options.onSelect === "function" ? options.onSelect : () => {};
+
+  const stores = loadStores();
+  let selectedId = localStorage.getItem(storageKey) || defaultStore;
+  if (!allowAll && selectedId === "all") {
+    selectedId = stores[0]?.id || "pusat";
+  }
+
+  const widgetId = "sw_" + Math.random().toString(36).slice(2, 8);
+  const btnId = widgetId + "_btn";
+  const popoverId = widgetId + "_popover";
+  const searchInputId = widgetId + "_search";
+  const listId = widgetId + "_list";
+  const nameElId = widgetId + "_name";
+  const iconBadgeId = widgetId + "_badge";
+
+  function getStore(id) {
+    if (id === "all") {
+      return { id: "all", name: "Semua Toko", shortName: "Semua", badgeClass: "all", isCentral: false };
+    }
+    return stores.find(s => s.id === id) || stores[0] || { id: "pusat", name: "Amar Plastik - Pusat", shortName: "Pusat", badgeClass: "pusat" };
+  }
+
+  const curStore = getStore(selectedId);
+
+  container.innerHTML = `
+    <button type="button" class="rpt-top-ctrl-box rpt-store-dropdown-btn" id="${btnId}" aria-haspopup="listbox" aria-expanded="false" title="Filter Lokasi Toko">
+      <span class="rpt-top-icon-badge" id="${iconBadgeId}"></span>
+      <div class="rpt-top-select-wrap">
+        <span class="rpt-top-mini-label">${miniLabel}</span>
+        <span class="rpt-top-select-name" id="${nameElId}">
+          <span class="rpt-name-full">${curStore.name}</span>
+          <span class="rpt-name-short">${curStore.shortName || curStore.name}</span>
+        </span>
+      </div>
+      <span class="rpt-select-chevron" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </span>
+    </button>
+
+    <div class="rpt-store-popover" id="${popoverId}" role="listbox" aria-label="Daftar Outlet Toko" hidden>
+      <div class="rpt-store-popover-header">
+        <span class="rpt-store-popover-title">PILIH CABANG TOKO</span>
+        <span class="rpt-store-popover-badge">${stores.length} Cabang Aktif</span>
+      </div>
+      <div class="breakdown-search-wrap" style="padding: 8px 12px 0;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="${searchInputId}" class="breakdown-search-input" placeholder="Cari cabang toko..." autocomplete="off" />
+      </div>
+      <div class="rpt-store-list" id="${listId}">
+        <!-- Dinamis via JS -->
+      </div>
+    </div>
+  `;
+
+  const btn = container.querySelector(`#${btnId}`);
+  const popover = container.querySelector(`#${popoverId}`);
+  const searchInput = container.querySelector(`#${searchInputId}`);
+  const listEl = container.querySelector(`#${listId}`);
+  const nameEl = container.querySelector(`#${nameElId}`);
+  const iconBadge = container.querySelector(`#${iconBadgeId}`);
+
+  function updateIconBadge(store) {
+    if (!iconBadge) return;
+    if (store.id === "all") {
+      iconBadge.style.color = "#475569";
+      iconBadge.style.background = "#f1f5f9";
+      iconBadge.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
+      `;
+    } else if (store.id === "pusat") {
+      iconBadge.style.color = "#4338ca";
+      iconBadge.style.background = "#eef2ff";
+      iconBadge.innerHTML = getCategorySvg("building");
+    } else if (store.id === "cabang2") {
+      iconBadge.style.color = "#047857";
+      iconBadge.style.background = "#ecfdf5";
+      iconBadge.innerHTML = getCategorySvg("store");
+    } else {
+      iconBadge.style.color = "#b45309";
+      iconBadge.style.background = "#fef3c7";
+      iconBadge.innerHTML = getCategorySvg("store");
+    }
+  }
+
+  updateIconBadge(curStore);
+
+  function renderList(filterTerm = "") {
+    const term = (filterTerm || "").trim().toLowerCase();
+    const filtered = stores.filter(s =>
+      !term || s.name.toLowerCase().includes(term) || s.code.toLowerCase().includes(term) || s.shortName.toLowerCase().includes(term)
+    );
+
+    let html = "";
+    if (allowAll) {
+      const isSel = selectedId === "all";
+      html += `
+        <button type="button" class="rpt-store-opt ${isSel ? "is-selected" : ""}" data-value="all" role="option" aria-selected="${isSel}">
+          <div class="rpt-store-opt-icon all">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="rpt-store-opt-content">
+            <div class="rpt-store-opt-row">
+              <strong class="rpt-store-opt-name">Semua Toko</strong>
+              <span class="rpt-store-badge all">Konsolidasi</span>
+            </div>
+            <span class="rpt-store-opt-sub">Akumulasi seluruh cabang & pusat</span>
+          </div>
+          <span class="rpt-store-opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        </button>
+      `;
+    }
+
+    filtered.forEach(s => {
+      const isSel = selectedId === s.id;
+      const iconSvg = s.isCentral ? getCategorySvg("building") : getCategorySvg("store");
+      html += `
+        <button type="button" class="rpt-store-opt ${isSel ? "is-selected" : ""}" data-value="${s.id}" role="option" aria-selected="${isSel}">
+          <div class="rpt-store-opt-icon ${s.badgeClass || 'pusat'}">
+            ${iconSvg}
+          </div>
+          <div class="rpt-store-opt-content">
+            <div class="rpt-store-opt-row">
+              <strong class="rpt-store-opt-name">${s.name}</strong>
+              <span class="rpt-store-badge ${s.badgeClass || 'pusat'}">${s.shortName || s.code}</span>
+            </div>
+            <span class="rpt-store-opt-sub">${s.address || 'Outlet Toko'}</span>
+          </div>
+          <span class="rpt-store-opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        </button>
+      `;
+    });
+
+    listEl.innerHTML = html;
+
+    listEl.querySelectorAll(".rpt-store-opt").forEach(optBtn => {
+      optBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const val = optBtn.dataset.value;
+        selectStore(val);
+      });
+    });
+  }
+
+  function selectStore(val) {
+    selectedId = val;
+    try { localStorage.setItem(storageKey, val); } catch {}
+    const s = getStore(val);
+    nameEl.innerHTML = `
+      <span class="rpt-name-full">${s.name}</span>
+      <span class="rpt-name-short">${s.shortName || s.name}</span>
+    `;
+    updateIconBadge(s);
+    popover.hidden = true;
+    btn.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+    renderList(searchInput.value);
+    onSelect(val, s);
+  }
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = !popover.hidden;
+    document.querySelectorAll(".rpt-store-popover").forEach(p => {
+      if (p !== popover) p.hidden = true;
+    });
+    document.querySelectorAll(".rpt-top-ctrl-box").forEach(b => {
+      if (b !== btn) b.classList.remove("is-open");
+    });
+
+    popover.hidden = isOpen;
+    btn.classList.toggle("is-open", !isOpen);
+    btn.setAttribute("aria-expanded", String(!isOpen));
+    if (!isOpen) {
+      searchInput.value = "";
+      renderList();
+      setTimeout(() => searchInput.focus(), 60);
+    }
+  });
+
+  searchInput.addEventListener("input", (e) => {
+    renderList(e.target.value);
+  });
+
+  const onDocClick = (e) => {
+    if (!container.contains(e.target)) {
+      popover.hidden = true;
+      btn.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  };
+  document.addEventListener("click", onDocClick);
+
+  renderList();
+
+  return {
+    getSelectedStore: () => getStore(selectedId),
+    getSelectedStoreId: () => selectedId,
+    setSelectedStore: (id) => selectStore(id)
+  };
+}
+
+
 /* ---- Multi-Unit Helper: Pembulatan 500 Rupiah ke Bawah & Diskon ---- */
 function roundDown500(num) {
   if (isNaN(num) || num <= 0) return 0;

@@ -102,7 +102,19 @@ const state = {
   sortBy: "default",        // default, price-asc, price-desc, name-asc, stock-desc
   payment: "Cash",
   history: [],              // riwayat transaksi sesi ini
+  storeId: localStorage.getItem("ap_active_store") || "pusat",
 };
+
+function getCurStoreId() {
+  return state.storeId || "pusat";
+}
+
+function getEffectiveCheckoutStoreId() {
+  if (state.storeId && state.storeId !== "all") {
+    return state.storeId;
+  }
+  return "pusat";
+}
 
 /* ============================================================
    Helpers & Multi-Unit Stock Tracking
@@ -139,9 +151,9 @@ function getCommittedBaseStock(productId) {
 }
 
 /**
- * Hitung sisa stok dasar yang tersedia untuk dipesan di cabang Pusat
+ * Hitung sisa stok dasar yang tersedia untuk dipesan di cabang toko terpilih
  */
-function getAvailableBaseStock(product, storeId = "pusat") {
+function getAvailableBaseStock(product, storeId = getCurStoreId()) {
   if (!product) return 0;
   const storeStock = typeof getProductStock === "function"
     ? getProductStock(product, storeId)
@@ -157,14 +169,15 @@ function openUnitPicker(productId) {
   const p = ITEM[productId];
   if (!p) return;
 
-  const availableBase = getAvailableBaseStock(p, "pusat");
+  const curStore = getCurStoreId();
+  const availableBase = getAvailableBaseStock(p, curStore);
   const modal = $("#unitPickerModalBackdrop");
   if (!modal) return;
 
   // Header info
   $("#unitPickerCat").textContent = CAT_NAME[p.cat] || p.cat;
   $("#unitPickerTitle").textContent = p.name;
-  $("#unitPickerStock").textContent = "Tersedia: " + (typeof formatDualUnitStock === "function" ? formatDualUnitStock(p, "pusat") : `${availableBase} ${p.baseUnit || 'pcs'}`);
+  $("#unitPickerStock").textContent = "Tersedia: " + (typeof formatDualUnitStock === "function" ? formatDualUnitStock(p, curStore) : `${availableBase} ${p.baseUnit || 'pcs'}`);
 
   const thumbBox = $("#unitPickerThumb");
   if (p.image) {
@@ -259,6 +272,7 @@ function renderCategories() {
 
 function filteredMenu() {
   const q = state.query.trim().toLowerCase();
+  const curStore = getCurStoreId();
   let list = MENU.filter(m => {
     // Kategori
     if (state.category !== "all" && m.cat !== state.category) return false;
@@ -267,7 +281,7 @@ function filteredMenu() {
     if (q && !m.name.toLowerCase().includes(q) && !CAT_NAME[m.cat]?.toLowerCase().includes(q)) return false;
 
     // Sisa stok riil
-    const avail = getAvailableBaseStock(m, "pusat");
+    const avail = getAvailableBaseStock(m, curStore);
 
     // Filter status stok
     if (state.filterStatus === "ready" && avail <= 0) return false;
@@ -288,7 +302,7 @@ function filteredMenu() {
   } else if (state.sortBy === "name-asc") {
     list.sort((a, b) => a.name.localeCompare(b.name));
   } else if (state.sortBy === "stock-desc") {
-    list.sort((a, b) => getAvailableBaseStock(b, "pusat") - getAvailableBaseStock(a, "pusat"));
+    list.sort((a, b) => getAvailableBaseStock(b, curStore) - getAvailableBaseStock(a, curStore));
   }
 
   return list;
@@ -296,6 +310,7 @@ function filteredMenu() {
 
 function renderMenu() {
   const items = filteredMenu();
+  const curStore = getCurStoreId();
   if (!items.length) {
     $("#menuGrid").innerHTML = `<div class="menu-empty">Produk tidak ditemukan.<br>Coba kata kunci atau kategori lain.</div>`;
     return;
@@ -307,7 +322,7 @@ function renderMenu() {
     const displayOld = defaultUnit && defaultUnit.price > displayPrice ? defaultUnit.price : m.old;
     const discount = displayOld ? Math.round((1 - displayPrice / displayOld) * 100) : 0;
 
-    const availableBase = getAvailableBaseStock(m, "pusat");
+    const availableBase = getAvailableBaseStock(m, curStore);
     const out = availableBase <= 0;
 
     // Tag produk
@@ -326,7 +341,7 @@ function renderMenu() {
       : `<span class="media-emoji" aria-hidden="true">${m.emoji || ""}</span>`;
 
     const stockText = typeof formatDualUnitStock === "function"
-      ? formatDualUnitStock(m, "pusat")
+      ? formatDualUnitStock(m, curStore)
       : `${availableBase} ${m.unit || 'pcs'}`;
 
     return `
@@ -587,6 +602,9 @@ function completeTransaction() {
   const total = $("#totalVal").textContent;
   const trxCode = generateTrxCode();
   const timeStr = nowText();
+  const effectiveStoreId = getEffectiveCheckoutStoreId();
+  const stores = typeof loadStores === "function" ? loadStores() : [];
+  const storeObj = stores.find(s => s.id === effectiveStoreId) || { id: "pusat", name: "Amar Plastik - Pusat", shortName: "Pusat" };
 
   // Ambil data master produk terkini
   const masterList = typeof loadProducts === "function" ? loadProducts() : MENU;
@@ -600,24 +618,24 @@ function completeTransaction() {
     const finalPrice = u.finalPrice !== undefined ? u.finalPrice : m.price;
     const baseUsed = (Number(u.qtyRatio) || 1) * qty;
 
-    // Kurangi stok cabang Pusat secara persisten dalam baseUnit
+    // Kurangi stok cabang terpilih secara persisten dalam baseUnit
     const targetProd = masterList.find(x => x.id === m.id);
     if (targetProd) {
       if (!targetProd.stocks) targetProd.stocks = { pusat: 0, cabang2: 0, cabang3: 0 };
-      const curPusat = Number(targetProd.stocks.pusat || 0);
-      const afterPusat = Math.max(0, curPusat - baseUsed);
-      targetProd.stocks.pusat = afterPusat;
+      const curStock = Number(targetProd.stocks[effectiveStoreId] || 0);
+      const afterStock = Math.max(0, curStock - baseUsed);
+      targetProd.stocks[effectiveStoreId] = afterStock;
 
       // Catat mutasi stok jika helper tersedia
       if (typeof recordStockMutation === "function") {
         recordStockMutation({
           productId: targetProd.id,
-          storeId: "pusat",
-          storeName: "Amar Plastik - Pusat",
+          storeId: effectiveStoreId,
+          storeName: storeObj.name,
           type: "out",
           delta: -baseUsed,
-          beforeQty: curPusat,
-          afterQty: afterPusat,
+          beforeQty: curStock,
+          afterQty: afterStock,
           note: `Penjualan POS #${trxCode} (${qty} x ${u.name})`
         });
       }
@@ -641,6 +659,8 @@ function completeTransaction() {
     trx: trxCode,
     time: timeStr,
     payment: state.payment,
+    storeId: effectiveStoreId,
+    storeName: storeObj.name,
     totalNum: parseInt(total.replace(/[^\d]/g, ""), 10),
     itemCount: items.reduce((s, i) => s + i.qty, 0),
     items,
@@ -818,6 +838,15 @@ function nowText() {
 }
 
 function showReceipt(totalText, trxCode, timeStr) {
+  const effectiveStoreId = getEffectiveCheckoutStoreId();
+  const stores = typeof loadStores === "function" ? loadStores() : [];
+  const sObj = stores.find(s => s.id === effectiveStoreId) || { name: "AMAR PLASTIK", address: "Jl. Raya Industri No. 88, Medan" };
+
+  const rName = $(".receipt-name");
+  const rAddr = $(".receipt-addr");
+  if (rName && sObj) rName.textContent = sObj.name;
+  if (rAddr && sObj) rAddr.innerHTML = `${sObj.address || "Jl. Raya Industri No. 88, Medan"}<br>Telp. 061-1234-5678`;
+
   $("#rTrx").textContent = trxCode || generateTrxCode();
   $("#rTime").textContent = timeStr || nowText();
   $("#rCashier").textContent = typeof STORE !== "undefined" && STORE.cashier ? STORE.cashier : "Lina Puspa Melinda";
@@ -878,7 +907,7 @@ $("#receiptPrint").addEventListener("click", () => {
 $("#receiptDone").addEventListener("click", () => {
   $("#receiptBackdrop").hidden = true;
   toggleOrderPanel(false);
-  toast("Transaksi selesai ✅");
+  toast("Transaksi berhasil disimpan");
 });
 $("#receiptBackdrop").addEventListener("click", e => {
   if (e.target === e.currentTarget) {
@@ -1200,6 +1229,34 @@ function initSidebar(active) {
       toggleSidebar(false);
     }
   });
+}
+
+// Inisialisasi StoreDropdown Capsule Widget Multi-Cabang di Kasir
+if (typeof renderStoreDropdownWidget === "function") {
+  renderStoreDropdownWidget("#posStoreDropdownWrap", {
+    storageKey: "ap_active_store",
+    defaultStore: "pusat",
+    allowAll: true,
+    onSelect: (storeId, storeObj) => {
+      state.storeId = storeId;
+      const sub = $("#posCashierOutletSub");
+      if (sub && storeObj) {
+        sub.textContent = storeId === "all" ? "Kasir · Semua Cabang" : `Kasir · ${storeObj.shortName || storeObj.name}`;
+      }
+      refreshProducts();
+      renderMenu();
+      if ($("#unitPickerModalBackdrop") && !$("#unitPickerModalBackdrop").hidden) {
+        closeUnitPicker();
+      }
+      toast(`Cabang POS: ${storeObj.shortName || storeObj.name}`);
+    }
+  });
+
+  const curInitialStore = (typeof loadStores === "function" ? loadStores() : []).find(s => s.id === state.storeId);
+  if (curInitialStore) {
+    const sub = $("#posCashierOutletSub");
+    if (sub) sub.textContent = state.storeId === "all" ? "Kasir · Semua Cabang" : `Kasir · ${curInitialStore.shortName || curInitialStore.name}`;
+  }
 }
 
 renderCategories();

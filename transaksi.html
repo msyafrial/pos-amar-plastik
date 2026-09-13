@@ -108,27 +108,36 @@
       <div class="page-pad page-full">
         <!-- Modern Header Section -->
         <div class="trx-page-header">
-          <div class="trx-header-left">
-            <button class="topbar-toggle-btn" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="3"/><path d="M9 3v18"/></svg>
-            </button>
-            <div class="trx-header-title-box">
-              <div class="trx-title-row">
-                <span class="trx-title-icon" aria-hidden="true">
-                  <!-- Clock / History icon -->
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 8v4l3 3"/>
-                    <path d="M3.05 11a9 9 0 1 1 .5 4"/>
-                    <path d="M3 5v6h6"/>
-                  </svg>
-                </span>
-                <h1 class="trx-title">Riwayat Transaksi</h1>
+          <div class="trx-header-top">
+            <div class="trx-header-left">
+              <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka / Tutup sidebar (Ctrl+B)" title="Buka / Tutup sidebar (Ctrl+B)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h16"/></svg>
+              </button>
+              <div class="trx-header-title-box">
+                <div class="trx-title-row">
+                  <h1 class="page-title trx-title">Riwayat Transaksi</h1>
+                  <span class="trx-count-pill" id="trxCountPill">7 Transaksi</span>
+                </div>
+                <p class="trx-subtitle page-sub" id="trxCountSubtitle">7 transaksi tercatat</p>
               </div>
-              <p class="trx-subtitle" id="trxCountSubtitle">7 transaksi tercatat</p>
             </div>
+
+            <!-- Transaksi Baru Button -->
+            <a href="kasir.html" class="trx-btn-new" id="trxBtnNew" title="Mulai transaksi baru di Kasir">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <line x1="12" y1="9" x2="12" y2="15"/>
+                <line x1="9" y1="12" x2="15" y2="12"/>
+              </svg>
+              <span class="btn-text-full">Transaksi Baru</span>
+              <span class="btn-text-short">+ Baru</span>
+            </a>
           </div>
 
           <div class="trx-header-actions">
+            <!-- Filter Toko Capsule Dropdown (2026 Enterprise) -->
+            <div class="rpt-store-dropdown-wrap" id="trxStoreDropdownWrap"></div>
+
             <!-- Filter Button & Dropdown -->
             <div class="trx-filter-wrapper">
               <button class="trx-btn-filter" id="btnFilterToggle" aria-label="Filter transaksi">
@@ -153,22 +162,13 @@
                   <input type="text" class="trx-filter-search" id="trxSearchInput" placeholder="Cari invoice / pelanggan / kasir..." />
                 </div>
                 <div style="border-top: 1px solid #f1f5f9; padding-top: 10px; display: flex; justify-content: flex-end;">
-                  <button id="btnResetAllTrx" style="background: none; border: none; color: #ef4444; font-size: 11.5px; font-weight: 600; cursor: pointer;">
-                    🗑 Reset Semua Transaksi
+                  <button id="btnResetAllTrx" style="background: none; border: none; color: #ef4444; font-size: 11.5px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    Reset Semua Transaksi
                   </button>
                 </div>
               </div>
             </div>
-
-            <!-- Transaksi Baru Button -->
-            <a href="kasir.html" class="trx-btn-new" title="Mulai transaksi baru di Kasir">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <line x1="12" y1="9" x2="12" y2="15"/>
-                <line x1="9" y1="12" x2="15" y2="12"/>
-              </svg>
-              <span>Transaksi Baru</span>
-            </a>
           </div>
         </div>
 
@@ -252,6 +252,8 @@
         total: 117000,
         profit: 8800,
         payment: "Cash",
+        storeId: "pusat",
+        storeName: "Amar Plastik - Pusat",
         items: [
           { name: "Tepung Terigu 1kg", qty: 2, price: 12500 },
           { name: "Gula Pasir 1kg", qty: 1, price: 15500 },
@@ -267,6 +269,8 @@
         total: 50000,
         profit: 18000,
         payment: "QRIS",
+        storeId: "pusat",
+        storeName: "Amar Plastik - Pusat",
         items: [
           { name: "Mica Bento Kotak", qty: 3, price: 12000 },
           { name: "Plastik Kresek L", qty: 3, price: 4666 }
@@ -281,6 +285,8 @@
         total: 79000,
         profit: 24000,
         payment: "Cash",
+        storeId: "cabang2",
+        storeName: "Amar Plastik - Cabang 2",
         items: [
           { name: "Cup Puding Isi 50", qty: 2, price: 21500 },
           { name: "Mentega 250gr", qty: 2, price: 18000 }
@@ -295,6 +301,8 @@
         total: 148000,
         profit: 50000,
         payment: "Debit",
+        storeId: "pusat",
+        storeName: "Amar Plastik - Pusat",
         items: [
           { name: "Plastik Vacuum 1kg", qty: 4, price: 27500 },
           { name: "Tepung Terigu 1kg", qty: 3, price: 12500 }
@@ -309,6 +317,8 @@
         total: 77500,
         profit: 25000,
         payment: "Cash",
+        storeId: "cabang2",
+        storeName: "Amar Plastik - Cabang 2",
         items: [
           { name: "Gula Pasir 1kg", qty: 3, price: 15500 },
           { name: "Mentega 250gr", qty: 1, price: 18900 },
@@ -324,6 +334,8 @@
         total: 189000,
         profit: 58000,
         payment: "QRIS",
+        storeId: "cabang3",
+        storeName: "Amar Plastik - Cabang 3",
         items: [
           { name: "Coklat Bubuk 500gr", qty: 4, price: 26500 },
           { name: "Cup Puding Isi 50", qty: 3, price: 21500 }
@@ -338,6 +350,8 @@
         total: 27000,
         profit: 9000,
         payment: "Cash",
+        storeId: "pusat",
+        storeName: "Amar Plastik - Pusat",
         items: [
           { name: "Plastik Kresek L", qty: 2, price: 8500 },
           { name: "Mica Bento Kotak", qty: 1, price: 10000 }
@@ -345,6 +359,7 @@
       }
     ];
 
+    let currentStoreFilter = localStorage.getItem("ap_active_store") || "all";
     let currentRange = "all";
     let searchQuery = "";
     let cachedList = [];
@@ -391,6 +406,8 @@
         const customer = t.customer || (t.customerName || "Umum");
         const cashier = t.cashier || "kasir";
         const rawDate = t.time || t.date || nowText();
+        const storeId = t.storeId || "pusat";
+        const storeName = t.storeName || (storeId === "cabang2" ? "Amar Plastik - Cabang 2" : (storeId === "cabang3" ? "Amar Plastik - Cabang 3" : "Amar Plastik - Pusat"));
 
         return {
           trx: t.trx || `TRX-TRX${idx+100}`,
@@ -401,7 +418,9 @@
           total: total,
           profit: profit,
           payment: t.payment || "Cash",
-          items: t.items || []
+          items: t.items || [],
+          storeId: storeId,
+          storeName: storeName
         };
       });
 
@@ -413,8 +432,12 @@
       const all = getAllTransactions();
       cachedList = all;
 
-      // Filter berdasarkan rentang waktu & pencarian
+      // Filter berdasarkan cabang toko, rentang waktu & pencarian
       let filtered = all.filter(t => {
+        if (currentStoreFilter !== "all" && (t.storeId || "pusat") !== currentStoreFilter) {
+          return false;
+        }
+
         if (searchQuery) {
           const q = searchQuery.toLowerCase();
           const matchInvoice = t.trx.toLowerCase().includes(q);
@@ -433,10 +456,15 @@
         return true;
       });
 
-      // Update subtitle count
+      // Update subtitle and pill count
       const countSubtitle = $("#trxCountSubtitle");
       if (countSubtitle) {
-        countSubtitle.textContent = `${filtered.length} transaksi tercatat`;
+        const storeObj = currentStoreFilter !== "all" ? loadStores().find(s => s.id === currentStoreFilter) : null;
+        countSubtitle.textContent = `${filtered.length} transaksi tercatat${storeObj ? ' • ' + storeObj.shortName : ''}`;
+      }
+      const countPill = $("#trxCountPill");
+      if (countPill) {
+        countPill.textContent = `${filtered.length} Transaksi`;
       }
 
       const tbody = $("#trxTableBody");
@@ -455,17 +483,23 @@
       tbody.innerHTML = filtered.map((t, idx) => {
         const pay = (t.payment || "Cash").toLowerCase();
         const payClass = pay.includes("qris") ? "qris" : pay.includes("debit") ? "debit" : "cash";
-        const payIcon = pay.includes("qris") ? "📱" : pay.includes("debit") ? "💳" : "💵";
         const payLabel = pay.includes("qris") ? "QRIS" : pay.includes("debit") ? "Debit" : "Tunai";
+        const sId = t.storeId || "pusat";
+        const sObj = loadStores().find(s => s.id === sId) || { shortName: "Pusat", badgeClass: "pusat" };
 
         return `
           <tr>
             <td class="trx-col-no">${idx + 1}</td>
-            <td class="trx-col-invoice">${t.trx}</td>
+            <td class="trx-col-invoice">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span>${t.trx}</span>
+                <span class="rpt-store-badge ${sObj.badgeClass || 'pusat'}">${sObj.shortName || 'Pusat'}</span>
+              </div>
+            </td>
             <td class="trx-col-date">${t.date}</td>
             <td class="trx-col-cashier">${t.cashier}</td>
             <td><span class="trx-badge-customer">${t.customer}</span></td>
-            <td><span class="trx-badge-pay ${payClass}">${payIcon} ${payLabel}</span></td>
+            <td><span class="trx-badge-pay ${payClass}">${payLabel}</span></td>
             <td style="text-align: center;"><span class="trx-badge-item">${t.itemCount}</span></td>
             <td style="text-align: center;"><span class="trx-badge-status">● Selesai</span></td>
             <td class="trx-col-total">${rp(t.total)}</td>
@@ -475,7 +509,7 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <polyline points="6 9 6 2 18 2 18 9"/>
                   <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-                  <rect x="6" y="14" width="12" height="8"/>
+                  <rect width="12" height="8" x="6" y="14"/>
                 </svg>
               </button>
             </td>
@@ -596,6 +630,17 @@
 
     $("#receiptBackdrop")?.addEventListener("click", (e) => {
       if (e.target.id === "receiptBackdrop") $("#receiptBackdrop").hidden = true;
+    });
+
+    // Inisialisasi StoreDropdown Capsule Widget Multi-Cabang
+    renderStoreDropdownWidget("#trxStoreDropdownWrap", {
+      storageKey: "ap_active_store",
+      defaultStore: "all",
+      allowAll: true,
+      onSelect: (storeId) => {
+        currentStoreFilter = storeId;
+        renderTable();
+      }
     });
 
     // Inisialisasi

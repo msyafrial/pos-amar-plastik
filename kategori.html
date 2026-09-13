@@ -108,26 +108,28 @@
       <div class="page-pad page-full">
         <!-- Header Halaman Kategori -->
         <header class="cat-header">
-          <div class="cat-header-left">
-            <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka navigasi menu" title="Buka navigasi menu">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6.5h16M4 12h16M4 17.5h16" />
-              </svg>
-            </button>
-            <div>
-              <h1 class="page-title">Master Kategori</h1>
-              <p class="page-sub" id="catTotalSub">Kelola taksonomi departemen produk dan visibilitas di mesin kasir</p>
+          <div class="cat-header-top">
+            <div class="cat-header-left">
+              <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka navigasi menu" title="Buka navigasi menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h16"/></svg>
+              </button>
+              <div class="cat-header-title-wrap">
+                <div class="cat-title-row">
+                  <h1 class="page-title">Master Kategori</h1>
+                  <span class="cat-count-pill" id="catCountPill">8 Kategori</span>
+                </div>
+                <p class="page-sub" id="catTotalSub">Kelola taksonomi departemen produk dan visibilitas di mesin kasir</p>
+              </div>
             </div>
-          </div>
-          <div class="cat-header-right">
-            <button type="button" class="cat-btn-add" id="btnOpenAddCategory">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="16"/>
-                <line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-              <span>Tambah Kategori</span>
-            </button>
+            <div class="cat-header-right">
+              <button type="button" class="cat-btn-add" id="btnOpenAddCategory">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 5v14M5 12h14"/>
+                </svg>
+                <span class="btn-text-full">Tambah Kategori</span>
+                <span class="btn-text-short">Kategori</span>
+              </button>
+            </div>
           </div>
         </header>
 
@@ -347,6 +349,8 @@
       $("#kpiActiveCat").textContent = activeCat;
       $("#kpiTotalSku").textContent = totalSku;
       $("#catTotalSub").textContent = `${totalCat} kategori terdaftar • ${activeCat} aktif di kasir`;
+      const pill = $("#catCountPill");
+      if (pill) pill.textContent = `${totalCat} Kategori`;
     }
 
     function renderCategories() {

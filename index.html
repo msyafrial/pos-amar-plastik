@@ -152,26 +152,44 @@
       <div class="page-pad page-full">
         <!-- Modern Header Dashboard -->
         <header class="db-header">
-          <div class="db-header-left">
-            <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle"
-              aria-label="Buka navigasi menu" title="Buka navigasi menu">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6.5h16M4 12h16M4 17.5h16" />
-              </svg>
-            </button>
-            <div class="db-header-title-group">
-              <div class="db-header-badge-row">
-                <h1 class="page-title">Dashboard</h1>
-                <span class="db-store-status-pill">
-                  <span class="pulse-dot"></span>
-                  <span>Toko Buka • Kasir Aktif</span>
-                </span>
+          <div class="db-header-top">
+            <div class="db-header-left">
+              <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle"
+                aria-label="Buka navigasi menu" title="Buka navigasi menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 6.5h16M4 12h16M4 17.5h16" />
+                </svg>
+              </button>
+              <div class="db-header-title-group">
+                <div class="db-header-badge-row">
+                  <h1 class="page-title">Dashboard</h1>
+                  <span class="db-store-status-pill">
+                    <span class="pulse-dot"></span>
+                    <span class="btn-text-full" id="dbStoreStatusText">Toko Buka • Kasir Aktif</span>
+                    <span class="btn-text-short">Toko Buka</span>
+                  </span>
+                </div>
+                <p class="page-sub">Ringkasan aktivitas bisnis & performa operasional toko</p>
               </div>
-              <p class="page-sub">Ringkasan aktivitas bisnis & performa operasional toko</p>
             </div>
+
+            <!-- CTA Kasir Baru -->
+            <a href="kasir.html" class="db-cta-kasir-btn" title="Buka Transaksi Kasir Baru">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                <path d="M12 9v6M9 12h6" />
+              </svg>
+              <span class="btn-text-full">+ Kasir Baru</span>
+              <span class="btn-text-short">+ Kasir</span>
+            </a>
           </div>
 
           <div class="db-header-actions">
+            <!-- Filter Toko Capsule Dropdown (2026 Enterprise) -->
+            <div class="rpt-store-dropdown-wrap" id="dbStoreDropdownWrap"></div>
+
             <!-- Filter Rentang Waktu -->
             <div class="db-time-filter" id="dbTimeFilter">
               <div class="db-filter-chips" role="tablist" aria-label="Filter rentang waktu">
@@ -189,17 +207,6 @@
                   title="Terapkan rentang tanggal">Terapkan</button>
               </div>
             </div>
-
-            <!-- CTA Kasir Baru -->
-            <a href="kasir.html" class="db-cta-kasir-btn" title="Buka Transaksi Kasir Baru">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="9" cy="21" r="1" />
-                <circle cx="20" cy="21" r="1" />
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                <path d="M12 9v6M9 12h6" />
-              </svg>
-              <span>+ Kasir Baru</span>
-            </a>
           </div>
         </header>
 
@@ -557,6 +564,17 @@
     let currentRange = 'week';
     let customStart = '';
     let customEnd = '';
+    let currentStoreId = localStorage.getItem("ap_active_store") || "all";
+
+    function updateDashboardStoreHeader(storeObj) {
+      const statusText = $("#dbStoreStatusText");
+      if (!statusText) return;
+      if (!storeObj || storeObj.id === "all") {
+        statusText.textContent = "Konsolidasi Seluruh Cabang";
+      } else {
+        statusText.textContent = `Toko Buka • ${storeObj.shortName || storeObj.name}`;
+      }
+    }
 
     // Helper format ringkas untuk angka besar (misal: Rp 700 Jt, Rp 1,5 M) di sumbu chart
     function formatCompactRp(val) {
@@ -626,35 +644,44 @@
 
     function renderDashboard() {
       const allHistory = loadHistory();
-      const filteredHistory = filterHistoryByRange(allHistory);
+      const storeHistory = (currentStoreId && currentStoreId !== "all")
+        ? allHistory.filter(t => (t.storeId || "pusat") === currentStoreId)
+        : allHistory;
+
+      const filteredHistory = filterHistoryByRange(storeHistory);
       const n = filteredHistory.length;
       let totalOmzet = filteredHistory.reduce((s, t) => s + (t.totalNum || 0), 0);
       let totalProfit = Math.round(totalOmzet * 0.20);
       let avgOrder = n > 0 ? Math.round(totalOmzet / n) : 0;
       let totalOrdersCount = n;
 
-      // Baseline sampel proporsional bila belum ada transaksi
-      if (allHistory.length === 0) {
+      // Baseline sampel proporsional bila belum ada transaksi riil untuk cabang terpilih
+      if (storeHistory.length === 0) {
+        let factor = 1.0;
+        if (currentStoreId === "cabang2") factor = 0.45;
+        else if (currentStoreId === "cabang3") factor = 0.30;
+        else if (currentStoreId === "pusat") factor = 0.70;
+
         if (currentRange === 'today') {
-          totalOmzet = 385000;
-          totalProfit = 77000;
-          totalOrdersCount = 4;
-          avgOrder = 96250;
+          totalOmzet = Math.round(385000 * factor);
+          totalProfit = Math.round(77000 * factor);
+          totalOrdersCount = Math.max(1, Math.round(4 * factor));
+          avgOrder = Math.round(totalOmzet / totalOrdersCount);
         } else if (currentRange === 'week') {
-          totalOmzet = 1202200;
-          totalProfit = 240440;
-          totalOrdersCount = 10;
-          avgOrder = 120220;
+          totalOmzet = Math.round(1202200 * factor);
+          totalProfit = Math.round(240440 * factor);
+          totalOrdersCount = Math.max(1, Math.round(10 * factor));
+          avgOrder = Math.round(totalOmzet / totalOrdersCount);
         } else if (currentRange === 'month') {
-          totalOmzet = 4850000;
-          totalProfit = 970000;
-          totalOrdersCount = 38;
-          avgOrder = 127630;
+          totalOmzet = Math.round(4850000 * factor);
+          totalProfit = Math.round(970000 * factor);
+          totalOrdersCount = Math.max(1, Math.round(38 * factor));
+          avgOrder = Math.round(totalOmzet / totalOrdersCount);
         } else {
-          totalOmzet = 850000;
-          totalProfit = 170000;
-          totalOrdersCount = 7;
-          avgOrder = 121428;
+          totalOmzet = Math.round(850000 * factor);
+          totalProfit = Math.round(170000 * factor);
+          totalOrdersCount = Math.max(1, Math.round(7 * factor));
+          avgOrder = Math.round(totalOmzet / totalOrdersCount);
         }
       }
 
@@ -665,19 +692,19 @@
       $("#dbAvgOrderVal").textContent = rp(avgOrder);
 
       const totalSku = MENU.length;
-      const lowStockItems = MENU.filter(m => stockStatus(m) === "low" || stockStatus(m) === "out");
+      const lowStockItems = MENU.filter(m => stockStatus(m, currentStoreId) === "low" || stockStatus(m, currentStoreId) === "out");
       const lowCount = lowStockItems.length;
 
       $("#dbTotalSkuCount").textContent = `${totalSku} SKU Aktif`;
       const stockSummaryEl = $("#dbStockSummaryText");
       const stockTagEl = $("#dbStockTag");
       if (lowCount > 0) {
-        stockSummaryEl.textContent = `⚠️ ${lowCount} Produk Perlu Restock`;
+        stockSummaryEl.textContent = `${lowCount} Produk Perlu Restock`;
         stockSummaryEl.className = "db-kpi-alert-text";
         stockTagEl.textContent = `${lowCount} Alert`;
         stockTagEl.className = "db-kpi-tag amber";
       } else {
-        stockSummaryEl.textContent = `✅ Semua stok aman terkendali`;
+        stockSummaryEl.textContent = "Semua stok aman terkendali";
         stockSummaryEl.className = "db-kpi-alert-text is-ok";
         stockTagEl.textContent = "Aman";
         stockTagEl.className = "db-kpi-tag green";
@@ -983,7 +1010,7 @@
         sub.textContent = "Semua stok produk saat ini dalam level aman dan siap melayani transaksi";
         itemsWrap.innerHTML = `
           <div style="grid-column: 1 / -1; padding: 10px 14px; background: #ecfdf5; border-radius: 12px; color: #047857; font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
-            <span>✅</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span>Tidak ada produk yang perlu restock saat ini. Seluruh persediaan tercukupi!</span>
           </div>
         `;
@@ -993,18 +1020,20 @@
       card.classList.remove("is-healthy");
       sub.textContent = `${lowItems.length} produk memiliki persediaan menipis atau habis. Segera lakukan pengadaan ulang ke distributor:`;
       itemsWrap.innerHTML = lowItems.map(item => {
-        const isOut = item.stock === 0;
+        const qty = getProductStock(item, currentStoreId);
+        const isOut = qty <= 0;
+        const stockDisplay = formatDualUnitStock(item, currentStoreId);
         return `
           <div class="db-stock-badge-item ${isOut ? 'is-out' : ''}">
             <div class="db-stock-item-info">
-              <span class="db-stock-emoji">${item.emoji || "📦"}</span>
+              <span class="db-stock-emoji">${getCategorySvg(item.icon || "package")}</span>
               <div class="db-stock-names">
                 <strong class="db-stock-name">${item.name}</strong>
                 <small class="db-stock-sku">${item.sku} • ${item.batch || 'Reguler'}</small>
               </div>
             </div>
             <span class="db-stock-pill ${isOut ? 'out' : 'low'}">
-              ${isOut ? 'Habis (0)' : `Sisa ${item.stock}`}
+              ${isOut ? 'Habis (0)' : `Sisa ${stockDisplay}`}
             </span>
           </div>
         `;
@@ -1138,6 +1167,22 @@
       }
       renderDashboard();
     });
+
+    // Inisialisasi StoreDropdown Capsule Widget Multi-Cabang
+    const dbStoreWidget = renderStoreDropdownWidget("#dbStoreDropdownWrap", {
+      storageKey: "ap_active_store",
+      defaultStore: "all",
+      allowAll: true,
+      onSelect: (storeId, storeObj) => {
+        currentStoreId = storeId;
+        updateDashboardStoreHeader(storeObj);
+        renderDashboard();
+      }
+    });
+
+    if (dbStoreWidget) {
+      updateDashboardStoreHeader(dbStoreWidget.getSelectedStore());
+    }
 
     renderDashboard();
     initSidebar("dashboard");

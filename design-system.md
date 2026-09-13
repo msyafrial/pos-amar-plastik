@@ -68,27 +68,54 @@ Each panel is isolated within a `.rpt-view-panel`:
   * Layout transitions from horizontal bar to structured multi-tier layout (`flex-direction: column; gap: 10px; align-items: stretch;`).
   * Top bar wraps per-page selector and counter info (`display: flex; justify-content: space-between;`).
   * Pager buttons expand or center with touch-friendly 36px touch targets.
+
 ## 7. Store Location Dropdown Popover (.rpt-store-dropdown-wrap)
 * **Design Philosophy:** Eliminates outdated, OS-native `<select>` boxes in favor of an ultra-modern, glassmorphism-inspired custom popover menu with rich branch identity, subtitle details, status badges, and dynamic icon tints.
 * **Trigger Component (`.rpt-top-ctrl-box.rpt-store-dropdown-btn`):**
-  * Capsule shape with `background: #ffffff`, `border: 1px solid #e2e8f0`, `border-radius: 12px`.
+  * Capsule shape with `background: #ffffff`, `border: 1px solid #e2e8f0`, `border-radius: 9px`.
   * **Dynamic Icon Badge (`.rpt-top-icon-badge`):** Transitions soft color background & icon tint matching selected store (Pusat: `#eef2ff`/`#4338ca`, Cabang 2: `#ecfdf5`/`#047857`, Cabang 3: `#fffbeb`/`#b45309`, Semua: `#f1f5f9`/`#475569`).
   * **Micro-Label:** `"LOKASI"` (`font-size: 8.5px; font-weight: 800; color: #94a3b8; text-transform: uppercase;`).
-  * **Selected Value Display (`.rpt-top-select-name`):** Bold typography (`13px`, `#0f172a`), transitions to indigo when active.
+  * **Selected Value Display (`.rpt-top-select-name`):** Bold typography (`11.5px`, `#0f172a`), transitions to indigo when active.
   * **Animated Chevron:** Smooth 180° rotation when open (`.is-open`).
+  * **Full-Width Button Expansion:** `.rpt-store-dropdown-wrap .rpt-top-ctrl-box { width: 100% !important; }` ensures the trigger capsule expands to 100% of its wrap container across all pages.
 * **Popover Container (`.rpt-store-popover`):**
   * `background: #ffffff`, `border-radius: 14px`, `border: 1px solid #e2e8f0`.
   * Depth: `box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.14), 0 4px 12px rgba(0, 0, 0, 0.04);`.
   * Entrance animation: `storePopoverIn 0.18s cubic-bezier(0.16, 1, 0.3, 1)`.
-  * Popover Header: Micro uppercase title `"PILIH OUTLET / CABANG"` with active count badge `"3 Cabang Aktif"`.
+  * Popover Header: Micro uppercase title `"PILIH CABANG TOKO"` with active count badge `"3 Cabang Aktif"`.
 * **Store Option Items (`.rpt-store-opt`):**
   * Distinct colored store icon container (`.all`, `.pusat`, `.cabang2`, `.cabang3`).
   * Two-line content: bold store name (`.rpt-store-opt-name`) + address/role subtitle (`.rpt-store-opt-sub`).
   * Right-aligned store badge (`.rpt-store-badge`) and dynamic checkmark icon (`.rpt-store-opt-check`) when selected.
-* **Mobile Adaptability (Mobile <= 768px):**
-  * Container expands to full width (`width: 100%`).
-  * Popover anchors flush across the viewport width (`left: 0; right: 0; width: 100%;`).
-  * Touch targets enhanced with minimum 44px height for comfortable thumb tap interaction.
+* **Standardized Tier 2 Mobile Positioning (Viewport <= 768px / 360x740):**
+  * **Strict Tier 2 Placement:** Present on all 6 store-enabled pages (`index.html`, `kasir.html`, `transaksi.html`, `produk.html`, `laporan.html`, `profit.html`), starting at exact `x: 14px, y: 68px`, height `34px`.
+  * **Text Alignment:** Label text (`.rpt-name-short`) strictly positioned at `x: 51px, y: 77px` with typography `11.5px bold 700`.
+  * **Container Layout Types:**
+    1. *Full Width (332px):* Dashboard (`index.html`), Kasir POS (`kasir.html`), and Laporan Penjualan (`laporan.html`).
+    2. *Responsive Flex alongside Secondary Action:* Riwayat Transaksi (`w: 253px` + Filter `w: 71px`), Laporan Keuntungan (`w: 253px` + Filter `w: 71px`), and Master Data Produk (`w: 221px` + Batch Stok `w: 103px`).
+  * **Popover Anchoring:** Cleanly anchored at `left: 0 !important; right: auto !important;` with max-width `min(320px, calc(100vw - 24px))` preventing any edge clipping or horizontal overflow.
+
+## 8. Standardized 2-Tier Header Architecture (All 8 Pages)
+* **Design Vision:** Unified visual rhythm, standardized component positioning, and zero layout overflow across Mobile (360x740) and Desktop (1280x800).
+* **Mobile Layout (360x740) - Pixel-Perfect Coordinate Standard:**
+  * **Tier 1 (Identity & Primary CTA - Y-Baseline = 26px):**
+    * Navigation Toggle: Standardized 36x36px hamburger (`topbar-toggle-btn topbar-mobile-toggle`), positioned at `x: 14px, y: 16px`.
+    * Page Title: 14px bold 800, color `#0f172a`, `line-height: 1.2`, positioned at exact `x: 58px, y: 26px` on all 8 pages (`white-space: nowrap`, `overflow: hidden`, `text-overflow: ellipsis`, `flex-shrink: 1`).
+    * Count/Status Pill: 10px bold 700, height 18px, `padding: 2px 7px`, `border-radius: 999px`, positioned at exact `y: 25px` (`9 SKU`, `3 Kategori`, `7 Transaksi`, `v1.0.0`, `Toko Buka`, `Live`).
+    * Primary CTA / Profile: Positioned at `y: 18px`, height 32px:
+      - Pages 1, 3, 4, 5, 6, 7: Primary action button (`+ Produk`, `+ Kategori`, `+ Baru`, `+ Kasir`, `Print`, `Export`) with font 11px bold 700, unified indigo `#4f46e5`, white SVG icon (`width: 13px; height: 13px`), and adaptive text (`.btn-text-short`).
+      - Kasir POS (`kasir.html`): Profile avatar (`.avatar`, `LM`, 32x32px) right-aligned, while profile text name is hidden in mobile view.
+    * Subtitles: Suppressed on mobile (`display: none !important`) to elevate above-the-fold content.
+  * **Tier 2 (Store Context & Secondary Actions - Y-Baseline = 77px):**
+    * Store Capsule (`.rpt-store-dropdown-wrap`): Height 34px, `x: 14px, y: 68px`, button text positioned at exact `x: 51px, y: 77px`, font 11.5px bold 700, showing `.rpt-name-short`, popover anchored left (`left: 0 !important; right: auto !important`).
+    * Secondary Actions: Parallel buttons (`Batch Stok`, `Filter`) aligned at exact `y: 79px`, height 34px, font 11.5px bold 700, radius 9px.
+* **Desktop Layout (1280x800):**
+  * Uses `display: contents` on top-row containers (`.master-head-top`, `.cat-header-top`, `.trx-header-top`, `.rpt-header-top`, `.db-header-top`, `.topbar-top`, `.topbar-actions`) to seamlessly flatten into a single balanced row:
+    * Left (Slot 1): Title + Subtitle + Count Pill (`order: 1`).
+    * Center/Right (Slot 2): Store Location Capsule & Secondary Filters (`order: 2`, with `margin-left: auto` in POS Kasir).
+    * Far Right (Slot 3): Primary CTA Button with full label `.btn-text-full` or Cashier Profile (`order: 3`).
+* **Zero-Emoji & Zero-Overflow:** 100% monochromatic curated SVG icons, `scrollWidth <= 360px` (mobile) and `1280px` (desktop), `isOverlapping: false`.
+
 
 
 

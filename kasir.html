@@ -105,23 +105,32 @@
     <!-- ================= MAIN ================= -->
     <main class="main">
       <header class="topbar">
-        <div class="topbar-left">
-          <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka navigasi menu" title="Buka navigasi menu">
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="hamburger-icon">
-              <path d="M4 6.5h16M4 12h16M4 17.5h16" />
-            </svg>
-          </button>
-          <div class="topbar-heading">
-            <span class="topbar-badge">POS KASIR</span>
-            <span class="topbar-sub">Amar Plastik · Toko & Kemasan</span>
+        <div class="topbar-top">
+          <div class="topbar-left">
+            <button class="topbar-toggle-btn topbar-mobile-toggle" id="topbarSidebarToggle" aria-label="Buka navigasi menu" title="Buka navigasi menu">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="hamburger-icon">
+                <path d="M4 6.5h16M4 12h16M4 17.5h16" />
+              </svg>
+            </button>
+            <div class="topbar-heading">
+              <div class="topbar-title-row">
+                <h1 class="page-title">POS Kasir</h1>
+                <span class="pos-status-pill" id="posActivePill">Live</span>
+              </div>
+              <span class="topbar-sub">Amar Plastik · Toko & Kemasan</span>
+            </div>
+          </div>
+          <div class="profile">
+            <span class="profile-text">
+              <strong>Lina Puspa Melinda</strong>
+              <small id="posCashierOutletSub">Kasir Toko · Amar Plastik</small>
+            </span>
+            <span class="avatar" aria-hidden="true">LM</span>
           </div>
         </div>
-        <div class="profile">
-          <span class="profile-text">
-            <strong>Lina Puspa Melinda</strong>
-            <small>Kasir Toko · Amar Plastik</small>
-          </span>
-          <span class="avatar" aria-hidden="true">LM</span>
+        <div class="topbar-actions">
+          <!-- Filter Toko Capsule Dropdown (2026 Enterprise) -->
+          <div class="rpt-store-dropdown-wrap" id="posStoreDropdownWrap"></div>
         </div>
       </header>
 
