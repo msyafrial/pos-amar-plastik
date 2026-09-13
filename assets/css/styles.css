@@ -10117,7 +10117,8 @@ a:focus-visible {
     display: none;
   }
 
-  .rpt-table-responsive {
+  .rpt-table-responsive,
+  .trx-table-responsive {
     display: none;
   }
 
